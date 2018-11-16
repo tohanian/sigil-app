@@ -22,7 +22,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
-        <Bat color="yellow"/>
+        <Bat stroke="blue" size="500px" foregroundColor="red"/>
       </div>
     );
   }
