@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Bat} from './icons/animals'
 
 class App extends Component {
   render() {
@@ -17,9 +18,11 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
+
             Learn React
           </a>
         </header>
+        <Bat color="yellow"/>
       </div>
     );
   }
