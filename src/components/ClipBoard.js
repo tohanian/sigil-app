@@ -1,5 +1,5 @@
-import React from 'react';
-import * as icons from '../icons/animals';
+import React from "react";
+import * as icons from "../icons/animals";
 
 const ItemSet = props => {
   const itemSets = {
@@ -23,7 +23,7 @@ const SigilOptions = props =>
         name={icon}
         onClick={props.onClick}
         key={i}
-        style={{ padding: 12 }}
+        style={{ padding: 12, cursor: "pointer" }}
       >
         <C
           onClick={props.onClick}
