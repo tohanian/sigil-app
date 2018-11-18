@@ -8,15 +8,22 @@ const ClipBoard = props => {
     const C = icons[icon];
 
     return (
-      <span key={i} style={{ padding: 12 }}>
+      <div
+        value={icon}
+        name={icon}
+        onClick={props.onClick}
+        key={i}
+        style={{ padding: 12 }}
+      >
         <C
           onClick={props.onClick}
           name={icon}
+          value={icon}
           index={i}
           size="25"
           foregroundColor="black"
         />
-      </span>
+      </div>
     );
   });
 };
@@ -45,8 +52,8 @@ class App extends Component {
   };
 
   onClick = event => {
-    debugger;
-    this.setState({ icon: event.target.name });
+    console.log(event.currentTarget.attributes[0].value);
+    this.setState({ icon: event.currentTarget.attributes[0].value });
   };
 
   render() {
