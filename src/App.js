@@ -17,7 +17,7 @@ const LargeImage = props => {
           index={i}
           size="250"
           text={props.text}
-          foregroundColor="red"
+          foregroundColor={props.foregroundColor}
           stroke="blue"
         />
       ) : null;
@@ -28,20 +28,25 @@ const LargeImage = props => {
 class App extends Component {
   state = {
     icon: "Bat",
-    text: "Coolio"
+    text: "Coolio",
+    color: "red"
   };
 
   onClick = event => {
-    this.setState({ icon: event.currentTarget.attributes[0].value });
+    this.setState({
+      [event.currentTarget.attributes[1].value]:
+        event.currentTarget.attributes[0].value
+    });
   };
 
   render() {
+    const { text, icon, color } = this.state;
     return (
       <div className="App">
-        <LargeImage text={this.state.text} icon={this.state.icon} />
+        <LargeImage foregroundColor={color} text={text} icon={icon} />
         <div style={cell}>
           <ClipBoard onClick={this.onClick} />
-          <SwatchOptions />
+          <SwatchOptions onClick={this.onClick} />
         </div>
       </div>
     );

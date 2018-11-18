@@ -21,7 +21,7 @@ const SigilOptions = props =>
     return (
       <div
         value={icon}
-        name={icon}
+        className="icon"
         onClick={props.onClick}
         key={i}
         style={{ padding: 12, cursor: "pointer" }}
@@ -29,8 +29,9 @@ const SigilOptions = props =>
         <C
           onClick={props.onClick}
           name={icon}
+          className="icon"
           key={i}
-          value={icon}
+          value="icon"
           index={i}
           size="25"
           foregroundColor="black"
@@ -42,18 +43,17 @@ const SigilOptions = props =>
 export const SwatchOptions = props =>
   Object.keys(colors).map((color, i) => {
     const C = colors[color];
-
     return (
       <div
         value={color}
-        name={color}
+        className="color"
         onClick={props.onClick}
         key={i}
         style={{ padding: 6, cursor: "pointer" }}
       >
         <C
           onClick={props.onClick}
-          name={color}
+          className="color"
           key={i}
           value={color}
           index={i}
