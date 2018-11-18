@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Bat } from "./icons/animals";
 import * as icons from "./icons/animals";
 
 const ClipBoard = props => {
@@ -18,6 +17,7 @@ const ClipBoard = props => {
         <C
           onClick={props.onClick}
           name={icon}
+          key={i}
           value={icon}
           index={i}
           size="25"
@@ -36,8 +36,10 @@ const LargeImage = props => {
         <C
           key={i}
           name={icon}
+          value={`icon-${1}`}
           index={i}
           size="250"
+          text={props.text}
           foregroundColor="red"
           stroke="blue"
         />
@@ -48,18 +50,18 @@ const LargeImage = props => {
 
 class App extends Component {
   state = {
-    icon: "Bat"
+    icon: "Bat",
+    text: "Coolio"
   };
 
   onClick = event => {
-    console.log(event.currentTarget.attributes[0].value);
     this.setState({ icon: event.currentTarget.attributes[0].value });
   };
 
   render() {
     return (
       <div className="App">
-        <LargeImage icon={this.state.icon} />
+        <LargeImage text={this.state.text} icon={this.state.icon} />
         <div style={cell}>
           <ClipBoard onClick={this.onClick} />
         </div>
@@ -76,4 +78,5 @@ const cell = {
   alignItems: "center",
   width: "100%"
 };
+
 export default App;
