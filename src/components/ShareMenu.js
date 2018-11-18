@@ -4,7 +4,7 @@ const ShareMenu = props => {
   return (
     <ul>
       <li>Share on FB</li>
-      <li>Get Image</li>
+      <li onClick={props.convertToPng}>Get Image</li>
     </ul>
   );
 };

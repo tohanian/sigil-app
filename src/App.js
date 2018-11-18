@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import * as icons from './icons/animals';
+import canvg from 'canvg';
+import { svgAsPngUri } from 'save-svg-as-png';
 
 // Components
 import ClipBoard from './components/ClipBoard';
@@ -32,11 +34,20 @@ class App extends Component {
   state = {
     icon: 'Bat',
     text: 'Coolio',
-    shareMenu: false
+    shareMenu: false,
+    sigilPng: null
   };
 
   onClick = event => {
     this.setState({ icon: event.currentTarget.attributes[0].value });
+  };
+
+  convertToPng = () => {
+    const that = this;
+    const svg = document.querySelector('svg');
+    svgAsPngUri(svg, {}, function(uri) {
+      that.setState({ sigilPng: uri });
+    });
   };
 
   render() {
@@ -44,13 +55,16 @@ class App extends Component {
       <div className="App" style={{ position: 'relative' }}>
         <LargeImage text={this.state.text} icon={this.state.icon} />
         <ClipBoard onClick={this.onClick} />
-        {this.state.shareMenu ? <ShareMenu /> : null}
+        {this.state.shareMenu ? (
+          <ShareMenu convertToPng={this.convertToPng} />
+        ) : null}
         <ShareIcon onClick={() => this.setState({ shareMenu: true })} />
         {this.state.shareMenu ? (
           <CloseShareMenuIcon
             onClick={() => this.setState({ shareMenu: false })}
           />
         ) : null}
+        <img src={this.state.sigilPng} />
       </div>
     );
   }
