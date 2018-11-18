@@ -1,39 +1,16 @@
-import React, { Component } from "react";
-import "./App.css";
-import * as icons from "./icons/animals";
+import React, { Component } from 'react';
+import './App.css';
+import * as icons from './icons/animals';
 
-const ClipBoard = props => {
-  return Object.keys(icons).map((icon, i) => {
-    const C = icons[icon];
-
-    return (
-      <div
-        value={icon}
-        name={icon}
-        onClick={props.onClick}
-        key={i}
-        style={{ padding: 12 }}
-      >
-        <C
-          onClick={props.onClick}
-          name={icon}
-          key={i}
-          value={icon}
-          index={i}
-          size="25"
-          foregroundColor="black"
-        />
-      </div>
-    );
-  });
-};
+// Components
+import ClipBoard from './components/ClipBoard';
 
 const LargeImage = props => {
   return Object.keys(icons).map((icon, i) => {
-    const C = icons[icon];
+    const Icon = icons[icon];
     const iconic =
       props.icon === icon ? (
-        <C
+        <Icon
           key={i}
           name={icon}
           value={`icon-${1}`}
@@ -50,8 +27,8 @@ const LargeImage = props => {
 
 class App extends Component {
   state = {
-    icon: "Bat",
-    text: "Coolio"
+    icon: 'Bat',
+    text: 'Coolio'
   };
 
   onClick = event => {
@@ -72,11 +49,11 @@ class App extends Component {
 
 const cell = {
   borderRadius: 4,
-  background: "white",
-  display: "flex",
-  flexWrap: "wrap",
-  alignItems: "center",
-  width: "100%"
+  background: 'white',
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  width: '100%'
 };
 
 export default App;
