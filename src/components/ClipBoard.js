@@ -1,5 +1,6 @@
 import React from "react";
 import * as icons from "../icons/animals";
+import * as colors from "../icons/ColorSwatches";
 
 const ItemSet = props => {
   const itemSets = {
@@ -30,6 +31,31 @@ const SigilOptions = props =>
           name={icon}
           key={i}
           value={icon}
+          index={i}
+          size="25"
+          foregroundColor="black"
+        />
+      </div>
+    );
+  });
+
+export const SwatchOptions = props =>
+  Object.keys(colors).map((color, i) => {
+    const C = colors[color];
+
+    return (
+      <div
+        value={color}
+        name={color}
+        onClick={props.onClick}
+        key={i}
+        style={{ padding: 6, cursor: "pointer" }}
+      >
+        <C
+          onClick={props.onClick}
+          name={color}
+          key={i}
+          value={color}
           index={i}
           size="25"
           foregroundColor="black"

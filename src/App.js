@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import './App.css';
-import * as icons from './icons/animals';
+import React, { Component } from "react";
+import "./App.css";
+import * as icons from "./icons/animals";
 
 // Components
-import ClipBoard from './components/ClipBoard';
+import ClipBoard, { SwatchOptions } from "./components/ClipBoard";
 
 const LargeImage = props => {
   return Object.keys(icons).map((icon, i) => {
@@ -27,8 +27,8 @@ const LargeImage = props => {
 
 class App extends Component {
   state = {
-    icon: 'Bat',
-    text: 'Coolio'
+    icon: "Bat",
+    text: "Coolio"
   };
 
   onClick = event => {
@@ -41,6 +41,7 @@ class App extends Component {
         <LargeImage text={this.state.text} icon={this.state.icon} />
         <div style={cell}>
           <ClipBoard onClick={this.onClick} />
+          <SwatchOptions />
         </div>
       </div>
     );
@@ -49,11 +50,11 @@ class App extends Component {
 
 const cell = {
   borderRadius: 4,
-  background: 'white',
-  display: 'flex',
-  flexWrap: 'wrap',
-  alignItems: 'center',
-  width: '100%'
+  background: "white",
+  display: "flex",
+  flexWrap: "wrap",
+  alignItems: "center",
+  width: "100%"
 };
 
 export default App;
