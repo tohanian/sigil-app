@@ -5,7 +5,7 @@ export const Bat = ({
   backgroundColor = "white",
   size = 200,
   stroke,
-  houseText = null,
+  houseText,
   sloganText = null,
   textColor = "black"
 }) => (

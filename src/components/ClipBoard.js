@@ -77,10 +77,11 @@ const SwatchOptions = props => (
 
 const BannerOptions = props => <div>Banner Options</div>;
 
-const TextOptions = props => <div>Text Options</div>;
+const TextOptions = props => {
+  return <input onChange={props.onChange} />;
+};
 
 const Selectors = props => {
-  console.log(props);
   return (
     <div
       style={{
@@ -95,7 +96,11 @@ const Selectors = props => {
         }}
         onClick={props.onClick("previous")}
       >
-        <i className="fa fa-chevron-left" aria-hidden="true" />
+        <i
+          className="fa fa-chevron-left"
+          style={{ cursor: "pointer" }}
+          aria-hidden="true"
+        />
       </div>
       <div style={{ marginTop: 5 }}> {props.name} </div>
       <div
@@ -105,7 +110,11 @@ const Selectors = props => {
         }}
         onClick={props.onClick("next")}
       >
-        <i className="fa fa-chevron-right" aria-hidden="true" />
+        <i
+          className="fa fa-chevron-right"
+          style={{ cursor: "pointer" }}
+          aria-hidden="true"
+        />
       </div>
     </div>
   );

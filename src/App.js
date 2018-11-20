@@ -21,7 +21,7 @@ const LargeImage = props => {
           value={`icon-${1}`}
           index={i}
           size="250"
-          text={props.text}
+          houseText={props.houseText}
           foregroundColor={props.foregroundColor}
           stroke="blue"
         />
@@ -54,12 +54,17 @@ class App extends Component {
     });
   };
 
+  onChange = event => {
+    this.setState({ text: event.target.value });
+  };
+
   render() {
     const { text, icon, color } = this.state;
+    console.log(text);
     return (
       <div className="App" style={{ position: "relative" }}>
-        <LargeImage foregroundColor={color} text={text} icon={icon} />
-        <ClipBoard onClick={this.onClick} />
+        <LargeImage foregroundColor={color} houseText={text} icon={icon} />
+        <ClipBoard onChange={this.onChange} onClick={this.onClick} />
         {this.state.shareMenu ? (
           <ShareMenu convertToPng={this.convertToPng} />
         ) : null}
