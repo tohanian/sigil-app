@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
 import * as icons from "./icons/animals";
+import canvg from "canvg";
+import { svgAsPngUri } from "save-svg-as-png";
 
 // Components
 import ClipBoard, { SwatchOptions } from "./components/ClipBoard";
+import ShareIcon from "./components/ShareIcon";
+import ShareMenu from "./components/ShareMenu";
+import CloseShareMenuIcon from "./components/CloseShareMenuIcon";
 
 const LargeImage = props => {
   return Object.keys(icons).map((icon, i) => {
@@ -29,6 +34,8 @@ class App extends Component {
   state = {
     icon: "Bat",
     text: "Coolio",
+    shareMenu: false,
+    sigilPng: null,
     color: "red"
   };
 
@@ -39,27 +46,33 @@ class App extends Component {
     });
   };
 
+  convertToPng = () => {
+    const that = this;
+    const svg = document.querySelector("svg");
+    svgAsPngUri(svg, {}, function(uri) {
+      that.setState({ sigilPng: uri });
+    });
+  };
+
   render() {
     const { text, icon, color } = this.state;
     return (
-      <div className="App">
-        <LargeImage foregroundColor={color} text={text} icon={icon} />
-        <div style={cell}>
-          <ClipBoard onClick={this.onClick} />
-          <SwatchOptions onClick={this.onClick} />
-        </div>
+      <div className="App" style={{ position: "relative" }}>
+        <LargeImage text={this.state.text} icon={this.state.icon} />
+        <ClipBoard onClick={this.onClick} />
+        {this.state.shareMenu ? (
+          <ShareMenu convertToPng={this.convertToPng} />
+        ) : null}
+        <ShareIcon onClick={() => this.setState({ shareMenu: true })} />
+        {this.state.shareMenu ? (
+          <CloseShareMenuIcon
+            onClick={() => this.setState({ shareMenu: false })}
+          />
+        ) : null}
+        <img src={this.state.sigilPng} />
       </div>
     );
   }
 }
-
-const cell = {
-  borderRadius: 4,
-  background: "white",
-  display: "flex",
-  flexWrap: "wrap",
-  alignItems: "center",
-  width: "100%"
-};
 
 export default App;
