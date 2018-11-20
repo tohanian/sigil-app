@@ -48,35 +48,39 @@ const SigilOptions = props => (
   </div>
 );
 
-export const SwatchOptions = props =>
-  Object.keys(colors).map((color, i) => {
-    const C = colors[color];
-    return (
-      <div
-        value={color}
-        className="color"
-        onClick={props.onClick}
-        key={i}
-        style={{ padding: 6, cursor: "pointer" }}
-      >
-        <C
-          onClick={props.onClick}
-          className="color"
-          key={i}
+const SwatchOptions = props => (
+  <div style={{ display: "flex", flexWrap: "wrap" }}>
+    {Object.keys(colors).map((color, i) => {
+      const C = colors[color];
+      return (
+        <div
           value={color}
-          index={i}
-          size="25"
-          foregroundColor="black"
-        />
-      </div>
-    );
-  });
+          className="color"
+          onClick={props.onClick}
+          key={i}
+          style={{ padding: 6, cursor: "pointer" }}
+        >
+          <C
+            onClick={props.onClick}
+            className="color"
+            key={i}
+            value={color}
+            index={i}
+            size="25"
+            foregroundColor="black"
+          />
+        </div>
+      );
+    })}
+  </div>
+);
 
 const BannerOptions = props => <div>Banner Options</div>;
 
 const TextOptions = props => <div>Text Options</div>;
 
 const Selectors = props => {
+  console.log(props);
   return (
     <div
       style={{
@@ -91,10 +95,9 @@ const Selectors = props => {
         }}
         onClick={props.onClick("previous")}
       >
-        {props.option === "sigilOptions" ? null : (
-          <i className="fa fa-chevron-left" aria-hidden="true" />
-        )}
+        <i className="fa fa-chevron-left" aria-hidden="true" />
       </div>
+      <div style={{ marginTop: 5 }}> {props.name} </div>
       <div
         style={{
           width: "20px",
@@ -110,31 +113,43 @@ const Selectors = props => {
 
 const ClipBoard = props => {
   const [option, setOption] = useState("sigilOptions");
-
+  const [name, setName] = useState("Sigil");
   const selectorOnClick = selection => () => {
     switch (option) {
       case "sigilOptions":
         if (selection === "next") {
-          setOption("bannerOptions");
+          setOption("swatchOptions");
+          setName("Swatch");
+        } else {
+          setOption("textOptions");
+          setName("Text");
         }
         break;
       case "bannerOptions":
         if (selection === "previous") {
-          setOption("sigilOptions");
+          setOption("swatchOptions");
+          setName("Swatch");
         } else {
           setOption("textOptions");
+          setName("Text");
         }
         break;
       case "swatchOptions":
         if (selection === "previous") {
           setOption("sigilOptions");
+          setName("Sigil");
         } else {
-          setOption("swatchOptions");
+          setOption("bannerOptions");
+          setName("Banner Text");
         }
         break;
       case "textOptions":
         if (selection === "previous") {
           setOption("bannerOptions");
+          setName("Banner Text");
+        } else {
+          setOption("sigilOptions");
+          setName("Sigil");
         }
         break;
       default:
@@ -144,7 +159,7 @@ const ClipBoard = props => {
 
   return (
     <div style={cell}>
-      <Selectors onClick={selectorOnClick} option={option} />
+      <Selectors name={name} onClick={selectorOnClick} option={option} />
       <OptionSet {...props} optionSet={option} />
     </div>
   );

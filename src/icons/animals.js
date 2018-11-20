@@ -10,7 +10,7 @@ export const Bat = ({
   textColor = "black"
 }) => (
   <svg width={size} name="Bat" value="Bat" viewBox="0 0 512 512">
-    <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0`" />
+    <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
     <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
       {houseText}
     </text>

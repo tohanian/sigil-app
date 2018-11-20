@@ -5,7 +5,7 @@ import canvg from "canvg";
 import { svgAsPngUri } from "save-svg-as-png";
 
 // Components
-import ClipBoard, { SwatchOptions } from "./components/ClipBoard";
+import ClipBoard from "./components/ClipBoard";
 import ShareIcon from "./components/ShareIcon";
 import ShareMenu from "./components/ShareMenu";
 import CloseShareMenuIcon from "./components/CloseShareMenuIcon";
@@ -58,7 +58,7 @@ class App extends Component {
     const { text, icon, color } = this.state;
     return (
       <div className="App" style={{ position: "relative" }}>
-        <LargeImage text={this.state.text} icon={this.state.icon} />
+        <LargeImage foregroundColor={color} text={text} icon={icon} />
         <ClipBoard onClick={this.onClick} />
         {this.state.shareMenu ? (
           <ShareMenu convertToPng={this.convertToPng} />
