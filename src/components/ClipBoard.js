@@ -215,7 +215,11 @@ const cell = {
   borderRadius: 4,
   background: "lightgrey",
   alignItems: "center",
-  width: "100%"
+  width: "100%",
+  position: "fixed",
+  bottom: 0,
+  left: 0,
+  right: 0
 };
 
 export default ClipBoard;
