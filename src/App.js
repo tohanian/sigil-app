@@ -84,10 +84,12 @@ class App extends Component {
           <ShareMenu
             onClick={() => this.setState({ shareMenu: false })}
             convertToPng={this.convertToPng}
+            src={this.state.sigilPng}
           />
         ) : null}
-        <ShareIcon onClick={() => this.setState({ shareMenu: true })} />
-        <img width="200" height="200" alt="" src={this.state.sigilPng} />
+        <ShareIcon
+          onClick={() => this.setState({ shareMenu: true }, this.convertToPng)}
+        />
       </div>
     );
   }
