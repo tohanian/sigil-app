@@ -1,4 +1,5 @@
 import * as React from "react";
+import css from "../App.css";
 
 export const Bat = ({
   foregroundColor = "#fff",
@@ -6,12 +7,20 @@ export const Bat = ({
   size = 200,
   stroke,
   houseText,
-  sloganText = null,
-  textColor = "black"
+  sloganText,
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} name="Bat" value="Bat" viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      x="50%"
+      y="10%"
+      className={fontClassName}
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -23,7 +32,14 @@ export const Bat = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>

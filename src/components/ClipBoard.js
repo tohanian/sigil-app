@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import * as icons from "../icons/animals";
 import * as colors from "../icons/ColorSwatches";
-
+import * as fonts from "../icons/fonts";
 const OptionSet = props => {
   const optionSets = {
     sigilOptions: <SigilOptions {...props} />,
     swatchOptions: <SwatchOptions {...props} />,
     bannerOptions: <BannerOptions {...props} />,
-    textOptions: <TextOptions {...props} />
+    textOptions: <TextOptions {...props} />,
+    fontOptions: <FontOptions {...props} />
   };
   if (props.optionSet) {
     return optionSets[props.optionSet];
@@ -18,6 +19,33 @@ const OptionSet = props => {
     </div>
   );
 };
+
+const FontOptions = props => (
+  <div style={{ display: "flex", flexWrap: "wrap" }}>
+    {Object.keys(fonts).map((font, i) => {
+      const C = fonts[font];
+
+      return (
+        <div
+          value={font}
+          onClick={props.onFontSelect}
+          key={i}
+          style={{ padding: 12, cursor: "pointer" }}
+        >
+          <C
+            onClick={props.onFontSelect}
+            name={font}
+            key={i}
+            value="icon"
+            index={i}
+            size="25"
+            foregroundColor="black"
+          />
+        </div>
+      );
+    })}
+  </div>
+);
 
 const SigilOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
@@ -130,8 +158,8 @@ const ClipBoard = props => {
           setOption("swatchOptions");
           setName("Swatch");
         } else {
-          setOption("textOptions");
-          setName("Text");
+          setOption("fontOptions");
+          setName("Font");
         }
         break;
       case "bannerOptions":
@@ -156,6 +184,15 @@ const ClipBoard = props => {
         if (selection === "previous") {
           setOption("bannerOptions");
           setName("Banner Text");
+        } else {
+          setOption("fontOptions");
+          setName("Font");
+        }
+        break;
+      case "fontOptions":
+        if (selection === "previous") {
+          setOption("textOptions");
+          setName("Text");
         } else {
           setOption("sigilOptions");
           setName("Sigil");

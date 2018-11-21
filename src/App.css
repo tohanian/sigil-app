@@ -25,3 +25,8 @@
 a:active {
   color: red;
 }
+
+.Raleway {
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 400;
+}
