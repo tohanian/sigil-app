@@ -26,6 +26,7 @@ const LargeImage = props => {
           sloganText={props.sloganText}
           foregroundColor={props.foregroundColor}
           stroke={props.stroke}
+          textColor={props.textColor}
         />
       ) : null;
     return iconic;
@@ -41,7 +42,8 @@ class App extends Component {
     color: "red",
     fontClassName: null,
     stroke: null,
-    houseText: "HOUSE RUDASHEVSKI"
+    houseText: "HOUSE RUDASHEVSKI",
+    textColor: null
   };
 
   onClick = event => {
@@ -75,8 +77,20 @@ class App extends Component {
     this.setState({ fontClassName: event.target.className });
   };
 
+  onFontColorClick = event => {
+    this.setState({ textColor: event.currentTarget.attributes[0].value });
+  };
+
   render() {
-    const { text, icon, color, fontClassName, stroke, houseText } = this.state;
+    const {
+      text,
+      icon,
+      color,
+      fontClassName,
+      stroke,
+      houseText,
+      textColor
+    } = this.state;
     return (
       <div className="App" style={{ position: "relative" }}>
         <LargeImage
@@ -86,6 +100,7 @@ class App extends Component {
           icon={icon}
           stroke={stroke}
           houseText={houseText}
+          textColor={textColor}
         />
         <ClipBoard
           onFontSelect={this.onFontSelect}
@@ -93,6 +108,7 @@ class App extends Component {
           onClick={this.onClick}
           onOutlineClick={this.onOutlineClick}
           onHouseTextChange={this.onHouseTextChange}
+          onFontColorClick={this.onFontColorClick}
         />
         {this.state.shareMenu ? (
           <ShareMenu

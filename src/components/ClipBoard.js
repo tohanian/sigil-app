@@ -9,6 +9,7 @@ const OptionSet = props => {
     bannerOptions: <BannerOptions {...props} />,
     textOptions: <TextOptions {...props} />,
     fontOptions: <FontOptions {...props} />,
+    fontColor: <FontColor {...props} />,
     outlineOptions: <OutlineOptions {...props} />
   };
   if (props.optionSet) {
@@ -131,6 +132,33 @@ const OutlineOptions = props => (
   </div>
 );
 
+const FontColor = props => (
+  <div style={{ display: "flex", flexWrap: "wrap" }}>
+    {Object.keys(colors).map((color, i) => {
+      const C = colors[color];
+      return (
+        <div
+          value={color}
+          className="color"
+          onClick={props.onFontColorClick}
+          key={i}
+          style={{ padding: 6, cursor: "pointer" }}
+        >
+          <C
+            onClick={props.onFontColorClick}
+            className="color"
+            key={i}
+            value={color}
+            index={i}
+            size="25"
+            foregroundColor="black"
+          />
+        </div>
+      );
+    })}
+  </div>
+);
+
 const BannerOptions = props => {
   return <input onChange={props.onHouseTextChange} />;
 };
@@ -188,8 +216,8 @@ const ClipBoard = props => {
           setOption("swatchOptions");
           setName("Swatch");
         } else {
-          setOption("fontOptions");
-          setName("Font");
+          setOption("fontColor");
+          setName("Font Color");
         }
         break;
       case "bannerOptions":
@@ -198,7 +226,7 @@ const ClipBoard = props => {
           setName("Outline");
         } else {
           setOption("textOptions");
-          setName("Text");
+          setName("Slogan Text");
         }
         break;
       case "swatchOptions":
@@ -231,7 +259,16 @@ const ClipBoard = props => {
       case "fontOptions":
         if (selection === "previous") {
           setOption("textOptions");
-          setName("Text");
+          setName("Slogan Text");
+        } else {
+          setOption("fontColor");
+          setName("Font Color");
+        }
+        break;
+      case "fontColor":
+        if (selection === "previous") {
+          setOption("fontOptions");
+          setName("Font");
         } else {
           setOption("sigilOptions");
           setName("Sigil");

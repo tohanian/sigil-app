@@ -8,7 +8,7 @@ export const Bat = ({
   stroke,
   houseText,
   sloganText,
-  textColor = "black",
+  textColor,
   fontClassName
 }) => (
   <svg width={size} name="Bat" value="Bat" viewBox="0 0 512 512">
@@ -93,9 +93,9 @@ export const Chicken = ({
   backgroundColor = "white",
   size = 200,
   stroke,
-  houseText = null,
-  sloganText = null,
-  textColor = "black",
+  houseText,
+  sloganText,
+  textColor,
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
