@@ -33,6 +33,10 @@ const LargeImage = props => {
   });
 };
 
+const Header = props => {
+  return <div className="App-header"> SIGILS </div>;
+};
+
 class App extends Component {
   state = {
     icon: "Bat",
@@ -92,7 +96,8 @@ class App extends Component {
       textColor
     } = this.state;
     return (
-      <div className="App" style={{ position: "relative" }}>
+      <div className="App">
+        <Header />
         <LargeImage
           fontClassName={fontClassName}
           foregroundColor={color}

@@ -294,6 +294,7 @@ const cell = {
   width: "100%",
   height: "20%",
   position: "fixed",
+  overflow: "scroll",
   bottom: 0,
   left: 0,
   right: 0
