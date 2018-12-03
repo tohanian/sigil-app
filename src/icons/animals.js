@@ -52,11 +52,19 @@ export const Cat = ({
   stroke,
   houseText = null,
   sloganText = null,
-  textColor = "black"
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="10%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -67,7 +75,14 @@ export const Cat = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>
@@ -80,11 +95,19 @@ export const Chicken = ({
   stroke,
   houseText = null,
   sloganText = null,
-  textColor = "black"
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="10%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -95,7 +118,14 @@ export const Chicken = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>
@@ -108,11 +138,19 @@ export const Cricket = ({
   stroke,
   houseText = null,
   sloganText = null,
-  textColor = "black"
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="10%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -123,7 +161,14 @@ export const Cricket = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>
@@ -136,11 +181,19 @@ export const Eagle = ({
   stroke,
   houseText = null,
   sloganText = null,
-  textColor = "black"
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="10%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -151,7 +204,14 @@ export const Eagle = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>
@@ -164,11 +224,19 @@ export const Elephant = ({
   stroke,
   houseText = null,
   sloganText = null,
-  textColor = "black"
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="10%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -179,7 +247,14 @@ export const Elephant = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>
@@ -192,11 +267,19 @@ export const Hound = ({
   stroke,
   houseText = null,
   sloganText = null,
-  textColor = "black"
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="10%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -207,7 +290,14 @@ export const Hound = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>
@@ -219,11 +309,19 @@ export const Owl = ({
   stroke,
   houseText = null,
   sloganText = null,
-  textColor = "black"
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="10%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -234,7 +332,14 @@ export const Owl = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>
@@ -247,11 +352,19 @@ export const Scarab = ({
   stroke,
   houseText = null,
   sloganText = null,
-  textColor = "black"
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="10%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -262,7 +375,14 @@ export const Scarab = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>
@@ -275,11 +395,19 @@ export const Shark = ({
   stroke,
   houseText = null,
   sloganText = null,
-  textColor = "black"
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="10%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -290,7 +418,14 @@ export const Shark = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>
@@ -302,11 +437,19 @@ export const Tiger = ({
   stroke,
   houseText = null,
   sloganText = null,
-  textColor = "black"
+  textColor = "black",
+  fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
     <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
-    <text x="50%" y="10%" textAnchor="middle" fontSize="40px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="10%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
       {houseText}
     </text>
     <path
@@ -317,7 +460,14 @@ export const Tiger = ({
       strokeOpacity="1"
       strokeWidth="8"
     />
-    <text x="50%" y="95%" textAnchor="middle" fontSize="20px" fill={textColor}>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="20px"
+      fill={textColor}
+    >
       {sloganText}
     </text>
   </svg>
