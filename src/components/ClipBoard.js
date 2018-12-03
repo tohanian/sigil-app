@@ -216,6 +216,7 @@ const cell = {
   background: "lightgrey",
   alignItems: "center",
   width: "100%",
+  height: "20%",
   position: "fixed",
   bottom: 0,
   left: 0,
