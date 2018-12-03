@@ -60,7 +60,7 @@ export const Cat = ({
     <text
       className={fontClassName}
       x="50%"
-      y="10%"
+      y="6%"
       textAnchor="middle"
       fontSize="40px"
       fill={textColor}
@@ -103,7 +103,7 @@ export const Chicken = ({
     <text
       className={fontClassName}
       x="50%"
-      y="10%"
+      y="6%"
       textAnchor="middle"
       fontSize="40px"
       fill={textColor}
@@ -189,7 +189,7 @@ export const Eagle = ({
     <text
       className={fontClassName}
       x="50%"
-      y="10%"
+      y="6%"
       textAnchor="middle"
       fontSize="40px"
       fill={textColor}
@@ -207,7 +207,7 @@ export const Eagle = ({
     <text
       className={fontClassName}
       x="50%"
-      y="95%"
+      y="100%"
       textAnchor="middle"
       fontSize="20px"
       fill={textColor}
@@ -232,7 +232,7 @@ export const Elephant = ({
     <text
       className={fontClassName}
       x="50%"
-      y="10%"
+      y="6%"
       textAnchor="middle"
       fontSize="40px"
       fill={textColor}
@@ -250,7 +250,7 @@ export const Elephant = ({
     <text
       className={fontClassName}
       x="50%"
-      y="95%"
+      y="97%"
       textAnchor="middle"
       fontSize="20px"
       fill={textColor}
@@ -275,7 +275,7 @@ export const Hound = ({
     <text
       className={fontClassName}
       x="50%"
-      y="10%"
+      y="6%"
       textAnchor="middle"
       fontSize="40px"
       fill={textColor}
@@ -293,7 +293,7 @@ export const Hound = ({
     <text
       className={fontClassName}
       x="50%"
-      y="95%"
+      y="99%"
       textAnchor="middle"
       fontSize="20px"
       fill={textColor}
@@ -317,9 +317,9 @@ export const Owl = ({
     <text
       className={fontClassName}
       x="50%"
-      y="10%"
+      y="6%"
       textAnchor="middle"
-      fontSize="40px"
+      fontSize="30px"
       fill={textColor}
     >
       {houseText}
@@ -335,7 +335,7 @@ export const Owl = ({
     <text
       className={fontClassName}
       x="50%"
-      y="95%"
+      y="99%"
       textAnchor="middle"
       fontSize="20px"
       fill={textColor}
@@ -445,7 +445,7 @@ export const Tiger = ({
     <text
       className={fontClassName}
       x="50%"
-      y="10%"
+      y="5%"
       textAnchor="middle"
       fontSize="40px"
       fill={textColor}
