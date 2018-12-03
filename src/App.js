@@ -24,7 +24,7 @@ const LargeImage = props => {
           fontClassName={props.fontClassName}
           sloganText={props.sloganText}
           foregroundColor={props.foregroundColor}
-          stroke="blue"
+          stroke={props.stroke}
         />
       ) : null;
     return iconic;
@@ -38,7 +38,8 @@ class App extends Component {
     shareMenu: false,
     sigilPng: null,
     color: "red",
-    fontClassName: null
+    fontClassName: null,
+    stroke: null
   };
 
   onClick = event => {
@@ -46,6 +47,10 @@ class App extends Component {
       [event.currentTarget.attributes[1].value]:
         event.currentTarget.attributes[0].value
     });
+  };
+
+  onOutlineClick = event => {
+    this.setState({ stroke: event.currentTarget.attributes[0].value });
   };
 
   convertToPng = () => {
@@ -65,7 +70,7 @@ class App extends Component {
   };
 
   render() {
-    const { text, icon, color, fontClassName } = this.state;
+    const { text, icon, color, fontClassName, stroke } = this.state;
     console.log(text);
     return (
       <div className="App" style={{ position: "relative" }}>
@@ -74,11 +79,13 @@ class App extends Component {
           foregroundColor={color}
           sloganText={text}
           icon={icon}
+          stroke={stroke}
         />
         <ClipBoard
           onFontSelect={this.onFontSelect}
           onChange={this.onChange}
           onClick={this.onClick}
+          onOutlineClick={this.onOutlineClick}
         />
         {this.state.shareMenu ? (
           <ShareMenu

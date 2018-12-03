@@ -8,7 +8,8 @@ const OptionSet = props => {
     swatchOptions: <SwatchOptions {...props} />,
     bannerOptions: <BannerOptions {...props} />,
     textOptions: <TextOptions {...props} />,
-    fontOptions: <FontOptions {...props} />
+    fontOptions: <FontOptions {...props} />,
+    outlineOptions: <OutlineOptions {...props} />
   };
   if (props.optionSet) {
     return optionSets[props.optionSet];
@@ -103,6 +104,33 @@ const SwatchOptions = props => (
   </div>
 );
 
+const OutlineOptions = props => (
+  <div style={{ display: "flex", flexWrap: "wrap" }}>
+    {Object.keys(colors).map((color, i) => {
+      const C = colors[color];
+      return (
+        <div
+          value={color}
+          className="color"
+          onClick={props.onOutlineClick}
+          key={i}
+          style={{ padding: 6, cursor: "pointer" }}
+        >
+          <C
+            onClick={props.onOutlineClick}
+            className="color"
+            key={i}
+            value={color}
+            index={i}
+            size="25"
+            foregroundColor="black"
+          />
+        </div>
+      );
+    })}
+  </div>
+);
+
 const BannerOptions = props => <div>Banner Options</div>;
 
 const TextOptions = props => {
@@ -164,8 +192,8 @@ const ClipBoard = props => {
         break;
       case "bannerOptions":
         if (selection === "previous") {
-          setOption("swatchOptions");
-          setName("Swatch");
+          setOption("outlineOptions");
+          setName("Outline");
         } else {
           setOption("textOptions");
           setName("Text");
@@ -175,6 +203,15 @@ const ClipBoard = props => {
         if (selection === "previous") {
           setOption("sigilOptions");
           setName("Sigil");
+        } else {
+          setOption("outlineOptions");
+          setName("Outline Color");
+        }
+        break;
+      case "outlineOptions":
+        if (selection === "previous") {
+          setOption("swatchOptions");
+          setName("Swatch");
         } else {
           setOption("bannerOptions");
           setName("Banner Text");
