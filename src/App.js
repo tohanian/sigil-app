@@ -21,6 +21,7 @@ const LargeImage = props => {
           value={`icon-${1}`}
           index={i}
           size="250"
+          houseText={props.houseText}
           fontClassName={props.fontClassName}
           sloganText={props.sloganText}
           foregroundColor={props.foregroundColor}
@@ -39,7 +40,8 @@ class App extends Component {
     sigilPng: null,
     color: "red",
     fontClassName: null,
-    stroke: null
+    stroke: null,
+    houseText: "HOUSE RUDASHEVSKI"
   };
 
   onClick = event => {
@@ -65,13 +67,16 @@ class App extends Component {
     this.setState({ text: event.target.value });
   };
 
+  onHouseTextChange = event => {
+    this.setState({ houseText: event.target.value });
+  };
+
   onFontSelect = event => {
     this.setState({ fontClassName: event.target.className });
   };
 
   render() {
-    const { text, icon, color, fontClassName, stroke } = this.state;
-    console.log(text);
+    const { text, icon, color, fontClassName, stroke, houseText } = this.state;
     return (
       <div className="App" style={{ position: "relative" }}>
         <LargeImage
@@ -80,12 +85,14 @@ class App extends Component {
           sloganText={text}
           icon={icon}
           stroke={stroke}
+          houseText={houseText}
         />
         <ClipBoard
           onFontSelect={this.onFontSelect}
           onChange={this.onChange}
           onClick={this.onClick}
           onOutlineClick={this.onOutlineClick}
+          onHouseTextChange={this.onHouseTextChange}
         />
         {this.state.shareMenu ? (
           <ShareMenu

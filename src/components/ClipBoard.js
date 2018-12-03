@@ -131,7 +131,9 @@ const OutlineOptions = props => (
   </div>
 );
 
-const BannerOptions = props => <div>Banner Options</div>;
+const BannerOptions = props => {
+  return <input onChange={props.onHouseTextChange} />;
+};
 
 const TextOptions = props => {
   return <input onChange={props.onChange} />;
