@@ -56,13 +56,12 @@ export const Cat = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
     <text
       className={fontClassName}
       x="50%"
-      y="6%"
+      y="5%"
       textAnchor="middle"
-      fontSize="40px"
+      fontSize="30px"
       fill={textColor}
     >
       {houseText}
@@ -99,13 +98,12 @@ export const Chicken = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
     <text
       className={fontClassName}
       x="50%"
-      y="6%"
+      y="5%"
       textAnchor="middle"
-      fontSize="40px"
+      fontSize="30px"
       fill={textColor}
     >
       {houseText}
@@ -121,7 +119,7 @@ export const Chicken = ({
     <text
       className={fontClassName}
       x="50%"
-      y="95%"
+      y="96%"
       textAnchor="middle"
       fontSize="20px"
       fill={textColor}
@@ -185,13 +183,12 @@ export const Eagle = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
     <text
       className={fontClassName}
       x="50%"
-      y="6%"
+      y="5%"
       textAnchor="middle"
-      fontSize="40px"
+      fontSize="30px"
       fill={textColor}
     >
       {houseText}
@@ -228,13 +225,12 @@ export const Elephant = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
     <text
       className={fontClassName}
       x="50%"
-      y="6%"
+      y="5%"
       textAnchor="middle"
-      fontSize="40px"
+      fontSize="30px"
       fill={textColor}
     >
       {houseText}
@@ -250,7 +246,7 @@ export const Elephant = ({
     <text
       className={fontClassName}
       x="50%"
-      y="97%"
+      y="99%"
       textAnchor="middle"
       fontSize="20px"
       fill={textColor}
@@ -313,7 +309,6 @@ export const Owl = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
     <text
       className={fontClassName}
       x="50%"

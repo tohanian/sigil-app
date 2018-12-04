@@ -96,36 +96,40 @@ class App extends Component {
       textColor
     } = this.state;
     return (
-      <div className="App">
+      <React.Fragment>
         <Header />
-        <LargeImage
-          fontClassName={fontClassName}
-          foregroundColor={color}
-          sloganText={text}
-          icon={icon}
-          stroke={stroke}
-          houseText={houseText}
-          textColor={textColor}
-        />
-        <ClipBoard
-          onFontSelect={this.onFontSelect}
-          onChange={this.onChange}
-          onClick={this.onClick}
-          onOutlineClick={this.onOutlineClick}
-          onHouseTextChange={this.onHouseTextChange}
-          onFontColorClick={this.onFontColorClick}
-        />
-        {this.state.shareMenu ? (
-          <ShareMenu
-            onClick={() => this.setState({ shareMenu: false })}
-            convertToPng={this.convertToPng}
-            src={this.state.sigilPng}
+        <div className="App">
+          <LargeImage
+            fontClassName={fontClassName}
+            foregroundColor={color}
+            sloganText={text}
+            icon={icon}
+            stroke={stroke}
+            houseText={houseText}
+            textColor={textColor}
           />
-        ) : null}
-        <ShareIcon
-          onClick={() => this.setState({ shareMenu: true }, this.convertToPng)}
-        />
-      </div>
+          <ClipBoard
+            onFontSelect={this.onFontSelect}
+            onChange={this.onChange}
+            onClick={this.onClick}
+            onOutlineClick={this.onOutlineClick}
+            onHouseTextChange={this.onHouseTextChange}
+            onFontColorClick={this.onFontColorClick}
+          />
+          {this.state.shareMenu ? (
+            <ShareMenu
+              onClick={() => this.setState({ shareMenu: false })}
+              convertToPng={this.convertToPng}
+              src={this.state.sigilPng}
+            />
+          ) : null}
+          <ShareIcon
+            onClick={() =>
+              this.setState({ shareMenu: true }, this.convertToPng)
+            }
+          />
+        </div>
+      </React.Fragment>
     );
   }
 }

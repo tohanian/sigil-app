@@ -289,8 +289,11 @@ const ClipBoard = props => {
 
 const cell = {
   borderRadius: 4,
-  background: "lightgrey",
+  background: "#FFDC00",
   alignItems: "center",
+  paddingTop: "10px",
+  paddingLeft: "5px",
+  paddingRight: "5px",
   width: "100%",
   height: "20%",
   position: "fixed",
