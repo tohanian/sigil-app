@@ -39,7 +39,7 @@ const Header = props => {
 
 class App extends Component {
   state = {
-    icon: "Bat",
+    icon: "Cat",
     text: "Coolio",
     shareMenu: false,
     sigilPng: null,

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as icons from "../icons/animals";
+import * as keyboardAnimals from "../icons/keyboardAnimals";
 import * as colors from "../icons/ColorSwatches";
 import * as fonts from "../icons/fonts";
 const OptionSet = props => {
@@ -51,8 +52,8 @@ const FontOptions = props => (
 
 const SigilOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
-    {Object.keys(icons).map((icon, i) => {
-      const C = icons[icon];
+    {Object.keys(keyboardAnimals).map((icon, i) => {
+      const C = keyboardAnimals[icon];
 
       return (
         <div
