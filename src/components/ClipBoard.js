@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import * as icons from "../icons/animals";
 import * as keyboardAnimals from "../icons/keyboardAnimals";
-import * as colors from "../icons/ColorSwatches";
+import * as colorz from "../icons/ColorSwatches";
 import * as fonts from "../icons/fonts";
+import css from "../App.css";
+
 const OptionSet = props => {
   const optionSets = {
     sigilOptions: <SigilOptions {...props} />,
@@ -81,8 +83,8 @@ const SigilOptions = props => (
 
 const SwatchOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
-    {Object.keys(colors).map((color, i) => {
-      const C = colors[color];
+    {Object.keys(colorz).map((color, i) => {
+      const C = colorz[color];
       return (
         <div
           value={color}
@@ -108,8 +110,8 @@ const SwatchOptions = props => (
 
 const OutlineOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
-    {Object.keys(colors).map((color, i) => {
-      const C = colors[color];
+    {Object.keys(colorz).map((color, i) => {
+      const C = colorz[color];
       return (
         <div
           value={color}
@@ -135,8 +137,8 @@ const OutlineOptions = props => (
 
 const FontColor = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
-    {Object.keys(colors).map((color, i) => {
-      const C = colors[color];
+    {Object.keys(colorz).map((color, i) => {
+      const C = colorz[color];
       return (
         <div
           value={color}
@@ -290,7 +292,7 @@ const ClipBoard = props => {
 
 const cell = {
   borderRadius: 4,
-  background: "#FFDC00",
+  background: "#DDDDDD",
   alignItems: "center",
   paddingTop: "10px",
   width: "100%",

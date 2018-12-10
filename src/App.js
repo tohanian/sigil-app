@@ -38,17 +38,38 @@ const Header = props => {
 };
 
 class App extends Component {
-  state = {
-    icon: "Cat",
-    text: "Coolio",
-    shareMenu: false,
-    sigilPng: null,
-    color: "red",
-    fontClassName: null,
-    stroke: null,
-    houseText: "HOUSE RUDASHEVSKI",
-    textColor: null
-  };
+  constructor() {
+    super();
+    window.colors = {
+      red: "#FF4136",
+      orange: "#FF851B",
+      yellow: "#FFDC00",
+      lime: "#01FF70",
+      green: "#2ECC40",
+      olive: "#3D9970",
+      aqua: "#7FDBFF",
+      teal: "#39CCCC",
+      blue: "#0074D9",
+      navy: "#001f3f",
+      fuschia: "#F012BE",
+      purple: "#B10DC9",
+      black: "#111111",
+      maroon: "#85144b",
+      gray: "#AAAAAA",
+      white: "white"
+    };
+    this.state = {
+      icon: "Cat",
+      text: "Coolio",
+      shareMenu: false,
+      sigilPng: null,
+      color: "red",
+      fontClassName: null,
+      stroke: null,
+      houseText: "HOUSE RUDASHEVSKI",
+      textColor: null
+    };
+  }
 
   onClick = event => {
     this.setState({
