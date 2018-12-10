@@ -29,7 +29,6 @@ const FontOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
     {Object.keys(fonts).map((font, i) => {
       const C = fonts[font];
-
       return (
         <div
           value={font}
@@ -85,9 +84,10 @@ const SwatchOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
     {Object.keys(colorz).map((color, i) => {
       const C = colorz[color];
+      const A = window.colors[color];
       return (
         <div
-          value={color}
+          value={A}
           className="color"
           onClick={props.onClick}
           key={i}
@@ -97,7 +97,7 @@ const SwatchOptions = props => (
             onClick={props.onClick}
             className="color"
             key={i}
-            value={color}
+            value={A}
             index={i}
             size="25"
             foregroundColor="black"
@@ -112,9 +112,10 @@ const OutlineOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
     {Object.keys(colorz).map((color, i) => {
       const C = colorz[color];
+      const A = window.colors[color];
       return (
         <div
-          value={color}
+          value={A}
           className="color"
           onClick={props.onOutlineClick}
           key={i}
@@ -124,7 +125,7 @@ const OutlineOptions = props => (
             onClick={props.onOutlineClick}
             className="color"
             key={i}
-            value={color}
+            value={A}
             index={i}
             size="25"
             foregroundColor="black"
@@ -139,9 +140,10 @@ const FontColor = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
     {Object.keys(colorz).map((color, i) => {
       const C = colorz[color];
+      const A = window.colors[color];
       return (
         <div
-          value={color}
+          value={A}
           className="color"
           onClick={props.onFontColorClick}
           key={i}
@@ -151,7 +153,7 @@ const FontColor = props => (
             onClick={props.onFontColorClick}
             className="color"
             key={i}
-            value={color}
+            value={A}
             index={i}
             size="25"
             foregroundColor="black"
