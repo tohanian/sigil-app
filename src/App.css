@@ -33,6 +33,9 @@ input {
     margin: 0 0 10px 0;
 }
 
+.Charmonman {
+  font-family: "Charmonman", cursive !important;
+}
 .Raleway {
   font-family: "Raleway", sans-serif !important;
   font-weight: 400;
@@ -40,6 +43,10 @@ input {
 
 .Lato {
   font-family: "Lato", sans-serif !important;
+}
+
+.GamjaFlower {
+  font-family: "Gamja Flower", cursive
 }
 
 .Merriweather {
@@ -50,8 +57,15 @@ input {
   font-family: "Montserrat", sans-serif !important;
 }
 
+.OpenSans {
+  font-family: "Open Sans", sans-serif !important;
+}
 .Oswald {
   font-family: "Oswald", sans-serif !important;
+}
+
+.PlayfairDisplay {
+  font-family: "Playfair Display", serif;
 }
 
 .Poppins {

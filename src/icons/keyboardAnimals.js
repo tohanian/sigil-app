@@ -36,7 +36,7 @@ export const Bat = ({
       x="50%"
       y="95%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
@@ -78,7 +78,7 @@ export const Cat = ({
       x="50%"
       y="95%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
@@ -120,7 +120,7 @@ export const Chicken = ({
       x="50%"
       y="96%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
@@ -163,7 +163,7 @@ export const Cricket = ({
       x="50%"
       y="95%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
@@ -205,7 +205,7 @@ export const Eagle = ({
       x="50%"
       y="95%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
@@ -247,7 +247,7 @@ export const Elephant = ({
       x="50%"
       y="99%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
@@ -289,7 +289,7 @@ export const Hound = ({
       x="50%"
       y="99%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
@@ -330,7 +330,7 @@ export const Owl = ({
       x="50%"
       y="99%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
@@ -372,7 +372,7 @@ export const Scarab = ({
       x="50%"
       y="95%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
@@ -414,7 +414,7 @@ export const Shark = ({
       x="50%"
       y="95%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
@@ -455,7 +455,7 @@ export const Tiger = ({
       x="50%"
       y="95%"
       textAnchor="middle"
-      fontSize="20px"
+      fontSize="30px"
       fill={textColor}
     >
       {sloganText}
