@@ -19,7 +19,12 @@ const OptionSet = props => {
     return optionSets[props.optionSet];
   }
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap"
+      }}
+    >
       <SigilOptions {...props} />
     </div>
   );
@@ -91,7 +96,7 @@ const SwatchOptions = props => (
           className="color"
           onClick={props.onClick}
           key={i}
-          style={{ padding: 6, cursor: "pointer" }}
+          style={{ padding: 8, cursor: "pointer" }}
         >
           <C
             onClick={props.onClick}
@@ -119,7 +124,7 @@ const OutlineOptions = props => (
           className="color"
           onClick={props.onOutlineClick}
           key={i}
-          style={{ padding: 6, cursor: "pointer" }}
+          style={{ padding: 8, cursor: "pointer" }}
         >
           <C
             onClick={props.onOutlineClick}
@@ -127,7 +132,6 @@ const OutlineOptions = props => (
             key={i}
             value={A}
             index={i}
-            size="25"
             foregroundColor="black"
           />
         </div>
@@ -147,7 +151,7 @@ const FontColor = props => (
           className="color"
           onClick={props.onFontColorClick}
           key={i}
-          style={{ padding: 6, cursor: "pointer" }}
+          style={{ padding: 8, cursor: "pointer" }}
         >
           <C
             onClick={props.onFontColorClick}
@@ -155,7 +159,6 @@ const FontColor = props => (
             key={i}
             value={A}
             index={i}
-            size="25"
             foregroundColor="black"
           />
         </div>
@@ -287,7 +290,9 @@ const ClipBoard = props => {
   return (
     <div style={cell}>
       <Selectors name={name} onClick={selectorOnClick} option={option} />
-      <OptionSet {...props} optionSet={option} />
+      <div style={{ marginLeft: "6px", marginRight: "6px" }}>
+        <OptionSet {...props} optionSet={option} />
+      </div>
     </div>
   );
 };
@@ -298,7 +303,7 @@ const cell = {
   alignItems: "center",
   paddingTop: "10px",
   width: "100%",
-  height: "20%",
+  height: "30%",
   position: "fixed",
   overflow: "scroll",
   bottom: 0,
