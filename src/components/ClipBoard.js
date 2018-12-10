@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as icons from "../icons/animals";
-import * as keyboardAnimals from "../icons/keyboardAnimals";
+import * as keyboardAnimals from "../icons/animals";
 import * as colorz from "../icons/ColorSwatches";
 import * as fonts from "../icons/fonts";
 import css from "../App.css";
@@ -76,7 +76,7 @@ const SigilOptions = props => (
             key={i}
             value="icon"
             index={i}
-            size="25"
+            size="40"
             foregroundColor="black"
           />
         </div>
