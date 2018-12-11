@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CloseShareMenuIcon from './CloseShareMenuIcon';
 import AWS from 'aws-sdk';
 import uuidv1 from 'uuid';
 import { blobToFile, dataUriToBlob } from '../util/helpers';
+import { FacebookShareButton } from 'react-share';
 
 const styles = {
   overlay: {
@@ -27,12 +28,26 @@ const awsConfig = {
 };
 
 const ShareMenu = props => {
+  const [mounted, setMount] = useState(false);
+  const [imageUrl, setImageUrl] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (!mounted && !imageUrl) {
+      uploadImage();
+      setMount(true);
+      console.log(mounted);
+    }
+  });
+
   const downloadImage = () => {
     uploadImage();
   };
 
+  console.log(mounted);
+
   const uploadImage = () => {
-    const fileBlob = dataUriTSoBlob(props.src);
+    const fileBlob = dataUriToBlob(props.src);
     const myFile = blobToFile(fileBlob, 'my-image.png');
 
     AWS.config.update({
@@ -55,22 +70,47 @@ const ShareMenu = props => {
         Bucket: awsConfig.albumBucketName,
         ACL: 'public-read-write'
       },
-      (error, _) => {
-        // TODO: add success/error handling
+      (uploadError, _) => {
+        if (!uploadError) {
+          setImageUrl(_.Location);
+        } else {
+        }
       }
     );
   };
+
+  const renderMenuItems = () => {
+    // TODO: add spinner here
+    if (!imageUrl && !error) {
+      return <span>Loading...</span>;
+    } else if (imageUrl && !error) {
+      return menuItems();
+    }
+    return <span>Sorry, the share menu is not available right now.</span>;
+  };
+
+  const menuItems = () => (
+    <ul>
+      <li>
+        <FacebookShareButton
+          quote={`${props.house}: ${props.quote}`}
+          hashtag="sigilz"
+          url={imageUrl}
+        >
+          <span>Share on Facebook</span>
+        </FacebookShareButton>
+      </li>
+      <li onClick={downloadImage}>Download Image</li>
+    </ul>
+  );
 
   return (
     <div style={styles.overlay}>
       <CloseShareMenuIcon onClick={props.onClick} />
       <div>
-        <ul>
-          <li>Share on FB</li>
-          <li onClick={downloadImage}>Download Image</li>
-        </ul>
+        <img width="200" height="200" alt="" src={props.src} />
+        {renderMenuItems()}
       </div>
-      <img width="200" height="200" alt="" src={props.src} />
     </div>
   );
 };
