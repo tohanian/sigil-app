@@ -6,7 +6,18 @@ export const red = ({ color = "#FF4136" }) => (
   </svg>
 );
 
+export const coral = ({ color = "#ff7675" }) => (
+  <svg className={color} width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
 export const orange = ({ color = "#FF851B" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+export const lightYellow = ({ color = "#ffeaa7" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
@@ -42,6 +53,12 @@ export const aqua = ({ color = "#7FDBFF" }) => (
   </svg>
 );
 
+export const lightBlue = ({ color = "#74b9ff" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
 export const teal = ({ color = "#39CCCC" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
@@ -65,6 +82,19 @@ export const fuschia = ({ color = "#F012BE" }) => (
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
 );
+
+export const lightPurple = ({ color = "#a29bfe" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
+export const mediumPurple = ({ color = "#6c5ce7" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
 export const purple = ({ color = "#B10DC9" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
@@ -83,7 +113,13 @@ export const maroon = ({ color = "#85144b" }) => (
   </svg>
 );
 
-export const gray = ({ color = "#AAAAAA" }) => (
+export const gray = ({ color = "#b2bec3" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
+export const silver = ({ color = "#AAAAAA" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>

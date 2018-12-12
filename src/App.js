@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import './App.css';
-import * as icons from './icons/animals';
-import canvg from 'canvg';
-import { svgAsPngUri } from 'save-svg-as-png';
+import React, { Component } from "react";
+import "./App.css";
+import * as icons from "./icons/animals";
+import canvg from "canvg";
+import { svgAsPngUri } from "save-svg-as-png";
 
 // Components
-import ClipBoard from './components/ClipBoard';
-import ShareIcon from './components/ShareIcon';
-import ShareMenu from './components/ShareMenu';
-import CloseShareMenuIcon from './components/CloseShareMenuIcon';
+import ClipBoard from "./components/ClipBoard";
+import ShareIcon from "./components/ShareIcon";
+import ShareMenu from "./components/ShareMenu";
+import CloseShareMenuIcon from "./components/CloseShareMenuIcon";
 
 const LargeImage = props => {
   return Object.keys(icons).map((icon, i) => {
@@ -41,32 +41,38 @@ class App extends Component {
   constructor() {
     super();
     window.colors = {
-      red: '#FF4136',
-      orange: '#FF851B',
-      yellow: '#FFDC00',
-      lime: '#01FF70',
-      green: '#2ECC40',
-      olive: '#3D9970',
-      aqua: '#7FDBFF',
-      teal: '#39CCCC',
-      blue: '#0074D9',
-      navy: '#001f3f',
-      fuschia: '#F012BE',
-      purple: '#B10DC9',
-      black: '#111111',
-      maroon: '#85144b',
-      gray: '#AAAAAA',
-      white: 'white'
+      red: "#FF4136",
+      coral: "#ff7675",
+      orange: "#FF851B",
+      lightYellow: "#ffeaa7",
+      yellow: "#FFDC00",
+      lime: "#01FF70",
+      green: "#2ECC40",
+      olive: "#3D9970",
+      aqua: "#7FDBFF",
+      lightBlue: "#74b9ff",
+      teal: "#39CCCC",
+      blue: "#0074D9",
+      navy: "#001f3f",
+      fuschia: "#F012BE",
+      mediumPurple: "#6c5ce7",
+      lightPurple: "#a29bfe",
+      purple: "#B10DC9",
+      black: "#111111",
+      maroon: "#85144b",
+      gray: "#AAAAAA",
+      silver: "#b2bec3",
+      white: "white"
     };
     this.state = {
-      icon: 'Cat',
-      text: 'Coolio',
+      icon: "Cat",
+      text: "Coolio",
       shareMenu: false,
       sigilPng: null,
-      color: 'red',
+      color: "red",
       fontClassName: null,
       stroke: null,
-      houseText: 'HOUSE RUDASHEVSKI',
+      houseText: "HOUSE RUDASHEVSKI",
       textColor: null
     };
   }
@@ -84,7 +90,7 @@ class App extends Component {
 
   convertToPng = () => {
     const that = this;
-    const svg = document.querySelector('svg');
+    const svg = document.querySelector("svg");
     svgAsPngUri(svg, {}, function(uri) {
       that.setState({ sigilPng: uri, shareMenu: true });
     });
