@@ -39,6 +39,9 @@ input {
     margin: 0 0 10px 0;
 }
 
+.Bungee {
+  font-family: "Bungee Shade", cursive !important;
+}
 .Charmonman {
   font-family: "Charmonman", cursive !important;
 }
@@ -51,8 +54,24 @@ input {
   font-family: "Lato", sans-serif !important;
 }
 
+.Lobster {
+  font-family: "Lobster", cursive !important;
+}
+
 .GamjaFlower {
-  font-family: "Gamja Flower", cursive
+  font-family: "Gamja Flower", cursive !important;
+}
+
+.Faster {
+  font-family: "Faster One", cursive !important;
+}
+
+.GloriaHallelujah {
+  font-family: "Gloria Hallelujah", cursive !important;
+}
+
+.IndieFlower {
+  font-family: "Indie Flower", cursive !important;
 }
 
 .Merriweather {
@@ -63,11 +82,19 @@ input {
   font-family: "Montserrat", sans-serif !important;
 }
 
+.NotoSerif {
+  font-family: "Noto Serif TC", serif !important;
+}
+
 .OpenSans {
   font-family: "Open Sans", sans-serif !important;
 }
 .Oswald {
   font-family: "Oswald", sans-serif !important;
+}
+
+.PermanentMarker {
+  font-family: "Permanent Marker", cursive !important;
 }
 
 .PlayfairDisplay {
@@ -80,6 +107,10 @@ input {
 
 .Roboto {
   font-family: "Roboto", sans-serif !important;
+}
+
+.SourceSansPro {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .Unlock {
