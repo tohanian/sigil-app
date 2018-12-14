@@ -7,7 +7,9 @@ import {
   FacebookShareButton,
   FacebookIcon,
   WhatsappShareButton,
-  WhatsappIcon
+  WhatsappIcon,
+  TwitterShareButton,
+  TwitterIcon
 } from 'react-share';
 import ShareMenuItem from './ShareMenuItem';
 
@@ -45,8 +47,8 @@ const ShareMenu = props => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!mounted && !imageUrl) {
-      // uploadImage();
+    if (!mounted && props.src && !imageUrl) {
+      uploadImage();
       setMount(true);
     }
   });
@@ -72,20 +74,20 @@ const ShareMenu = props => {
       correctClockSkew: true
     });
 
-    // s3.upload(
-    //   {
-    //     Key: `${uuidv1()}.png`,
-    //     Body: myFile,
-    //     Bucket: awsConfig.albumBucketName,
-    //     ACL: 'public-read-write'
-    //   },
-    //   (uploadError, _) => {
-    //     if (!uploadError) {
-    //       setImageUrl(_.Location);
-    //     } else {
-    //     }
-    //   }
-    // );
+    s3.upload(
+      {
+        Key: `${uuidv1()}.png`,
+        Body: myFile,
+        Bucket: awsConfig.albumBucketName,
+        ACL: 'public-read-write'
+      },
+      (uploadError, _) => {
+        if (!uploadError) {
+          setImageUrl(_.Location);
+        } else {
+        }
+      }
+    );
   };
 
   const renderMenuItems = () => {
@@ -121,6 +123,29 @@ const ShareMenu = props => {
             </div>
           </div>
         </FacebookShareButton>
+      </ShareMenuItem>
+      <ShareMenuItem>
+        <TwitterShareButton
+          title={`${props.house}: ${props.quote}`}
+          hashtag="sigilz"
+          via="Sigilz"
+          url={imageUrl}
+        >
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              height: '32px'
+            }}
+          >
+            <div style={{ marginRight: '30px' }}>
+              <TwitterIcon size={32} round={true} />
+            </div>
+            <div style={{ marginTop: '7px', width: '180px' }}>
+              Share on Twitter
+            </div>
+          </div>
+        </TwitterShareButton>
       </ShareMenuItem>
       <ShareMenuItem>
         <WhatsappShareButton
