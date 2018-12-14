@@ -15,11 +15,10 @@ import ShareMenuItem from './ShareMenuItem';
 
 const styles = {
   overlay: {
-    height: '100%',
+    height: 'calc(100% - 30px)',
     top: 30,
     right: 30,
     left: 30,
-    // bottom: 0,
     zIndex: 1000,
     position: 'absolute',
     justifyContent: 'center',
@@ -204,8 +203,10 @@ const ShareMenu = props => {
   return (
     <div style={getStyles()}>
       <CloseShareMenuIcon onClick={props.onClick} />
-      <div>
-        <img width="200" height="200" alt="" src={props.src} />
+      <div style={{ marginTop: '30px' }}>
+        <div style={{ textAlign: 'center' }}>
+          <img width="200" height="200" alt="" src={props.src} />
+        </div>
         {renderMenuItems()}
       </div>
     </div>

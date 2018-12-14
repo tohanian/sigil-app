@@ -125,7 +125,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header />
-        <div className="App">
+        <div className="App" style={{position: 'fixed', width: '100%', height: '100%', margin: '0', overflowY: 'hidden', zIndex: '-10'}}>
           <LargeImage
             fontClassName={fontClassName}
             foregroundColor={color}
@@ -143,16 +143,16 @@ class App extends Component {
             onHouseTextChange={this.onHouseTextChange}
             onFontColorClick={this.onFontColorClick}
           />
-          <ShareMenu
-            onClick={() => this.setState({ shareMenu: false })}
-            isOpen={this.state.shareMenu}
-            convertToPng={this.convertToPng}
-            src={this.state.sigilPng}
-            quote={this.state.text}
-            house={this.state.houseText}
-          />
           <ShareIcon onClick={this.convertToPng} />
         </div>
+        <ShareMenu
+          onClick={() => this.setState({ shareMenu: false })}
+          isOpen={this.state.shareMenu}
+          convertToPng={this.convertToPng}
+          src={this.state.sigilPng}
+          quote={this.state.text}
+          house={this.state.houseText}
+        />
       </React.Fragment>
     );
   }
