@@ -17,13 +17,15 @@ const styles = {
     top: 30,
     right: 30,
     left: 30,
-    bottom: 0,
+    // bottom: 0,
     zIndex: 1000,
     position: 'absolute',
     justifyContent: 'center',
     padding: '30px 0',
     background: 'lightgrey',
-    boxShadow: `0 2px 4px 0 rgba(0,0,0,0.15)`
+    boxShadow: `0 2px 4px 0 rgba(0,0,0,0.15)`,
+    transform: 'translateY(200%)',
+    transition: 'transform 600ms'
   },
   shareMenu: {
     listStyleType: 'none',
@@ -44,9 +46,8 @@ const ShareMenu = props => {
 
   useEffect(() => {
     if (!mounted && !imageUrl) {
-      uploadImage();
+      // uploadImage();
       setMount(true);
-      console.log(mounted);
     }
   });
 
@@ -71,20 +72,20 @@ const ShareMenu = props => {
       correctClockSkew: true
     });
 
-    s3.upload(
-      {
-        Key: `${uuidv1()}.png`,
-        Body: myFile,
-        Bucket: awsConfig.albumBucketName,
-        ACL: 'public-read-write'
-      },
-      (uploadError, _) => {
-        if (!uploadError) {
-          setImageUrl(_.Location);
-        } else {
-        }
-      }
-    );
+    // s3.upload(
+    //   {
+    //     Key: `${uuidv1()}.png`,
+    //     Body: myFile,
+    //     Bucket: awsConfig.albumBucketName,
+    //     ACL: 'public-read-write'
+    //   },
+    //   (uploadError, _) => {
+    //     if (!uploadError) {
+    //       setImageUrl(_.Location);
+    //     } else {
+    //     }
+    //   }
+    // );
   };
 
   const renderMenuItems = () => {
@@ -167,8 +168,16 @@ const ShareMenu = props => {
     </ul>
   );
 
+  const getStyles = () => {
+    const animationStyles = { ...styles.overlay };
+    if (props.isOpen) {
+      animationStyles.transform = 'none';
+    }
+    return animationStyles;
+  };
+
   return (
-    <div style={styles.overlay}>
+    <div style={getStyles()}>
       <CloseShareMenuIcon onClick={props.onClick} />
       <div>
         <img width="200" height="200" alt="" src={props.src} />
