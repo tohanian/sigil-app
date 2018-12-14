@@ -117,7 +117,25 @@ const ShareMenu = props => {
         </FacebookShareButton>
       </ShareMenuItem>
       <ShareMenuItem onClick={downloadImage}>
-        <div style={{ marginTop: '7px', width: '180px' }}>Download Image</div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            height: '32px'
+          }}
+        >
+          <div
+            style={{
+              marginRight: '15px',
+              height: '32px',
+              width: '32px',
+              color: 'rgb(146, 146, 146)'
+            }}
+          >
+            <i class="fa fa-cloud-download fa-2x" aria-hidden="true" />
+          </div>
+          <div style={{ marginTop: '7px', width: '180px' }}>Download Sigil</div>
+        </div>
       </ShareMenuItem>
     </ul>
   );
