@@ -89,6 +89,19 @@ const ShareMenu = props => {
     );
   };
 
+  const shareOnFacebook = () => {
+    console.log(imageUrl);
+    window.FB.ui(
+      {
+        method: 'share',
+        href: imageUrl
+      },
+      function(response) {
+        console.log(response);
+      }
+    );
+  };
+
   const renderMenuItems = () => {
     // TODO: add spinner here
     if (!imageUrl && !error) {
@@ -102,26 +115,27 @@ const ShareMenu = props => {
   const menuItems = () => (
     <ul style={styles.shareMenu}>
       <ShareMenuItem>
-        <FacebookShareButton
+        {/* <FacebookShareButton
           quote={`${props.house}: ${props.quote}`}
           hashtag="sigilz"
           url={imageUrl}
+        > */}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            height: '32px'
+          }}
+          onClick={shareOnFacebook}
         >
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              height: '32px'
-            }}
-          >
-            <div style={{ marginRight: '30px' }}>
-              <FacebookIcon size={32} round={true} />
-            </div>
-            <div style={{ marginTop: '7px', width: '180px' }}>
-              Share on Facebook
-            </div>
+          <div style={{ marginRight: '30px' }}>
+            <FacebookIcon size={32} round={true} />
           </div>
-        </FacebookShareButton>
+          <div style={{ marginTop: '7px', width: '180px' }}>
+            Share on Facebook
+          </div>
+        </div>
+        {/* </FacebookShareButton> */}
       </ShareMenuItem>
       <ShareMenuItem>
         <TwitterShareButton
@@ -184,7 +198,7 @@ const ShareMenu = props => {
               color: 'rgb(146, 146, 146)'
             }}
           >
-            <i class="fa fa-cloud-download fa-2x" aria-hidden="true" />
+            <i className="fa fa-cloud-download fa-2x" aria-hidden="true" />
           </div>
           <div style={{ marginTop: '7px', width: '180px' }}>Download Sigil</div>
         </div>

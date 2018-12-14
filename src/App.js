@@ -77,6 +77,33 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    this.loadFacebookApi();
+  }
+
+  loadFacebookApi = () => {
+    window.fbAsyncInit = function() {
+      window.FB.init({
+        appId: '528392401010453',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v3.2'
+      });
+    };
+
+    (function(d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'facebook-jssdk');
+  };
+
   onClick = event => {
     this.setState({
       [event.currentTarget.attributes[1].value]:
@@ -125,7 +152,17 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header />
-        <div className="App" style={{position: 'fixed', width: '100%', height: '100%', margin: '0', overflowY: 'hidden', zIndex: '-10'}}>
+        <div
+          className="App"
+          style={{
+            position: 'fixed',
+            width: '100%',
+            height: '100%',
+            margin: '0',
+            overflowY: 'hidden',
+            zIndex: '-10'
+          }}
+        >
           <LargeImage
             fontClassName={fontClassName}
             foregroundColor={color}
