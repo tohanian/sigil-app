@@ -3,7 +3,12 @@ import CloseShareMenuIcon from './CloseShareMenuIcon';
 import AWS from 'aws-sdk';
 import uuidv1 from 'uuid';
 import { blobToFile, dataUriToBlob } from '../util/helpers';
-import { FacebookShareButton, FacebookIcon } from 'react-share';
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  WhatsappShareButton,
+  WhatsappIcon
+} from 'react-share';
 import ShareMenuItem from './ShareMenuItem';
 
 const styles = {
@@ -107,7 +112,7 @@ const ShareMenu = props => {
               height: '32px'
             }}
           >
-            <div style={{ marginRight: '15px' }}>
+            <div style={{ marginRight: '30px' }}>
               <FacebookIcon size={32} round={true} />
             </div>
             <div style={{ marginTop: '7px', width: '180px' }}>
@@ -115,6 +120,28 @@ const ShareMenu = props => {
             </div>
           </div>
         </FacebookShareButton>
+      </ShareMenuItem>
+      <ShareMenuItem>
+        <WhatsappShareButton
+          title={`${props.house}: ${props.quote}`}
+          separator=" - "
+          url={imageUrl}
+        >
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              height: '32px'
+            }}
+          >
+            <div style={{ marginRight: '30px' }}>
+              <WhatsappIcon size={32} round={true} />
+            </div>
+            <div style={{ marginTop: '7px', width: '180px' }}>
+              Share on Whatsapp
+            </div>
+          </div>
+        </WhatsappShareButton>
       </ShareMenuItem>
       <ShareMenuItem onClick={downloadImage}>
         <div
@@ -126,7 +153,7 @@ const ShareMenu = props => {
         >
           <div
             style={{
-              marginRight: '15px',
+              marginRight: '30px',
               height: '32px',
               width: '32px',
               color: 'rgb(146, 146, 146)'
