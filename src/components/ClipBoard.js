@@ -10,7 +10,6 @@ const OptionSet = props => {
     sigilOptions: <SigilOptions {...props} />,
     swatchOptions: <SwatchOptions {...props} />,
     bannerOptions: <BannerOptions {...props} />,
-    textOptions: <TextOptions {...props} />,
     fontOptions: <FontOptions {...props} />,
     fontColor: <FontColor {...props} />,
     outlineOptions: <OutlineOptions {...props} />,
@@ -68,19 +67,33 @@ const SigilOptions = props => (
           className="icon"
           onClick={props.onClick}
           key={i}
-          style={{ padding: 12, cursor: "pointer" }}
+          style={{
+            width: "calc(100vw/7)",
+            height: "calc(100vw/7)",
+            cursor: "pointer",
+            position: "relative"
+          }}
         >
-          <C
-            onClick={props.onClick}
-            name={icon}
-            className="icon"
-            key={i}
-            value="icon"
-            index={i}
-            size="40"
-            foregroundColor="black"
-            backgroundOpacity="0"
-          />
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <C
+              onClick={props.onClick}
+              name={icon}
+              className="icon"
+              key={i}
+              value="icon"
+              index={i}
+              size="40"
+              foregroundColor="black"
+              backgroundOpacity="0"
+            />
+          </div>
         </div>
       );
     })}
@@ -98,17 +111,31 @@ const SwatchOptions = props => (
           className="color"
           onClick={props.onClick}
           key={i}
-          style={{ padding: 8, cursor: "pointer" }}
+          style={{
+            width: "calc(100vw/7)",
+            height: "calc(100vw/7)",
+            cursor: "pointer",
+            position: "relative"
+          }}
         >
-          <C
-            onClick={props.onClick}
-            className="color"
-            key={i}
-            value={A}
-            index={i}
-            size="25"
-            foregroundColor="black"
-          />
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <C
+              onClick={props.onClick}
+              className="color"
+              key={i}
+              value={A}
+              index={i}
+              size="25"
+              foregroundColor="black"
+            />
+          </div>
         </div>
       );
     })}
@@ -126,17 +153,31 @@ const BackgroundOptions = props => (
           className="color"
           onClick={props.onBackgroundClick}
           key={i}
-          style={{ padding: 8, cursor: "pointer" }}
+          style={{
+            width: "calc(100vw/7)",
+            height: "calc(100vw/7)",
+            cursor: "pointer",
+            position: "relative"
+          }}
         >
-          <C
-            onClick={props.onBackgroundClick}
-            className="color"
-            key={i}
-            value={A}
-            index={i}
-            size="25"
-            foregroundColor="black"
-          />
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <C
+              onClick={props.onBackgroundClick}
+              className="color"
+              key={i}
+              value={A}
+              index={i}
+              size="25"
+              foregroundColor="black"
+            />
+          </div>
         </div>
       );
     })}
@@ -154,16 +195,30 @@ const OutlineOptions = props => (
           className="color"
           onClick={props.onOutlineClick}
           key={i}
-          style={{ padding: 8, cursor: "pointer" }}
+          style={{
+            width: "calc(100vw/7)",
+            height: "calc(100vw/7)",
+            cursor: "pointer",
+            position: "relative"
+          }}
         >
-          <C
-            onClick={props.onOutlineClick}
-            className="color"
-            key={i}
-            value={A}
-            index={i}
-            foregroundColor="black"
-          />
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <C
+              onClick={props.onOutlineClick}
+              className="color"
+              key={i}
+              value={A}
+              index={i}
+              foregroundColor="black"
+            />
+          </div>
         </div>
       );
     })}
@@ -181,16 +236,30 @@ const FontColor = props => (
           className="color"
           onClick={props.onFontColorClick}
           key={i}
-          style={{ padding: 8, cursor: "pointer" }}
+          style={{
+            width: "calc(100vw/7)",
+            height: "calc(100vw/7)",
+            cursor: "pointer",
+            position: "relative"
+          }}
         >
-          <C
-            onClick={props.onFontColorClick}
-            className="color"
-            key={i}
-            value={A}
-            index={i}
-            foregroundColor="black"
-          />
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <C
+              onClick={props.onFontColorClick}
+              className="color"
+              key={i}
+              value={A}
+              index={i}
+              foregroundColor="black"
+            />
+          </div>
         </div>
       );
     })}
@@ -198,11 +267,45 @@ const FontColor = props => (
 );
 
 const BannerOptions = props => {
-  return <input onChange={props.onHouseTextChange} />;
-};
+  const [inputFocused, setFocus] = useState("none");
+  const inputStyles = {
+    padding: "8px 5px",
+    fontSize: "20px",
+    border: "none",
+    borderRadius: 0,
+    outline: "none",
+    borderBottom: "2px solid darkgrey",
+    textAlign: "center"
+  };
 
-const TextOptions = props => {
-  return <input onChange={props.onChange} />;
+  return (
+    <div>
+      <div style={{ marginTop: "15px" }}>
+        <input
+          style={{
+            ...inputStyles,
+            background: inputFocused === "bannerText" ? "lightgrey" : "none"
+          }}
+          onChange={props.onHouseTextChange}
+          onFocus={() => setFocus("bannerText")}
+          onBlur={() => setFocus("none")}
+          placeholder="Banner Text"
+        />
+      </div>
+      <div style={{ marginTop: "15px" }}>
+        <input
+          style={{
+            ...inputStyles,
+            background: inputFocused === "sloganText" ? "lightgrey" : "none"
+          }}
+          onChange={props.onChange}
+          onFocus={() => setFocus("sloganText")}
+          onBlur={() => setFocus("none")}
+          placeholder="Slogan Text"
+        />
+      </div>
+    </div>
+  );
 };
 
 const Selectors = props => {
@@ -210,13 +313,17 @@ const Selectors = props => {
     <div
       style={{
         display: "flex",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        border: "1px solid #d0d0d0",
+        backgroundColor: "#f1f1f1"
       }}
     >
       <div
         style={{
           width: "20px",
-          margin: "10px"
+          padding: "10px",
+          border: "1px solid #d0d0d0",
+          margin: "-1px"
         }}
         onClick={props.onClick("previous")}
       >
@@ -226,11 +333,13 @@ const Selectors = props => {
           aria-hidden="true"
         />
       </div>
-      <div style={{ marginTop: 5 }}> {props.name} </div>
+      <div style={{ marginTop: 10 }}> {props.name} </div>
       <div
         style={{
           width: "20px",
-          margin: "10px"
+          padding: "10px",
+          border: "1px solid #d0d0d0",
+          margin: "-1px"
         }}
         onClick={props.onClick("next")}
       >
@@ -263,8 +372,8 @@ const ClipBoard = props => {
           setOption("outlineOptions");
           setName("Outline");
         } else {
-          setOption("textOptions");
-          setName("Slogan Text");
+          setOption("fontOptions");
+          setName("Font");
         }
         break;
       case "swatchOptions":
@@ -282,22 +391,13 @@ const ClipBoard = props => {
           setName("Swatch");
         } else {
           setOption("bannerOptions");
-          setName("Banner Text");
-        }
-        break;
-      case "textOptions":
-        if (selection === "previous") {
-          setOption("bannerOptions");
-          setName("Banner Text");
-        } else {
-          setOption("fontOptions");
-          setName("Font");
+          setName("Text");
         }
         break;
       case "fontOptions":
         if (selection === "previous") {
-          setOption("textOptions");
-          setName("Slogan Text");
+          setOption("bannerOptions");
+          setName("Text");
         } else {
           setOption("fontColor");
           setName("Font Color");
@@ -329,7 +429,8 @@ const ClipBoard = props => {
   return (
     <div style={cell}>
       <Selectors name={name} onClick={selectorOnClick} option={option} />
-      <div style={{ marginLeft: "6px", marginRight: "6px" }}>
+      <div style={{ height: 10 }} />
+      <div style={{ height: "26vh", overflowY: "scroll" }}>
         <OptionSet {...props} optionSet={option} />
       </div>
     </div>
@@ -339,15 +440,13 @@ const ClipBoard = props => {
 const cell = {
   background: "#DDDDDD",
   alignItems: "center",
-  paddingTop: "10px",
   width: "100%",
-  height: "30%",
   position: "fixed",
-  overflow: "scroll",
   bottom: 0,
   left: 0,
   right: 0,
-  boxShadow: "0px 2px 2px 0px rgba(0,0,0,0.28)"
+  boxShadow: "0px 2px 2px 0px rgba(0,0,0,0.28)",
+  borderRadius: 4
 };
 
 export default ClipBoard;
