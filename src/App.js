@@ -172,21 +172,22 @@ class App extends Component {
             width: "100%",
             height: "100%",
             margin: "0",
-            overflowY: "hidden",
-            zIndex: "-10"
+            overflowY: "hidden"
           }}
         >
-          <LargeImage
-            fontClassName={fontClassName}
-            foregroundColor={color}
-            sloganText={text}
-            icon={icon}
-            stroke={stroke}
-            houseText={houseText}
-            textColor={textColor}
-            backgroundColor={backgroundColor}
-            backgroundOpacity={backgroundOpacity}
-          />
+          <div style={{ marginTop: 20 }}>
+            <LargeImage
+              fontClassName={fontClassName}
+              foregroundColor={color}
+              sloganText={text}
+              icon={icon}
+              stroke={stroke}
+              houseText={houseText}
+              textColor={textColor}
+              backgroundColor={backgroundColor}
+              backgroundOpacity={backgroundOpacity}
+            />
+          </div>
           <ClipBoard
             onFontSelect={this.onFontSelect}
             onChange={this.onChange}
