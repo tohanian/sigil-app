@@ -175,7 +175,7 @@ class App extends Component {
             overflowY: "hidden"
           }}
         >
-          <div style={{ marginTop: 20 }}>
+          <div style={{ marginTop: 160 }}>
             <LargeImage
               fontClassName={fontClassName}
               foregroundColor={color}
