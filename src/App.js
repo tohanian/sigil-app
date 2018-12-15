@@ -55,7 +55,7 @@ class App extends Component {
       mediumGreen: "#00b894",
       aqua: "#7FDBFF",
       lightBlue: "#74b9ff",
-      lighestGreen: "#E8FFFE",
+      lightestGreen: "#E3FCEC",
       lighterGreen: "#A2F5BF",
       teal: "#39CCCC",
       blue: "#0074D9",
