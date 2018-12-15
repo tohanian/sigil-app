@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import './App.css';
-import * as icons from './icons/animals';
-import canvg from 'canvg';
-import { svgAsPngUri } from 'save-svg-as-png';
+import React, { Component } from "react";
+import "./App.css";
+import * as icons from "./icons/animals";
+import canvg from "canvg";
+import { svgAsPngUri } from "save-svg-as-png";
 
 // Components
-import ClipBoard from './components/ClipBoard';
-import ShareIcon from './components/ShareIcon';
-import ShareMenu from './components/ShareMenu';
-import CloseShareMenuIcon from './components/CloseShareMenuIcon';
+import ClipBoard from "./components/ClipBoard";
+import ShareIcon from "./components/ShareIcon";
+import ShareMenu from "./components/ShareMenu";
+import CloseShareMenuIcon from "./components/CloseShareMenuIcon";
 
 const LargeImage = props => {
   return Object.keys(icons).map((icon, i) => {
@@ -27,6 +27,8 @@ const LargeImage = props => {
           foregroundColor={props.foregroundColor}
           stroke={props.stroke}
           textColor={props.textColor}
+          backgroundColor={props.backgroundColor}
+          fillOpacity={props.fillOpacity}
         />
       ) : null;
     return iconic;
@@ -41,39 +43,41 @@ class App extends Component {
   constructor() {
     super();
     window.colors = {
-      red: '#FF4136',
-      coral: '#ff7675',
-      orange: '#FF851B',
-      lightYellow: '#ffeaa7',
-      yellow: '#FFDC00',
-      lime: '#01FF70',
-      green: '#2ECC40',
-      olive: '#3D9970',
-      aqua: '#7FDBFF',
-      lightBlue: '#74b9ff',
-      teal: '#39CCCC',
-      blue: '#0074D9',
-      navy: '#001f3f',
-      fuschia: '#F012BE',
-      mediumPurple: '#6c5ce7',
-      lightPurple: '#a29bfe',
-      purple: '#B10DC9',
-      black: '#111111',
-      maroon: '#85144b',
-      gray: '#AAAAAA',
-      silver: '#b2bec3',
-      white: 'white'
+      red: "#FF4136",
+      coral: "#ff7675",
+      orange: "#FF851B",
+      lightYellow: "#ffeaa7",
+      yellow: "#FFDC00",
+      lime: "#01FF70",
+      green: "#2ECC40",
+      olive: "#3D9970",
+      aqua: "#7FDBFF",
+      lightBlue: "#74b9ff",
+      teal: "#39CCCC",
+      blue: "#0074D9",
+      navy: "#001f3f",
+      fuschia: "#F012BE",
+      mediumPurple: "#6c5ce7",
+      lightPurple: "#a29bfe",
+      purple: "#B10DC9",
+      black: "#111111",
+      maroon: "#85144b",
+      gray: "#AAAAAA",
+      silver: "#b2bec3",
+      white: "white"
     };
     this.state = {
-      icon: 'Cat',
-      text: 'Coolio',
+      icon: "Bat",
+      text: "Coolio",
       shareMenu: false,
       sigilPng: null,
-      color: 'red',
+      color: "red",
       fontClassName: null,
       stroke: null,
-      houseText: 'HOUSE RUDASHEVSKI',
-      textColor: null
+      houseText: "HOUSE RUDASHEVSKI",
+      textColor: null,
+      backgroundColor: "white",
+      backgroundOpacity: 0
     };
   }
 
@@ -84,10 +88,10 @@ class App extends Component {
   loadFacebookApi = () => {
     window.fbAsyncInit = function() {
       window.FB.init({
-        appId: '528392401010453',
+        appId: "528392401010453",
         autoLogAppEvents: true,
         xfbml: true,
-        version: 'v3.2'
+        version: "v3.2"
       });
     };
 
@@ -99,9 +103,9 @@ class App extends Component {
       }
       js = d.createElement(s);
       js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk.js';
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
-    })(document, 'script', 'facebook-jssdk');
+    })(document, "script", "facebook-jssdk");
   };
 
   onClick = event => {
@@ -115,9 +119,16 @@ class App extends Component {
     this.setState({ stroke: event.currentTarget.attributes[0].value });
   };
 
+  onBackgroundClick = event => {
+    this.setState({
+      backgroundColor: event.currentTarget.attributes[0].value,
+      backgroundOpacity: "1"
+    });
+  };
+
   convertToPng = () => {
     const that = this;
-    const svg = document.querySelector('svg');
+    const svg = document.querySelector("svg");
     svgAsPngUri(svg, {}, function(uri) {
       that.setState({ sigilPng: uri, shareMenu: true });
     });
@@ -147,7 +158,9 @@ class App extends Component {
       fontClassName,
       stroke,
       houseText,
-      textColor
+      textColor,
+      backgroundColor,
+      backgroundOpacity
     } = this.state;
     return (
       <React.Fragment>
@@ -155,12 +168,12 @@ class App extends Component {
         <div
           className="App"
           style={{
-            position: 'fixed',
-            width: '100%',
-            height: '100%',
-            margin: '0',
-            overflowY: 'hidden',
-            zIndex: '-10'
+            position: "fixed",
+            width: "100%",
+            height: "100%",
+            margin: "0",
+            overflowY: "hidden",
+            zIndex: "-10"
           }}
         >
           <LargeImage
@@ -171,6 +184,8 @@ class App extends Component {
             stroke={stroke}
             houseText={houseText}
             textColor={textColor}
+            backgroundColor={backgroundColor}
+            backgroundOpacity={backgroundOpacity}
           />
           <ClipBoard
             onFontSelect={this.onFontSelect}
@@ -179,6 +194,7 @@ class App extends Component {
             onOutlineClick={this.onOutlineClick}
             onHouseTextChange={this.onHouseTextChange}
             onFontColorClick={this.onFontColorClick}
+            onBackgroundClick={this.onBackgroundClick}
           />
           <ShareIcon onClick={this.convertToPng} />
         </div>

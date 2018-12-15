@@ -3,7 +3,8 @@ import css from "../App.css";
 
 export const Bat = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText,
@@ -12,6 +13,11 @@ export const Bat = ({
   fontClassName
 }) => (
   <svg width={size} name="Bat" value="Bat" viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       x="50%"
       y="7%"
@@ -46,7 +52,8 @@ export const Bat = ({
 
 export const Bicep = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -55,6 +62,11 @@ export const Bicep = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       x="50%"
       y="7%"
@@ -90,7 +102,8 @@ export const Bicep = ({
 
 export const Cat = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -99,6 +112,11 @@ export const Cat = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -134,7 +152,8 @@ export const Cat = ({
 
 export const Chicken = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText,
@@ -143,6 +162,11 @@ export const Chicken = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -178,7 +202,8 @@ export const Chicken = ({
 
 export const Cricket = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -187,7 +212,11 @@ export const Cricket = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <path d="M0 0h512v512H0z" fill={backgroundColor} fillOpacity="0" />
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -221,7 +250,8 @@ export const Cricket = ({
 
 export const Eagle = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -230,6 +260,11 @@ export const Eagle = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -265,7 +300,8 @@ export const Eagle = ({
 
 export const Elephant = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -274,6 +310,11 @@ export const Elephant = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -309,7 +350,8 @@ export const Elephant = ({
 
 export const Hound = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -318,6 +360,11 @@ export const Hound = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -352,7 +399,8 @@ export const Hound = ({
 );
 export const Owl = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -361,6 +409,11 @@ export const Owl = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -396,7 +449,8 @@ export const Owl = ({
 
 export const Pig = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -405,6 +459,11 @@ export const Pig = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -438,7 +497,8 @@ export const Pig = ({
 
 export const Scarab = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -447,6 +507,11 @@ export const Scarab = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -482,7 +547,8 @@ export const Scarab = ({
 
 export const Shark = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -491,6 +557,11 @@ export const Shark = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -526,7 +597,8 @@ export const Shark = ({
 
 export const SnakeBite = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -535,6 +607,11 @@ export const SnakeBite = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -570,7 +647,8 @@ export const SnakeBite = ({
 
 export const Tiger = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -579,6 +657,11 @@ export const Tiger = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -614,7 +697,8 @@ export const Tiger = ({
 
 export const Trout = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -623,6 +707,11 @@ export const Trout = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -657,7 +746,8 @@ export const Trout = ({
 );
 export const Turtle = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -666,6 +756,11 @@ export const Turtle = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -699,7 +794,8 @@ export const Turtle = ({
 
 export const Spider = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -708,6 +804,11 @@ export const Spider = ({
   fontClassName
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
     <text
       className={fontClassName}
       x="50%"
@@ -743,7 +844,108 @@ export const Spider = ({
 
 export const Venus = ({
   foregroundColor = "#fff",
-  backgroundColor = "white",
+  backgroundColor,
+  backgroundOpacity,
+  size = 200,
+  stroke,
+  houseText = null,
+  sloganText = null,
+  textColor = "black",
+  fontClassName
+}) => (
+  <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
+    <text
+      className={fontClassName}
+      x="50%"
+      y="7%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
+      {houseText}
+    </text>
+    <g transform="scale(0.8) translate(65, 65)">
+      <path
+        d="M247.8 27.78c-5.1.63-10 1.82-14.6 3.5l.1 18.09 14.2.27zm18 .15L265.5 50l13.9.27-.2-18.99c-4.2-1.55-8.7-2.69-13.4-3.35zm-50.5 13.59c-2.7 2.25-5.2 4.7-7.4 7.35l7.4.15zm82 .14l.1 8.96 8.6.17a54.7 54.7 0 0 0-8.7-9.13zm-99 25.03c-1.3 4.36-2 8.92-2 13.61 0 1.28.1 2.55.2 3.81h19l-.1-17.09zm35.1.68l.1 16.74h13.4l.3-16.47zm31.8.62l-.3 16.12h14.8l-.1-15.83zm32.4.64l.1 15.48h18.2c.1-1.26.2-2.53.2-3.81 0-3.88-.5-7.67-1.4-11.34zm-96 33.47c9.3 18.3 29.9 31.2 54.6 31.2 24.7 0 45.3-12.9 54.6-31.2zm9.7 36.2c-20.2.1-31.5 8.5-40.2 22.8-4.6 7.4-8.1 16.9-10.8 27.7 5.1-2.5 10.5-4.6 16.3-6.5l9.3-22.2 16.6 7-4.1 9.8c9.7-1.9 19.8-3.4 30-4.6l2.2 17.8c-17.8 2.2-34.9 5-48.5 9.4-12.6 4-21.8 9.3-26.4 15.1-.6 4-1 8.1-1.4 12.3 5.1 22.3 11.8 37.5 18.4 45.8 6.8 8.8 11.9 10.4 17.9 9.2 6-1.2 14.2-6.9 22.5-18.1 8.2-11.2 16.4-27.3 23.2-47.3l14.9 5.1 15.4-5.3c6.8 19.9 15.3 36 24 47.3 8.7 11.3 17.6 17.3 24.5 18.6 6.9 1.4 12.7-.4 20-9.1 6.9-8.2 13.8-23.1 19-45.2-.1-2.6-.3-5.1-.4-7.6-4.6-10.1-16.2-16.6-32-20-16.1-3.5-35.2-3.5-49.7-2.6l-1.2-18c3.9-.2 8.1-.4 12.5-.5 1.6 0 3.3-.1 5-.1 7.5 0 15.6.4 23.7 1.4-1.5-2.5-3.3-5-5.1-7.6l14.6-10.4c4.4 6.2 9.9 13.4 12.6 22.5 6.1 1.8 11.9 4.3 17.2 7.4-1.2-7.4-3.1-14.2-6.1-20.2-7-13.7-19.6-24.9-49-31-11.8 6.4-25.5 10.1-40 10.1-16.6 0-32.1-4.8-44.8-13zm40.2 89.1c-6.9 19-15 34.9-23.9 47.1-9.8 13.2-20.7 22.6-33.5 25.1s-26.1-3.6-35.6-15.8c-6.6-8.4-12.1-19.7-16.7-34.2-11.6 14-11.7 28.1-8.2 41.3 2.1 8 5.8 15.4 9.6 21 3.7 5.7 8.1 9.8 8.6 10.1 19 12.4 34.1 18.1 61.9 11.7l7.4-1.7 2.9 7.1c2.4 5.7 7.3 12.2 12.9 16.8 5.6 4.5 11.7 6.8 15 6.6 11.1-.5 18.3-9.1 22.2-19.2l2.7-7 7.3 1.3c25.8 4.6 51.1 3.2 69.5-9.7 19.2-13.4 26.8-27.9 26.9-43.3.1-11.4-4.3-24-13.1-36.8-5 15.8-11.1 28-18.5 36.9-10.2 12.1-24.1 17.8-37.3 15.2-13.3-2.6-24.9-11.9-35.3-25.3-9.4-12.2-17.9-28.1-24.8-47.2zm3.4 77.2a13.79 7.423 0 0 1 13.8 7.4 13.79 7.423 0 0 1-13.8 7.4 13.79 7.423 0 0 1-13.8-7.4 13.79 7.423 0 0 1 13.8-7.4zm-90.5 44c4.9 16.6 8.6 33 14.8 46.8 8.9 19.6 21 33.7 51 38.6 5.3.9 5.6.2 6.9-1.4 1.3-1.7 2.8-6.2 3.3-12.5 1-11.5-.6-27.1.7-40.8-.2-.2-.4-.5-.5-.7-5.4-1.9-10.5-5.1-15-8.8-5.9-4.8-11.1-10.7-15-17.3-17.8 3-32.7 1.1-46.2-3.9zm178.6 4.5c-17.5 5.7-36.6 5.9-55.2 3.3-5.6 10.3-14.8 20-28 23.1-.8 1.6-1.5 3.3-2.3 5.1-.5 24.1-2.6 41.6-1 48.8.8 3.7 1.2 4.1 3.5 5.3 2.4 1.1 8.1 2.1 17.7 1.6 30-1.7 41.4-15.4 50.1-35.8 6.4-14.9 9.9-33.5 15.2-51.4zM198.4 443l6.2 33s3.9 4.7 8.5 5.8c2.4.5 4.5.4 6.1-.2 1.5-.6 2.8-1.5 4.1-4.2l12.6-25.5c-2.8.4-5.7.4-8.7-.1-10.4-1.7-19.4-4.7-27.2-8.7zm112.6 6.7c-8.9 4.8-19.6 7.9-32.3 8.6-1.6.1-3.1.1-4.5.2l10.5 21.3c1.1 2.2 2.3 3.1 4.7 3.8 2.4.8 5.9.8 9.4.1 3.5-.8 6.9-2.3 8.9-3.8 1.5-1.1 1.9-2 1.9-1.9z"
+        fill={foregroundColor}
+        fillOpacity="1"
+        stroke={stroke}
+        strokeOpacity="1"
+        strokeWidth="8"
+      />
+    </g>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="30px"
+      fill={textColor}
+    >
+      {sloganText}
+    </text>
+  </svg>
+);
+
+export const Hazmat = ({
+  foregroundColor = "#fff",
+  backgroundColor,
+  backgroundOpacity,
+  size = 200,
+  stroke,
+  houseText = null,
+  sloganText = null,
+  textColor = "black",
+  fontClassName
+}) => (
+  <svg width={size} viewBox="0 0 512 512">
+    <path
+      d="M0 0h512v512H0z"
+      fill={backgroundColor}
+      fillOpacity={backgroundOpacity}
+    />
+    <text
+      className={fontClassName}
+      x="50%"
+      y="7%"
+      textAnchor="middle"
+      fontSize="40px"
+      fill={textColor}
+    >
+      {houseText}
+    </text>
+    <g transform="scale(0.8) translate(65, 65)">
+      <path
+        d="M256 45c-35.333 0-70.707 3.979-98.607 11.676-26.393 7.28-45.193 18.363-52.12 29.449l31.352 297.842c.901.593 3.648 2.66 9.256 4.601 6.885 2.383 16.619 4.618 28.043 6.45 22.848 3.662 52.539 5.814 82.17 6.12 29.63.307 59.297-1.236 82.039-4.732 11.37-1.747 21.026-4.017 27.777-6.54 5.909-2.21 8.64-4.599 9.408-5.374l31.409-298.367C399.8 75.039 381 63.956 354.607 56.675 326.707 48.98 291.333 45 256 45zm-.01 59.137c37.028-.094 74.071 6.24 114.76 19.293l6.855 2.199-20.869 233.723c-4.116 6.372-11.53 9.046-17.246 10.585-6.246 1.69-13.85 2.969-22.557 4C299.52 376.001 277.78 377 256 377c-21.78 0-43.52-.999-60.934-3.063-8.707-1.031-16.31-2.31-22.556-4-9.482-3.465-12.11-3.738-17.246-10.585L135.035 132.8l-.644-7.235 6.931-2.158c40.627-12.657 77.64-19.178 114.668-19.271zM256 132c-28.005.057-54.002 20.112-68.746 53.033 5.885-.227 12.083-.352 18.184-.16 7.3.23 14.433.904 20.63 2.367 8.487 2.004 14.262 7.006 19.086 10.494C249.978 201.222 253.373 203 256 203c2.627 0 6.022-1.778 10.846-5.266s10.599-8.49 19.086-10.494c11.391-2.689 25.927-2.706 38.869-2.205C310.047 152.09 284.025 132.031 256 132zm163.918.762l-2.17 20.607c7.773 6.04 14.416 13.272 17.897 21.973 5.96 14.901 4.597 36.162-19.118 69.097 1.775.94 3.485 1.911 5.11 2.924 3.523 2.196 6.772 4.686 9.568 7.45 25.766-36.133 29.768-64.61 21.15-86.155-6.63-16.577-19.586-27.807-32.437-35.896zm-225.123 70.111c-3.457.032-6.9.13-10.17.28-5.127.234-9.238.567-13.102.876l14.625 53.547c4.92-4.038 10.766-6.576 17.352-6.576 9.26 0 17.052 5.018 22.863 12.176 2.636-5.164 5.46-9.81 8.405-13.783C240.464 241.703 246 235 256 235s15.537 6.703 21.232 14.393c2.944 3.974 5.77 8.62 8.405 13.783C291.447 256.018 299.24 251 308.5 251c8.432 0 15.648 4.163 21.26 10.31l11.445-57.232c-3.974-.324-8.418-.678-13.83-.926-13.078-.597-28.938-.368-37.307 1.608-3.12.736-7.383 3.733-12.675 7.56C272.1 216.147 265.299 221 256 221c-9.299 0-16.1-4.853-21.393-8.68-5.292-3.827-9.555-6.824-12.675-7.56-4.185-.988-10.241-1.54-16.887-1.77a236.535 236.535 0 0 0-10.25-.117zM256 253.592c-.988.786-3.837 2.56-6.768 6.515-4.175 5.638-8.738 14.157-12.427 24.065C238.89 291.468 240 299.517 240 308c0 14.648-3.288 28.016-9.246 38.416-.581 1.014-1.205 2-1.852 2.967 9.34 5.148 17.63 9.499 27.098 9.617 11.958-.485 18.348-4.945 27.088-9.633a50.455 50.455 0 0 1-1.842-2.951C275.288 336.016 272 322.648 272 308c0-8.483 1.11-16.532 3.195-23.828-3.689-9.908-8.252-18.427-12.427-24.065-2.93-3.956-5.78-5.729-6.768-6.515zm-150.568 5.984c-2.028 1.006-3.887 2.027-5.545 3.06C91.622 267.79 89 272.126 89 276v77.41c7.838-2.207 16.466-4.295 25.65-6.265zm301.136 0l-9.218 87.569c9.184 1.97 17.812 4.058 25.65 6.265V276c0-3.875-2.622-8.211-10.887-13.363-1.658-1.034-3.517-2.055-5.545-3.06zM203.5 269c-3.349 0-7.642 2.56-11.637 9.533C187.868 285.506 185 296.138 185 308c0 11.862 2.868 22.494 6.863 29.467 3.995 6.973 8.288 9.533 11.637 9.533s7.642-2.56 11.637-9.533C219.132 330.494 222 319.862 222 308c0-11.862-2.868-22.494-6.863-29.467-3.995-6.973-8.288-9.533-11.637-9.533zm105 0c-3.349 0-7.642 2.56-11.637 9.533C292.868 285.506 290 296.138 290 308c0 11.862 2.868 22.494 6.863 29.467 3.995 6.973 8.288 9.533 11.637 9.533s7.642-2.56 11.637-9.533C324.132 330.494 327 319.862 327 308c0-11.862-2.868-22.494-6.863-29.467-3.995-6.973-8.288-9.533-11.637-9.533zm-191.943 96.26c-21.468 4.788-39.163 10.107-48.532 14.79-5.316 2.66-10.276 8.685-14.285 17.817s-6.92 20.982-8.845 33.502c-3.292 21.397-3.67 43.333-3.749 59.631h79.827l14.297-57.184 17.46 4.368L139.527 491h232.946l-13.203-52.816 17.46-4.368L391.027 491h79.827c-.08-16.298-.457-38.234-3.749-59.63-1.926-12.521-4.836-24.37-8.845-33.503-4.01-9.132-8.969-15.158-14.285-17.816-9.369-4.684-27.064-10.004-48.532-14.791l-2.664 25.304c-4.272 8.564-13.55 13.506-20.564 16.163-8.624 3.224-19.219 5.606-31.348 7.47-24.258 3.729-54.592 5.254-84.96 4.94-30.37-.314-60.679-2.474-84.83-6.346-12.077-1.936-22.593-4.273-31.083-7.21-10.34-4.82-15.85-6.412-20.738-14.686z"
+        fill={foregroundColor}
+        fillOpacity="1"
+        stroke={stroke}
+        strokeOpacity="1"
+        strokeWidth="8"
+      />
+    </g>
+    <text
+      className={fontClassName}
+      x="50%"
+      y="95%"
+      textAnchor="middle"
+      fontSize="30px"
+      fill={textColor}
+    >
+      {sloganText}
+    </text>
+  </svg>
+);
+
+export const Iceman = ({
+  foregroundColor = "#fff",
+  backgroundColor,
+  backgroundOpacity,
   size = 200,
   stroke,
   houseText = null,
@@ -764,7 +966,12 @@ export const Venus = ({
     </text>
     <g transform="scale(0.8) translate(65, 65)">
       <path
-        d="M247.8 27.78c-5.1.63-10 1.82-14.6 3.5l.1 18.09 14.2.27zm18 .15L265.5 50l13.9.27-.2-18.99c-4.2-1.55-8.7-2.69-13.4-3.35zm-50.5 13.59c-2.7 2.25-5.2 4.7-7.4 7.35l7.4.15zm82 .14l.1 8.96 8.6.17a54.7 54.7 0 0 0-8.7-9.13zm-99 25.03c-1.3 4.36-2 8.92-2 13.61 0 1.28.1 2.55.2 3.81h19l-.1-17.09zm35.1.68l.1 16.74h13.4l.3-16.47zm31.8.62l-.3 16.12h14.8l-.1-15.83zm32.4.64l.1 15.48h18.2c.1-1.26.2-2.53.2-3.81 0-3.88-.5-7.67-1.4-11.34zm-96 33.47c9.3 18.3 29.9 31.2 54.6 31.2 24.7 0 45.3-12.9 54.6-31.2zm9.7 36.2c-20.2.1-31.5 8.5-40.2 22.8-4.6 7.4-8.1 16.9-10.8 27.7 5.1-2.5 10.5-4.6 16.3-6.5l9.3-22.2 16.6 7-4.1 9.8c9.7-1.9 19.8-3.4 30-4.6l2.2 17.8c-17.8 2.2-34.9 5-48.5 9.4-12.6 4-21.8 9.3-26.4 15.1-.6 4-1 8.1-1.4 12.3 5.1 22.3 11.8 37.5 18.4 45.8 6.8 8.8 11.9 10.4 17.9 9.2 6-1.2 14.2-6.9 22.5-18.1 8.2-11.2 16.4-27.3 23.2-47.3l14.9 5.1 15.4-5.3c6.8 19.9 15.3 36 24 47.3 8.7 11.3 17.6 17.3 24.5 18.6 6.9 1.4 12.7-.4 20-9.1 6.9-8.2 13.8-23.1 19-45.2-.1-2.6-.3-5.1-.4-7.6-4.6-10.1-16.2-16.6-32-20-16.1-3.5-35.2-3.5-49.7-2.6l-1.2-18c3.9-.2 8.1-.4 12.5-.5 1.6 0 3.3-.1 5-.1 7.5 0 15.6.4 23.7 1.4-1.5-2.5-3.3-5-5.1-7.6l14.6-10.4c4.4 6.2 9.9 13.4 12.6 22.5 6.1 1.8 11.9 4.3 17.2 7.4-1.2-7.4-3.1-14.2-6.1-20.2-7-13.7-19.6-24.9-49-31-11.8 6.4-25.5 10.1-40 10.1-16.6 0-32.1-4.8-44.8-13zm40.2 89.1c-6.9 19-15 34.9-23.9 47.1-9.8 13.2-20.7 22.6-33.5 25.1s-26.1-3.6-35.6-15.8c-6.6-8.4-12.1-19.7-16.7-34.2-11.6 14-11.7 28.1-8.2 41.3 2.1 8 5.8 15.4 9.6 21 3.7 5.7 8.1 9.8 8.6 10.1 19 12.4 34.1 18.1 61.9 11.7l7.4-1.7 2.9 7.1c2.4 5.7 7.3 12.2 12.9 16.8 5.6 4.5 11.7 6.8 15 6.6 11.1-.5 18.3-9.1 22.2-19.2l2.7-7 7.3 1.3c25.8 4.6 51.1 3.2 69.5-9.7 19.2-13.4 26.8-27.9 26.9-43.3.1-11.4-4.3-24-13.1-36.8-5 15.8-11.1 28-18.5 36.9-10.2 12.1-24.1 17.8-37.3 15.2-13.3-2.6-24.9-11.9-35.3-25.3-9.4-12.2-17.9-28.1-24.8-47.2zm3.4 77.2a13.79 7.423 0 0 1 13.8 7.4 13.79 7.423 0 0 1-13.8 7.4 13.79 7.423 0 0 1-13.8-7.4 13.79 7.423 0 0 1 13.8-7.4zm-90.5 44c4.9 16.6 8.6 33 14.8 46.8 8.9 19.6 21 33.7 51 38.6 5.3.9 5.6.2 6.9-1.4 1.3-1.7 2.8-6.2 3.3-12.5 1-11.5-.6-27.1.7-40.8-.2-.2-.4-.5-.5-.7-5.4-1.9-10.5-5.1-15-8.8-5.9-4.8-11.1-10.7-15-17.3-17.8 3-32.7 1.1-46.2-3.9zm178.6 4.5c-17.5 5.7-36.6 5.9-55.2 3.3-5.6 10.3-14.8 20-28 23.1-.8 1.6-1.5 3.3-2.3 5.1-.5 24.1-2.6 41.6-1 48.8.8 3.7 1.2 4.1 3.5 5.3 2.4 1.1 8.1 2.1 17.7 1.6 30-1.7 41.4-15.4 50.1-35.8 6.4-14.9 9.9-33.5 15.2-51.4zM198.4 443l6.2 33s3.9 4.7 8.5 5.8c2.4.5 4.5.4 6.1-.2 1.5-.6 2.8-1.5 4.1-4.2l12.6-25.5c-2.8.4-5.7.4-8.7-.1-10.4-1.7-19.4-4.7-27.2-8.7zm112.6 6.7c-8.9 4.8-19.6 7.9-32.3 8.6-1.6.1-3.1.1-4.5.2l10.5 21.3c1.1 2.2 2.3 3.1 4.7 3.8 2.4.8 5.9.8 9.4.1 3.5-.8 6.9-2.3 8.9-3.8 1.5-1.1 1.9-2 1.9-1.9z"
+        d="M0 0h512v512H0z"
+        fill={backgroundColor}
+        fillOpacity={backgroundOpacity}
+      />
+      <path
+        d="M64.086 26.254c-6.237 39.87-10.003 32.572-38.703 36.922 26.282 3.712 39.417 8.81 38.193 37.176 2.659-19.972.836-30.862 36.156-36.666-15.822-6.064-33.712 4.317-35.646-37.432zm171.064.41L204.6 74.125l20.066 14.436 35.813-1.82 22.677-15.118-25.306-43.582-22.7-1.377zm58.313 26.863l34.135 58.787-3.514 4.756c-8.857 11.988-15.901 23.926-26.307 34.877l26.118 38.395-4.485-31.547 42.602-93.592-68.55-11.676zm-102.906 9.159l-56.166 16.63 10.02 19.877-18.005 28.631 31.244-2.363 16.258 32.252 5.51 83.332 34.289 33 14.793-60.986 46.986 66.673 55.434-39.97-1.518-10.672-.629.428-44.134-64.881-7.352 74.902-80.46-78.674.273-.281a85.007 85.007 0 0 1-6.385-8.314c-10.292-15.21-16.606-32.339-23.592-43.815l-2.93-4.812 26.364-40.957zm182.916 20.789l-27.828 61.136 31.628 21.692 31.745 93.63c-14.946-3.888-30.64 2.536-32.446-36.415-6.236 39.87-10.003 32.57-38.703 36.92 26.282 3.712 39.42 8.81 38.195 37.175 2.589-19.446.944-30.28 33.457-36.195l7.372 21.74 7.736-70.28 46.723 27.222-24.922-83.52-31.106 7.588-4.265-17.488 58.337-14.227c-7.958-4.17-10.582-5.507-21.425-11.27-10.758-5.716-21.643-11.558-30.147-16.253-4.252-2.348-7.9-4.404-10.703-6.053-.857-.505-1.495-.91-2.2-1.344l-31.448-14.058zm-81.262 3.744l-23.477 15.65v10.342h-18v-7.953l-16.56.842.754 8.283L217 116.012l-1.049-11.547-21.107-15.184-9.56 14.854c7.03 12.719 12.763 26.851 20.34 38.049 8.34 12.328 17.659 20.674 34.343 21.978 21.412-5.759 33.462-13.368 42.847-22.656 8.386-8.3 15.088-18.692 23.342-30.272L292.211 87.22zm-171.633 4.687L72.611 106.41l-3.324 38.537 13.43 8.631c-48.664 60.418-1.867.866-47.516 60.793l75.274-56.168 9.484 15.299L63.822 208.3l-5.527 64.074 41.072-28.842 11.117 25.617 31.87-102.539 10.503-10.666-5.859-11.627-54.834 4.149 31.596-50.25-3.182-6.31zm123.963 30.412c1.995.03 3.956.157 5.863.368 13.566 1.499 24.743 5.851 31.79 13.085l-12.895 12.56c-1.294-1.33-11.018-6.666-20.871-7.755-9.853-1.089-19.496.729-26.295 8.057l-13.196-12.242c8.706-9.383 20.047-13.244 30.897-13.955a58.083 58.083 0 0 1 4.707-.118zm21.063 51.987c-6.368 2.817-13.521 5.33-21.64 7.478l19.075 18.65 2.565-26.128zM439.49 242.37l-8.05 73.15c.82-.779 1.713-1.807 2.726-3.195 4.278-5.86 9.527-17.238 18.947-30.896l3.041-4.409 5.325.569c7.072.756 12.796 2.553 17.478 4.494l-10-22.545-29.467-17.168zM238.46 258.437l-2.494.204-12.156 50.109-24.1-23.193 26.346 42.152 41.062-19.115 15.66 27.707 44.032-9.846 6.101-37.865-3.775-25.35-57.881 41.737-32.795-46.54zm-146.662 12.87l-.93.19-41.486 29.132-5.75 22.115 38.984-22.586 25.756 23.113.512-12.597-17.086-39.367zm82.078 6.879l-45.77 107.558 9.182 41.313 17.697-53.094 16.582 47.125 10.842-13.99 7.696-19.975c38.884 7.55 31.602 11.181 34.92 39.856 4.635-26.136 10.192-39.084 38.497-36.862-19.866-3.36-30.814-1.923-35.37-37.426-6.58 15.513 2.999 33.633-37.993 34.29l19.72-51.19-36.003-57.605zm176.457 15.433l-7.691 47.74-39.034 8.729 32.791 19.484 5.99 49.994 22.903-34.087 29.022 44.11 7.892-66.1-51.873-69.87zm99.283 12.774c-6.236 39.87-10.003 32.57-38.703 36.92 26.282 3.712 39.417 8.81 38.193 37.175 2.659-19.972.838-30.861 36.159-36.666-15.823-6.063-33.714 4.32-35.649-37.43zm-84.48 111.597l-24.555 36.547-2.822 33.858 127.039 1.876 19.959-44.076-35.29 19.82-11.573-21.216-14.118 12.605-14.498-1.318-2.931 24.545-41.211-62.64zm-173.678 6.819l-25.904 33.421-10.108-28.724-20.05 60.15h57.01c-2.998-20.407-2.653-42.363-.948-64.847zm-111.969 4.84l-12.275 60.007h65.545l-7.776-34.988-23.048 10.477-22.446-35.497z"
         fill={foregroundColor}
         fillOpacity="1"
         stroke={stroke}

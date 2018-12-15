@@ -13,7 +13,8 @@ const OptionSet = props => {
     textOptions: <TextOptions {...props} />,
     fontOptions: <FontOptions {...props} />,
     fontColor: <FontColor {...props} />,
-    outlineOptions: <OutlineOptions {...props} />
+    outlineOptions: <OutlineOptions {...props} />,
+    backgroundOptions: <BackgroundOptions {...props} />
   };
   if (props.optionSet) {
     return optionSets[props.optionSet];
@@ -78,6 +79,7 @@ const SigilOptions = props => (
             index={i}
             size="40"
             foregroundColor="black"
+            backgroundOpacity="0"
           />
         </div>
       );
@@ -100,6 +102,34 @@ const SwatchOptions = props => (
         >
           <C
             onClick={props.onClick}
+            className="color"
+            key={i}
+            value={A}
+            index={i}
+            size="25"
+            foregroundColor="black"
+          />
+        </div>
+      );
+    })}
+  </div>
+);
+
+const BackgroundOptions = props => (
+  <div style={{ display: "flex", flexWrap: "wrap" }}>
+    {Object.keys(colorz).map((color, i) => {
+      const C = colorz[color];
+      const A = window.colors[color];
+      return (
+        <div
+          value={A}
+          className="color"
+          onClick={props.onBackgroundClick}
+          key={i}
+          style={{ padding: 8, cursor: "pointer" }}
+        >
+          <C
+            onClick={props.onBackgroundClick}
             className="color"
             key={i}
             value={A}
@@ -224,8 +254,8 @@ const ClipBoard = props => {
           setOption("swatchOptions");
           setName("Swatch");
         } else {
-          setOption("fontColor");
-          setName("Font Color");
+          setOption("backgroundOptions");
+          setName("Background Color");
         }
         break;
       case "bannerOptions":
@@ -277,6 +307,15 @@ const ClipBoard = props => {
         if (selection === "previous") {
           setOption("fontOptions");
           setName("Font");
+        } else {
+          setOption("backgroundOptions");
+          setName("Background Color");
+        }
+        break;
+      case "backgroundOptions":
+        if (selection === "previous") {
+          setOption("fontColor");
+          setName("Font Color");
         } else {
           setOption("sigilOptions");
           setName("Sigil");
