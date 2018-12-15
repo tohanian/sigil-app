@@ -10,7 +10,6 @@ const OptionSet = props => {
     sigilOptions: <SigilOptions {...props} />,
     swatchOptions: <SwatchOptions {...props} />,
     bannerOptions: <BannerOptions {...props} />,
-    textOptions: <TextOptions {...props} />,
     fontOptions: <FontOptions {...props} />,
     fontColor: <FontColor {...props} />,
     outlineOptions: <OutlineOptions {...props} />,
@@ -268,17 +267,43 @@ const FontColor = props => (
 );
 
 const BannerOptions = props => {
-  return (
-    <div style={{ marginTop: '40px' }}>
-      <input onChange={props.onHouseTextChange} />
-    </div>
-  );
-};
+  const [inputFocused, setFocus] = useState('none');
+  const inputStyles = {
+    padding: '8px 5px',
+    fontSize: '20px',
+    border: 'none',
+    borderRadius: 0,
+    outline: 'none',
+    borderBottom: '2px solid darkgrey',
+    textAlign: 'center'
+  };
 
-const TextOptions = props => {
   return (
-    <div style={{ marginTop: '40px' }}>
-      <input onChange={props.onChange} />
+    <div>
+      <div style={{ marginTop: '15px' }}>
+        <input
+          style={{
+            ...inputStyles,
+            background: inputFocused === 'bannerText' ? 'lightgrey' : 'none'
+          }}
+          onChange={props.onHouseTextChange}
+          onFocus={() => setFocus('bannerText')}
+          onBlur={() => setFocus('none')}
+          placeholder="Banner Text"
+        />
+      </div>
+      <div style={{ marginTop: '15px' }}>
+        <input
+          style={{
+            ...inputStyles,
+            background: inputFocused === 'sloganText' ? 'lightgrey' : 'none'
+          }}
+          onChange={props.onChange}
+          onFocus={() => setFocus('sloganText')}
+          onBlur={() => setFocus('none')}
+          placeholder="Slogan Text"
+        />
+      </div>
     </div>
   );
 };
@@ -347,8 +372,8 @@ const ClipBoard = props => {
           setOption('outlineOptions');
           setName('Outline');
         } else {
-          setOption('textOptions');
-          setName('Slogan Text');
+          setOption('fontOptions');
+          setName('Font');
         }
         break;
       case 'swatchOptions':
@@ -366,22 +391,13 @@ const ClipBoard = props => {
           setName('Swatch');
         } else {
           setOption('bannerOptions');
-          setName('Banner Text');
-        }
-        break;
-      case 'textOptions':
-        if (selection === 'previous') {
-          setOption('bannerOptions');
-          setName('Banner Text');
-        } else {
-          setOption('fontOptions');
-          setName('Font');
+          setName('Text');
         }
         break;
       case 'fontOptions':
         if (selection === 'previous') {
-          setOption('textOptions');
-          setName('Slogan Text');
+          setOption('bannerOptions');
+          setName('Text');
         } else {
           setOption('fontColor');
           setName('Font Color');
