@@ -337,7 +337,6 @@ const ClipBoard = props => {
 };
 
 const cell = {
-  borderRadius: 4,
   background: "#DDDDDD",
   alignItems: "center",
   paddingTop: "10px",
@@ -347,7 +346,8 @@ const cell = {
   overflow: "scroll",
   bottom: 0,
   left: 0,
-  right: 0
+  right: 0,
+  boxShadow: "0px 2px 2px 0px rgba(0,0,0,0.28)"
 };
 
 export default ClipBoard;

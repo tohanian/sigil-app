@@ -20,14 +20,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 5vmin);
+  font-size: calc(20px + 5vmin);
   color: white;
   font-family: "Raleway";
   padding: 0;
   outline: none;
   border: 0;
   width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25)
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.28)
 }
 
 input {
@@ -40,61 +40,61 @@ input {
 }
 
 .Bungee {
-  font-family: "Bungee Shade", cursive !important;
+  font-family: "Bungee Shade", cursive;
 }
 .Charmonman {
-  font-family: "Charmonman", cursive !important;
+  font-family: "Charmonman", cursive;
 }
 .Raleway {
-  font-family: "Raleway", sans-serif !important;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 
 .Lato {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif;
 }
 
 .Lobster {
-  font-family: "Lobster", cursive !important;
+  font-family: "Lobster", cursive;
 }
 
 .GamjaFlower {
-  font-family: "Gamja Flower", cursive !important;
+  font-family: "Gamja Flower", cursive;
 }
 
 .Faster {
-  font-family: "Faster One", cursive !important;
+  font-family: "Faster One", cursive;
 }
 
 .GloriaHallelujah {
-  font-family: "Gloria Hallelujah", cursive !important;
+  font-family: "Gloria Hallelujah", cursive;
 }
 
 .IndieFlower {
-  font-family: "Indie Flower", cursive !important;
+  font-family: "Indie Flower", cursive;
 }
 
 .Merriweather {
-  font-family: "Merriweather", sans-serif !important;
+  font-family: "Merriweather", sans-serif;
 }
 
 .Montserrat {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Montserrat", sans-serif;
 }
 
 .NotoSerif {
-  font-family: "Noto Serif TC", serif !important;
+  font-family: "Noto Serif TC", serif;
 }
 
 .OpenSans {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Open Sans", sans-serif;
 }
 .Oswald {
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Oswald", sans-serif;
 }
 
 .PermanentMarker {
-  font-family: "Permanent Marker", cursive !important;
+  font-family: "Permanent Marker", cursive;
 }
 
 .PlayfairDisplay {
@@ -102,11 +102,11 @@ input {
 }
 
 .Poppins {
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins", sans-serif;
 }
 
 .Roboto {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto", sans-serif;
 }
 
 .SourceSansPro {
@@ -114,5 +114,5 @@ input {
 }
 
 .Unlock {
-  font-family: "Unlock", sans-serif !important;
+  font-family: "Unlock", sans-serif;
 }
