@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import * as icons from "../icons/animals";
-import * as keyboardAnimals from "../icons/animals";
-import * as colorz from "../icons/ColorSwatches";
-import * as fonts from "../icons/fonts";
-import css from "../App.css";
+import React, { useState } from 'react';
+import * as icons from '../icons/animals';
+import * as keyboardAnimals from '../icons/animals';
+import * as colorz from '../icons/ColorSwatches';
+import * as fonts from '../icons/fonts';
+import css from '../App.css';
 
 const OptionSet = props => {
   const optionSets = {
@@ -22,8 +22,8 @@ const OptionSet = props => {
   return (
     <div
       style={{
-        display: "flex",
-        flexWrap: "wrap"
+        display: 'flex',
+        flexWrap: 'wrap'
       }}
     >
       <SigilOptions {...props} />
@@ -32,7 +32,7 @@ const OptionSet = props => {
 };
 
 const FontOptions = props => (
-  <div style={{ display: "flex", flexWrap: "wrap" }}>
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(fonts).map((font, i) => {
       const C = fonts[font];
       return (
@@ -40,7 +40,7 @@ const FontOptions = props => (
           value={font}
           onClick={props.onFontSelect}
           key={i}
-          style={{ padding: 12, cursor: "pointer" }}
+          style={{ padding: 12, cursor: 'pointer' }}
         >
           <C
             onClick={props.onFontSelect}
@@ -58,7 +58,7 @@ const FontOptions = props => (
 );
 
 const SigilOptions = props => (
-  <div style={{ display: "flex", flexWrap: "wrap" }}>
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(keyboardAnimals).map((icon, i) => {
       const C = keyboardAnimals[icon];
 
@@ -68,19 +68,33 @@ const SigilOptions = props => (
           className="icon"
           onClick={props.onClick}
           key={i}
-          style={{ padding: 12, cursor: "pointer" }}
+          style={{
+            width: 'calc(100vw/7)',
+            height: 'calc(100vw/7)',
+            cursor: 'pointer',
+            position: 'relative'
+          }}
         >
-          <C
-            onClick={props.onClick}
-            name={icon}
-            className="icon"
-            key={i}
-            value="icon"
-            index={i}
-            size="40"
-            foregroundColor="black"
-            backgroundOpacity="0"
-          />
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)'
+            }}
+          >
+            <C
+              onClick={props.onClick}
+              name={icon}
+              className="icon"
+              key={i}
+              value="icon"
+              index={i}
+              size="40"
+              foregroundColor="black"
+              backgroundOpacity="0"
+            />
+          </div>
         </div>
       );
     })}
@@ -88,7 +102,7 @@ const SigilOptions = props => (
 );
 
 const SwatchOptions = props => (
-  <div style={{ display: "flex", flexWrap: "wrap" }}>
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(colorz).map((color, i) => {
       const C = colorz[color];
       const A = window.colors[color];
@@ -98,17 +112,31 @@ const SwatchOptions = props => (
           className="color"
           onClick={props.onClick}
           key={i}
-          style={{ padding: 8, cursor: "pointer" }}
+          style={{
+            width: 'calc(100vw/7)',
+            height: 'calc(100vw/7)',
+            cursor: 'pointer',
+            position: 'relative'
+          }}
         >
-          <C
-            onClick={props.onClick}
-            className="color"
-            key={i}
-            value={A}
-            index={i}
-            size="25"
-            foregroundColor="black"
-          />
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)'
+            }}
+          >
+            <C
+              onClick={props.onClick}
+              className="color"
+              key={i}
+              value={A}
+              index={i}
+              size="25"
+              foregroundColor="black"
+            />
+          </div>
         </div>
       );
     })}
@@ -116,7 +144,7 @@ const SwatchOptions = props => (
 );
 
 const BackgroundOptions = props => (
-  <div style={{ display: "flex", flexWrap: "wrap" }}>
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(colorz).map((color, i) => {
       const C = colorz[color];
       const A = window.colors[color];
@@ -126,17 +154,31 @@ const BackgroundOptions = props => (
           className="color"
           onClick={props.onBackgroundClick}
           key={i}
-          style={{ padding: 8, cursor: "pointer" }}
+          style={{
+            width: 'calc(100vw/7)',
+            height: 'calc(100vw/7)',
+            cursor: 'pointer',
+            position: 'relative'
+          }}
         >
-          <C
-            onClick={props.onBackgroundClick}
-            className="color"
-            key={i}
-            value={A}
-            index={i}
-            size="25"
-            foregroundColor="black"
-          />
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)'
+            }}
+          >
+            <C
+              onClick={props.onBackgroundClick}
+              className="color"
+              key={i}
+              value={A}
+              index={i}
+              size="25"
+              foregroundColor="black"
+            />
+          </div>
         </div>
       );
     })}
@@ -144,7 +186,7 @@ const BackgroundOptions = props => (
 );
 
 const OutlineOptions = props => (
-  <div style={{ display: "flex", flexWrap: "wrap" }}>
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(colorz).map((color, i) => {
       const C = colorz[color];
       const A = window.colors[color];
@@ -154,16 +196,30 @@ const OutlineOptions = props => (
           className="color"
           onClick={props.onOutlineClick}
           key={i}
-          style={{ padding: 8, cursor: "pointer" }}
+          style={{
+            width: 'calc(100vw/7)',
+            height: 'calc(100vw/7)',
+            cursor: 'pointer',
+            position: 'relative'
+          }}
         >
-          <C
-            onClick={props.onOutlineClick}
-            className="color"
-            key={i}
-            value={A}
-            index={i}
-            foregroundColor="black"
-          />
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)'
+            }}
+          >
+            <C
+              onClick={props.onOutlineClick}
+              className="color"
+              key={i}
+              value={A}
+              index={i}
+              foregroundColor="black"
+            />
+          </div>
         </div>
       );
     })}
@@ -171,7 +227,7 @@ const OutlineOptions = props => (
 );
 
 const FontColor = props => (
-  <div style={{ display: "flex", flexWrap: "wrap" }}>
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(colorz).map((color, i) => {
       const C = colorz[color];
       const A = window.colors[color];
@@ -181,16 +237,30 @@ const FontColor = props => (
           className="color"
           onClick={props.onFontColorClick}
           key={i}
-          style={{ padding: 8, cursor: "pointer" }}
+          style={{
+            width: 'calc(100vw/7)',
+            height: 'calc(100vw/7)',
+            cursor: 'pointer',
+            position: 'relative'
+          }}
         >
-          <C
-            onClick={props.onFontColorClick}
-            className="color"
-            key={i}
-            value={A}
-            index={i}
-            foregroundColor="black"
-          />
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)'
+            }}
+          >
+            <C
+              onClick={props.onFontColorClick}
+              className="color"
+              key={i}
+              value={A}
+              index={i}
+              foregroundColor="black"
+            />
+          </div>
         </div>
       );
     })}
@@ -198,45 +268,59 @@ const FontColor = props => (
 );
 
 const BannerOptions = props => {
-  return <input onChange={props.onHouseTextChange} />;
+  return (
+    <div style={{ marginTop: '40px' }}>
+      <input onChange={props.onHouseTextChange} />
+    </div>
+  );
 };
 
 const TextOptions = props => {
-  return <input onChange={props.onChange} />;
+  return (
+    <div style={{ marginTop: '40px' }}>
+      <input onChange={props.onChange} />
+    </div>
+  );
 };
 
 const Selectors = props => {
   return (
     <div
       style={{
-        display: "flex",
-        justifyContent: "space-between"
+        display: 'flex',
+        justifyContent: 'space-between',
+        border: '1px solid #d0d0d0',
+        backgroundColor: '#f1f1f1'
       }}
     >
       <div
         style={{
-          width: "20px",
-          margin: "10px"
+          width: '20px',
+          padding: '10px',
+          border: '1px solid #d0d0d0',
+          margin: '-1px'
         }}
-        onClick={props.onClick("previous")}
+        onClick={props.onClick('previous')}
       >
         <i
           className="fa fa-chevron-left"
-          style={{ cursor: "pointer" }}
+          style={{ cursor: 'pointer' }}
           aria-hidden="true"
         />
       </div>
-      <div style={{ marginTop: 5 }}> {props.name} </div>
+      <div style={{ marginTop: 10 }}> {props.name} </div>
       <div
         style={{
-          width: "20px",
-          margin: "10px"
+          width: '20px',
+          padding: '10px',
+          border: '1px solid #d0d0d0',
+          margin: '-1px'
         }}
-        onClick={props.onClick("next")}
+        onClick={props.onClick('next')}
       >
         <i
           className="fa fa-chevron-right"
-          style={{ cursor: "pointer" }}
+          style={{ cursor: 'pointer' }}
           aria-hidden="true"
         />
       </div>
@@ -245,80 +329,80 @@ const Selectors = props => {
 };
 
 const ClipBoard = props => {
-  const [option, setOption] = useState("sigilOptions");
-  const [name, setName] = useState("Sigil");
+  const [option, setOption] = useState('sigilOptions');
+  const [name, setName] = useState('Sigil');
   const selectorOnClick = selection => () => {
     switch (option) {
-      case "sigilOptions":
-        if (selection === "next") {
-          setOption("swatchOptions");
-          setName("Swatch");
+      case 'sigilOptions':
+        if (selection === 'next') {
+          setOption('swatchOptions');
+          setName('Swatch');
         } else {
-          setOption("backgroundOptions");
-          setName("Background Color");
+          setOption('backgroundOptions');
+          setName('Background Color');
         }
         break;
-      case "bannerOptions":
-        if (selection === "previous") {
-          setOption("outlineOptions");
-          setName("Outline");
+      case 'bannerOptions':
+        if (selection === 'previous') {
+          setOption('outlineOptions');
+          setName('Outline');
         } else {
-          setOption("textOptions");
-          setName("Slogan Text");
+          setOption('textOptions');
+          setName('Slogan Text');
         }
         break;
-      case "swatchOptions":
-        if (selection === "previous") {
-          setOption("sigilOptions");
-          setName("Sigil");
+      case 'swatchOptions':
+        if (selection === 'previous') {
+          setOption('sigilOptions');
+          setName('Sigil');
         } else {
-          setOption("outlineOptions");
-          setName("Outline Color");
+          setOption('outlineOptions');
+          setName('Outline Color');
         }
         break;
-      case "outlineOptions":
-        if (selection === "previous") {
-          setOption("swatchOptions");
-          setName("Swatch");
+      case 'outlineOptions':
+        if (selection === 'previous') {
+          setOption('swatchOptions');
+          setName('Swatch');
         } else {
-          setOption("bannerOptions");
-          setName("Banner Text");
+          setOption('bannerOptions');
+          setName('Banner Text');
         }
         break;
-      case "textOptions":
-        if (selection === "previous") {
-          setOption("bannerOptions");
-          setName("Banner Text");
+      case 'textOptions':
+        if (selection === 'previous') {
+          setOption('bannerOptions');
+          setName('Banner Text');
         } else {
-          setOption("fontOptions");
-          setName("Font");
+          setOption('fontOptions');
+          setName('Font');
         }
         break;
-      case "fontOptions":
-        if (selection === "previous") {
-          setOption("textOptions");
-          setName("Slogan Text");
+      case 'fontOptions':
+        if (selection === 'previous') {
+          setOption('textOptions');
+          setName('Slogan Text');
         } else {
-          setOption("fontColor");
-          setName("Font Color");
+          setOption('fontColor');
+          setName('Font Color');
         }
         break;
-      case "fontColor":
-        if (selection === "previous") {
-          setOption("fontOptions");
-          setName("Font");
+      case 'fontColor':
+        if (selection === 'previous') {
+          setOption('fontOptions');
+          setName('Font');
         } else {
-          setOption("backgroundOptions");
-          setName("Background Color");
+          setOption('backgroundOptions');
+          setName('Background Color');
         }
         break;
-      case "backgroundOptions":
-        if (selection === "previous") {
-          setOption("fontColor");
-          setName("Font Color");
+      case 'backgroundOptions':
+        if (selection === 'previous') {
+          setOption('fontColor');
+          setName('Font Color');
         } else {
-          setOption("sigilOptions");
-          setName("Sigil");
+          setOption('sigilOptions');
+          setName('Sigil');
         }
         break;
       default:
@@ -329,7 +413,8 @@ const ClipBoard = props => {
   return (
     <div style={cell}>
       <Selectors name={name} onClick={selectorOnClick} option={option} />
-      <div style={{ marginLeft: "6px", marginRight: "6px" }}>
+      <div style={{ height: 10 }} />
+      <div style={{ height: '26vh', overflowY: 'scroll' }}>
         <OptionSet {...props} optionSet={option} />
       </div>
     </div>
@@ -338,13 +423,10 @@ const ClipBoard = props => {
 
 const cell = {
   borderRadius: 4,
-  background: "#DDDDDD",
-  alignItems: "center",
-  paddingTop: "10px",
-  width: "100%",
-  height: "30%",
-  position: "fixed",
-  overflow: "scroll",
+  background: '#DDDDDD',
+  alignItems: 'center',
+  width: '100%',
+  position: 'fixed',
   bottom: 0,
   left: 0,
   right: 0
