@@ -25,7 +25,7 @@ const OptionSet = props => {
         flexWrap: "wrap"
       }}
     >
-      <SigilOptions {...props} />
+      <SwatchOptions {...props} />
     </div>
   );
 };
