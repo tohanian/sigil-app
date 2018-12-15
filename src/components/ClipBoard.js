@@ -441,7 +441,7 @@ const cell = {
   background: "#DDDDDD",
   alignItems: "center",
   width: "100%",
-  height: "25%",
+  height: "30%",
   position: "fixed",
   bottom: 0,
   left: 0,
