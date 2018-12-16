@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as icons from "../icons/animals";
 import * as keyboardAnimals from "../icons/animals";
 import * as colorz from "../icons/ColorSwatches";
+import * as outlineColors from "../icons/OutlineSwatches";
 import * as fonts from "../icons/fonts";
 import css from "../App.css";
 
@@ -176,8 +177,8 @@ const BackgroundOptions = props => (
 
 const OutlineOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
-    {Object.keys(colorz).map((color, i) => {
-      const C = colorz[color];
+    {Object.keys(outlineColors).map((color, i) => {
+      const C = outlineColors[color];
       const A = window.colors[color];
       return (
         <div

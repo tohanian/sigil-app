@@ -95,13 +95,13 @@ class App extends Component {
     };
     this.state = {
       icon: "Bat",
-      text: "Coolio",
+      text: "YOUR HOUSE SLOGAN HERE",
       shareMenu: false,
       sigilPng: null,
       color: "red",
       fontClassName: null,
       stroke: null,
-      houseText: "HOUSE RUDASHEVSKI",
+      houseText: "YOUR HOUSE NAME HERE",
       textColor: null,
       backgroundColor: "white",
       backgroundOpacity: 0
