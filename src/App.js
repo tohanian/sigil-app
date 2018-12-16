@@ -69,7 +69,7 @@ class App extends Component {
       brightPurple: "#9980FA",
       deepPurple: "#5758BB",
       black: "#111111",
-      maroon: "#85144b",
+      maroon: "#621B18",
       gray: "#AAAAAA",
       silver: "#b2bec3",
       white: "white",
@@ -79,7 +79,19 @@ class App extends Component {
       darkGrey: "#34495e",
       brightWhite: "#ecf0f1",
       lightBrown: "#4b4b4b",
-      rosePink: "#ffcccc"
+      rosePink: "#ffcccc",
+      lightestBlue: "#EFF8FF",
+      darkGreen: "#1A4731",
+      darkRed: "#CC1F1A",
+      lightestIndigo: "#E6E8FF",
+      darkYellow: "#F2D024",
+      lightestOrange: "#FCD9B6",
+      darkestOrange: "#DE751F",
+      lighterPurple: "#D6BBFC",
+      mediumishPurple: "#794ACF",
+      darkPink: "#EB5286",
+      lightestYellow: "#FFF9C2",
+      lightishPurple: "#A779E9"
     };
     this.state = {
       icon: "Bat",

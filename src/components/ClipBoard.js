@@ -18,16 +18,6 @@ const OptionSet = props => {
   if (props.optionSet) {
     return optionSets[props.optionSet];
   }
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap"
-      }}
-    >
-      <SwatchOptions {...props} />
-    </div>
-  );
 };
 
 const FontOptions = props => (

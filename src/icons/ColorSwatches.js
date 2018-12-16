@@ -36,7 +36,12 @@ export const darkGrey = ({ color = "#34495e" }) => (
   </svg>
 );
 
-export const lightbrown = ({ color = "#4b4b4b" }) => (
+export const navy = ({ color = "#001f3f" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+export const lightBrown = ({ color = "#4b4b4b" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
@@ -52,17 +57,7 @@ export const rosePink = ({ color = "#ffcccc" }) => (
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
 );
-export const lightPink = ({ color = "#fab1a0" }) => (
-  <svg className={color} width="35" height="35">
-    <rect rx="5" ry="5" width="35" height="35" fill={color} />
-  </svg>
-);
 
-export const coral = ({ color = "#ff7675" }) => (
-  <svg className={color} width="35" height="35">
-    <rect rx="5" ry="5" width="35" height="35" fill={color} />
-  </svg>
-);
 export const brightPink = ({ color = "#fd79a8" }) => (
   <svg className={color} width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
@@ -75,8 +70,41 @@ export const fuschia = ({ color = "#F012BE" }) => (
   </svg>
 );
 
+export const darkPink = ({ color = "#EB5286" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+export const lighterPurple = ({ color = "#D6BBFC" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
+export const lightishPurple = ({ color = "#A779E9" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+export const mediumishPurple = ({ color = "#794ACF" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
 export const purple = ({ color = "#B10DC9" }) => (
   <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
+export const lightPink = ({ color = "#fab1a0" }) => (
+  <svg className={color} width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
+export const coral = ({ color = "#ff7675" }) => (
+  <svg className={color} width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
 );
@@ -86,19 +114,23 @@ export const red = ({ color = "#FF4136" }) => (
   </svg>
 );
 
-export const maroon = ({ color = "#85144b" }) => (
+export const darkRed = ({ color = "#CC1F1A" }) => (
+  <svg className={color} width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+export const maroon = ({ color = "#621B18" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
 );
 
+export const lightestYellow = ({ color = "#FFF9C2" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
 export const lightYellow = ({ color = "#ffeaa7" }) => (
-  <svg width="35" height="35">
-    <rect rx="5" ry="5" width="35" height="35" fill={color} />
-  </svg>
-);
-
-export const brightYellow = ({ color = "#fdcb6e" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
@@ -110,7 +142,30 @@ export const yellow = ({ color = "#FFDC00" }) => (
   </svg>
 );
 
+export const darkYellow = ({ color = "#F2D024" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
+export const lightestOrange = ({ color = "#FCD9B6" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
+export const brightYellow = ({ color = "#fdcb6e" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
 export const orange = ({ color = "#FF851B" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+export const darkestOrange = ({ color = "#DE751F" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
@@ -149,6 +204,17 @@ export const olive = ({ color = "#3D9970" }) => (
   </svg>
 );
 
+export const darkGreen = ({ color = "#1A4731" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
+
+export const lightestBlue = ({ color = "#EFF8FF" }) => (
+  <svg width="35" height="35">
+    <rect rx="5" ry="5" width="35" height="35" fill={color} />
+  </svg>
+);
 export const aqua = ({ color = "#7FDBFF" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
@@ -184,12 +250,12 @@ export const deepBlue = ({ color = "#1B1464" }) => (
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
 );
-export const navy = ({ color = "#001f3f" }) => (
+
+export const lightestIndigo = ({ color = "#E6E8FF" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
 );
-
 export const lightPurple = ({ color = "#a29bfe" }) => (
   <svg width="35" height="35">
     <rect rx="5" ry="5" width="35" height="35" fill={color} />
