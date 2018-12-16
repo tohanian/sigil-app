@@ -210,14 +210,6 @@ export const brightWhite = ({ color = "#ecf0f1" }) => (
 
 export const white = ({ color = "white" }) => (
   <svg width="35" height="35">
-    <rect
-      stroke="black"
-      strokeWidth="2"
-      rx="5"
-      ry="5"
-      width="35"
-      height="35"
-      fill={color}
-    />
+    <rects rx="5" ry="5" width="35" height="35" fill={color} />
   </svg>
 );
