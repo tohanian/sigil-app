@@ -25,6 +25,7 @@ export const Bat = ({
       textAnchor="middle"
       fontSize="40px"
       fill={textColor}
+      fontFamily={fontClassName}
     >
       {houseText}
     </text>

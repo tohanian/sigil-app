@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import css from "./App.css";
 import * as icons from "./icons/animals";
 import canvg from "canvg";
 import { svgAsPngUri } from "save-svg-as-png";
@@ -151,6 +151,27 @@ class App extends Component {
       backgroundColor: event.currentTarget.attributes[0].value,
       backgroundOpacity: "1"
     });
+  };
+
+  convertToPng = () => {
+    const that = this;
+    const svg = document.querySelector("svg");
+    svgAsPngUri(
+      svg,
+      {
+        fonts: [
+          {
+            url: "http://fonts.googleapis.com/css?family=Permanent+Marker",
+            format: "application/x-font-ttf",
+            text:
+              "@font-face{font-family:'Permanent Marker';src:url(http://fonts.googleapis.com/css?family=Permanent+Marker)}"
+          }
+        ]
+      },
+      function(uri) {
+        that.setState({ sigilPng: uri, shareMenu: true });
+      }
+    );
   };
 
   convertToPng = () => {
