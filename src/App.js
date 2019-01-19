@@ -104,7 +104,8 @@ class App extends Component {
       houseText: "YOUR HOUSE NAME HERE",
       textColor: null,
       backgroundColor: "white",
-      backgroundOpacity: 0
+      backgroundOpacity: 0,
+      svg: null
     };
   }
 
@@ -156,27 +157,6 @@ class App extends Component {
   convertToPng = () => {
     const that = this;
     const svg = document.querySelector("svg");
-    svgAsPngUri(
-      svg,
-      {
-        fonts: [
-          {
-            url: "http://fonts.googleapis.com/css?family=Permanent+Marker",
-            format: "application/x-font-ttf",
-            text:
-              "@font-face{font-family:'Permanent Marker';src:url(http://fonts.googleapis.com/css?family=Permanent+Marker)}"
-          }
-        ]
-      },
-      function(uri) {
-        that.setState({ sigilPng: uri, shareMenu: true });
-      }
-    );
-  };
-
-  convertToPng = () => {
-    const that = this;
-    const svg = document.querySelector("svg");
     svgAsPngUri(svg, {}, function(uri) {
       that.setState({ sigilPng: uri, shareMenu: true });
     });
@@ -184,6 +164,11 @@ class App extends Component {
 
   onChange = event => {
     this.setState({ text: event.target.value });
+  };
+
+  componentDidMount = () => {
+    const svg = document.querySelector("svg");
+    this.setState({ svg: svg });
   };
 
   onHouseTextChange = event => {
@@ -251,6 +236,7 @@ class App extends Component {
           onClick={() => this.setState({ shareMenu: false })}
           isOpen={this.state.shareMenu}
           convertToPng={this.convertToPng}
+          svg={this.state.svg}
           src={this.state.sigilPng}
           quote={this.state.text}
           house={this.state.houseText}

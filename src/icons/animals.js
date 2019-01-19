@@ -12,7 +12,7 @@ export const Bat = ({
   textColor,
   fontClassName
 }) => (
-  <svg width={size} name="Bat" value="Bat" viewBox="0 0 512 512">
+  <svg width={size} height={size} name="Bat" value="Bat" viewBox="0 0 512 512">
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
@@ -21,11 +21,10 @@ export const Bat = ({
     <text
       x="50%"
       y="7%"
-      className={fontClassName}
+      className="PermanentMarker"
       textAnchor="middle"
       fontSize="40px"
       fill={textColor}
-      fontFamily={fontClassName}
     >
       {houseText}
     </text>

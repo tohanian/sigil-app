@@ -13,6 +13,13 @@ import {
 } from "react-share";
 import ShareMenuItem from "./ShareMenuItem";
 
+const headers = () => {
+  return {
+    "Content-Type": "application/json",
+    Accepts: "application/json"
+  };
+};
+
 const styles = {
   overlay: {
     height: "calc(100% - 30px)",
@@ -57,6 +64,14 @@ const ShareMenu = props => {
   };
 
   const uploadImage = () => {
+    fetch("http://localhost:3000/sigil", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify(props.svg.outerHTML)
+    });
     const fileBlob = dataUriToBlob(props.src);
     const myFile = blobToFile(fileBlob, "my-image.png");
 
