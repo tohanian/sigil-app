@@ -69,9 +69,11 @@ export const Bicep = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
@@ -80,9 +82,16 @@ export const Bicep = ({
     <text
       x="50%"
       y="7%"
-      className={fontClassName}
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -98,7 +107,7 @@ export const Bicep = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -119,20 +128,29 @@ export const Cat = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -148,7 +166,7 @@ export const Cat = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -169,20 +187,29 @@ export const Chicken = ({
   houseText,
   sloganText,
   textColor,
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -198,7 +225,7 @@ export const Chicken = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -219,20 +246,29 @@ export const Cricket = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="30px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -246,7 +282,7 @@ export const Cricket = ({
       strokeWidth="8"
     />
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -267,20 +303,29 @@ export const Eagle = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -296,7 +341,7 @@ export const Eagle = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -317,20 +362,29 @@ export const Elephant = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -346,7 +400,7 @@ export const Elephant = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -367,20 +421,29 @@ export const Hound = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -396,7 +459,7 @@ export const Hound = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -416,20 +479,29 @@ export const Owl = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -445,7 +517,7 @@ export const Owl = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -466,20 +538,29 @@ export const Pig = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -493,7 +574,7 @@ export const Pig = ({
       strokeWidth="8"
     />
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -514,20 +595,29 @@ export const Scarab = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -543,7 +633,7 @@ export const Scarab = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -564,20 +654,29 @@ export const Shark = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -593,7 +692,7 @@ export const Shark = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -614,20 +713,29 @@ export const SnakeBite = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -643,7 +751,7 @@ export const SnakeBite = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -664,20 +772,29 @@ export const Tiger = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -693,7 +810,7 @@ export const Tiger = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -714,20 +831,29 @@ export const Trout = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -743,7 +869,7 @@ export const Trout = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -763,20 +889,29 @@ export const Turtle = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -790,7 +925,7 @@ export const Turtle = ({
       strokeWidth="8"
     />
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -811,20 +946,29 @@ export const Spider = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -840,7 +984,7 @@ export const Spider = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -861,20 +1005,29 @@ export const Venus = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -890,7 +1043,7 @@ export const Venus = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -911,20 +1064,29 @@ export const Hazmat = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -940,7 +1102,7 @@ export const Hazmat = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -961,20 +1123,29 @@ export const Iceman = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -990,7 +1161,7 @@ export const Iceman = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1011,20 +1182,29 @@ export const SmartPhone = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1040,7 +1220,7 @@ export const SmartPhone = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1061,20 +1241,29 @@ export const TrappedGhost = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1090,7 +1279,7 @@ export const TrappedGhost = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1111,20 +1300,29 @@ export const Biohazard = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1140,7 +1338,7 @@ export const Biohazard = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1161,20 +1359,29 @@ export const Sun = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1190,7 +1397,7 @@ export const Sun = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1211,20 +1418,29 @@ export const Sword = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1240,7 +1456,7 @@ export const Sword = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1261,20 +1477,29 @@ export const Shuttle = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1290,7 +1515,7 @@ export const Shuttle = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1311,20 +1536,29 @@ export const Abstract = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1340,7 +1574,7 @@ export const Abstract = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1361,20 +1595,29 @@ export const Dice = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1390,7 +1633,7 @@ export const Dice = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1411,20 +1654,29 @@ export const Fairy = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1440,7 +1692,7 @@ export const Fairy = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1461,20 +1713,29 @@ export const Buckles = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1490,7 +1751,7 @@ export const Buckles = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1511,20 +1772,29 @@ export const Coat = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1540,7 +1810,7 @@ export const Coat = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1561,20 +1831,29 @@ export const Mask = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1590,7 +1869,7 @@ export const Mask = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1611,20 +1890,29 @@ export const ArchitectMask = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1640,7 +1928,7 @@ export const ArchitectMask = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1661,20 +1949,29 @@ export const PlagueDoctor = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1690,7 +1987,7 @@ export const PlagueDoctor = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1711,20 +2008,29 @@ export const Turkey = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1740,7 +2046,7 @@ export const Turkey = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1761,20 +2067,29 @@ export const Gauntlet = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1790,7 +2105,7 @@ export const Gauntlet = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1811,20 +2126,29 @@ export const DwarfFace = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1840,7 +2164,7 @@ export const DwarfFace = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1861,20 +2185,29 @@ export const Vampire = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1890,7 +2223,7 @@ export const Vampire = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1911,20 +2244,29 @@ export const FemaleElf = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1940,7 +2282,7 @@ export const FemaleElf = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -1961,20 +2303,29 @@ export const Fangs = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -1990,7 +2341,7 @@ export const Fangs = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -2011,20 +2362,29 @@ export const ShipsWheel = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -2040,7 +2400,7 @@ export const ShipsWheel = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -2061,20 +2421,29 @@ export const Genie = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -2090,7 +2459,7 @@ export const Genie = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -2111,20 +2480,29 @@ export const Flower = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -2140,7 +2518,7 @@ export const Flower = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -2160,20 +2538,29 @@ export const Pizza = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -2189,7 +2576,7 @@ export const Pizza = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"
@@ -2210,20 +2597,29 @@ export const FemaleVampire = ({
   houseText = null,
   sloganText = null,
   textColor = "black",
-  fontClassName
+  fontClassName,
+  fontFamily
 }) => (
   <svg width={size} viewBox="0 0 512 512">
+    <style>{fontClassName}</style>
     <path
       d="M0 0h512v512H0z"
       fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
-      className={fontClassName}
       x="50%"
       y="7%"
+      fontFamily={fontFamily}
       textAnchor="middle"
-      fontSize="40px"
+      fontSize={
+        fontFamily === "Bungee Shade" ||
+        fontFamily === "Charmonman" ||
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
+          ? "30px"
+          : "40px"
+      }
       fill={textColor}
     >
       {houseText}
@@ -2239,7 +2635,7 @@ export const FemaleVampire = ({
       />
     </g>
     <text
-      className={fontClassName}
+      fontFamily={fontFamily}
       x="50%"
       y="95%"
       textAnchor="middle"

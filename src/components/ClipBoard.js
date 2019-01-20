@@ -337,8 +337,8 @@ const Selectors = props => {
 };
 
 const ClipBoard = props => {
-  const [option, setOption] = useState("fontOptions");
-  const [name, setName] = useState("Font");
+  const [option, setOption] = useState("sigilOptions");
+  const [name, setName] = useState("Sigil");
   const selectorOnClick = selection => () => {
     switch (option) {
       case "sigilOptions":
