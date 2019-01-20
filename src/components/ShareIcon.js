@@ -6,9 +6,8 @@ const ShareIcon = props => {
       <div
         style={{
           position: "absolute",
-          top: "-400%",
-          left: "50%",
-          transform: `translate(-50%, 0%)`
+          top: "62%",
+          left: "90%"
         }}
         onClick={props.onClick}
       >
@@ -20,10 +19,7 @@ const ShareIcon = props => {
 
 const shareIconStyles = {
   width: "50px",
-  height: "50px",
-  position: "fixed",
-  bottom: 0,
-  right: 0
+  height: "50px"
 };
 
 export default ShareIcon;

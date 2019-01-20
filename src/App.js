@@ -201,14 +201,12 @@ class App extends Component {
         <div
           className="App"
           style={{
-            position: "fixed",
             width: "100%",
             height: "100%",
-            margin: "0",
-            overflowY: "hidden"
+            margin: "0"
           }}
         >
-          <div style={{ marginTop: 160 }}>
+          <div style={{ marginTop: 20 }}>
             <LargeImage
               fontClassName={fontClassName}
               foregroundColor={color}
@@ -220,8 +218,8 @@ class App extends Component {
               backgroundColor={backgroundColor}
               backgroundOpacity={backgroundOpacity}
             />
+            <ShareIcon onClick={this.convertToPng} />
           </div>
-
           <ClipBoard
             onFontSelect={this.onFontSelect}
             onChange={this.onChange}
@@ -241,7 +239,6 @@ class App extends Component {
           quote={this.state.text}
           house={this.state.houseText}
         />
-        <ShareIcon onClick={this.convertToPng} />
       </React.Fragment>
     );
   }
