@@ -100,13 +100,13 @@ class App extends Component {
     };
     this.state = {
       icon: "Bat",
-      text: "Your HOUSE NAME here",
+      text: "Your Slogan Here",
       shareMenu: false,
       sigilPng: null,
       color: "red",
       fontClassName: null,
       stroke: null,
-      houseText: "Your HOUSE SLOGAN here",
+      houseText: "Your House Here",
       textColor: null,
       backgroundColor: "white",
       backgroundOpacity: 0,

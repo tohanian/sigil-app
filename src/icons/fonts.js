@@ -18,7 +18,7 @@ export const Special_Elite = ({ fontFam = "Special_Elite" }) => (
 );
 
 export const Gamja_Flower = ({ fontFam = "Gamja_Flower" }) => (
-  <div className={fontFam}> Gamja Flower </div>
+  <div className={fontFam}> Gamja</div>
 );
 
 export const Gloria_Hallelujah = ({ fontFam = "Gloria_Hallelujah" }) => (
@@ -26,11 +26,15 @@ export const Gloria_Hallelujah = ({ fontFam = "Gloria_Hallelujah" }) => (
 );
 
 export const Indie_Flower = ({ fontFam = "Indie_Flower" }) => (
-  <div className={fontFam}> Indie Flower </div>
+  <div className={fontFam}> Indie</div>
 );
 
 export const Faster_One = ({ fontFam = "Faster_One" }) => (
   <div className={fontFam}> Faster </div>
+);
+
+export const Fredericka_the_Great = ({ fontFam = "Fredericka_the_Great" }) => (
+  <div className={fontFam}> Fred </div>
 );
 
 export const Lato = ({ fontFam = "Lato" }) => (
@@ -40,6 +44,10 @@ export const Lato = ({ fontFam = "Lato" }) => (
 export const Lobster = ({ fontFam = "Lobster" }) => (
   <div className={fontFam}> {fontFam} </div>
 );
+
+export const Mountains_of_Christmas = ({
+  fontFam = "Mountains_of_Christmas"
+}) => <div className={fontFam}> Mountains </div>;
 
 export const Oswald = ({ fontFam = "Oswald" }) => (
   <div className={fontFam}> {fontFam} </div>
@@ -57,8 +65,12 @@ export const Raleway = ({ fontFam = "Raleway" }) => (
   <div className={fontFam}> {fontFam} </div>
 );
 
-export const Roboto = ({ fontFam = "Roboto" }) => (
-  <div className={fontFam}> {fontFam} </div>
+export const Rock_Salt = ({ fontFam = "Rock_Salt" }) => (
+  <div className={fontFam}> Rock Salt </div>
+);
+
+export const Berkshire_Swash = ({ fontFam = "Berkshire_Swash" }) => (
+  <div className={fontFam}> Swash </div>
 );
 
 export const Unlock = ({ fontFam = "Unlock" }) => (

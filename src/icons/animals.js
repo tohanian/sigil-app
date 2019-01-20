@@ -28,7 +28,8 @@ export const Bat = ({
       fontSize={
         fontFamily === "Bungee Shade" ||
         fontFamily === "Charmonman" ||
-        fontFamily === "Faster One"
+        fontFamily === "Faster One" ||
+        fontFamily === "Rock Salt"
           ? "30px"
           : "40px"
       }
