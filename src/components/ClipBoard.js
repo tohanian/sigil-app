@@ -21,7 +21,7 @@ const OptionSet = props => {
 };
 
 const FontOptions = props => (
-  <div style={{ display: "flex", flexWrap: "wrap" }}>
+  <div style={{ flexWrap: "wrap" }}>
     {Object.keys(fonts).map((font, i) => {
       const C = fonts[font];
       return (
