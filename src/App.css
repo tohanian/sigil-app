@@ -29,16 +29,11 @@ html, body, #root {
 
 .App-header {
   background-color: #0074D9;
+  padding: 5px;
   min-height: 20vh;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: calc(20px + 5vmin);
   color: white;
   font-family: "Raleway";
-  padding: 0;
-  outline: none;
-  border: 0;
   width: 100%;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.28);
 }
