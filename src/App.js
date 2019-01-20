@@ -36,7 +36,12 @@ const LargeImage = props => {
 };
 
 const Header = props => {
-  return <div className="App-header"> SIGILS </div>;
+  return (
+    <div className="App-header">
+      <div style={{ display: "block" }}> SIGILS</div>
+      {props.children}
+    </div>
+  );
 };
 
 class App extends Component {
@@ -196,14 +201,17 @@ class App extends Component {
       backgroundOpacity
     } = this.state;
     return (
-      <div className="App" style={{ position: "relative" }}>
-        <Header />
-        <ShareIcon onClick={this.convertToPng} />
+      <React.Fragment>
+        <Header>
+          <ShareIcon onClick={this.convertToPng} />
+        </Header>
         <div
           style={{
-            position: "relative",
-            transform: "translateY(20%)"
+            justifyContent: "center",
+            display: "flex",
+            alignItems: "center"
           }}
+          className="App"
         >
           <LargeImage
             fontClassName={fontClassName}
@@ -217,7 +225,6 @@ class App extends Component {
             backgroundOpacity={backgroundOpacity}
           />
         </div>
-
         <ClipBoard
           onFontSelect={this.onFontSelect}
           onChange={this.onChange}
@@ -236,7 +243,7 @@ class App extends Component {
           quote={this.state.text}
           house={this.state.houseText}
         />
-      </div>
+      </React.Fragment>
     );
   }
 }

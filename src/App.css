@@ -5,11 +5,15 @@ textarea {
   font-size: 16px;
 }
 
-html, body, #root, .App {
+html, body, #root {
   margin: 0;
   font-family: "Raleway";
   height: 100% !important;
   text-align: center;
+}
+
+.App {
+  height: 50%;
 }
 
 .App-header {
