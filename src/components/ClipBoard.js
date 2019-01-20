@@ -4,7 +4,7 @@ import * as keyboardAnimals from "../icons/animals";
 import * as colorz from "../icons/ColorSwatches";
 import * as outlineColors from "../icons/OutlineSwatches";
 import * as fonts from "../icons/fonts";
-import css from "../App.css";
+import "../App.css";
 
 const OptionSet = props => {
   const optionSets = {
@@ -59,20 +59,13 @@ const SigilOptions = props => (
           onClick={props.onClick}
           key={i}
           style={{
-            width: "calc(100vw/7)",
-            height: "calc(100vw/7)",
+            width: "calc(98vw/7)",
+            height: "calc(98vw/7)",
             cursor: "pointer",
             position: "relative"
           }}
         >
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)"
-            }}
-          >
+          <div>
             <C
               onClick={props.onClick}
               name={icon}
@@ -103,8 +96,8 @@ const SwatchOptions = props => (
           onClick={props.onClick}
           key={i}
           style={{
-            width: "calc(100vw/7)",
-            height: "calc(100vw/7)",
+            width: "calc(98vw/7)",
+            height: "calc(98vw/7)",
             cursor: "pointer",
             position: "relative"
           }}
@@ -145,8 +138,8 @@ const BackgroundOptions = props => (
           onClick={props.onBackgroundClick}
           key={i}
           style={{
-            width: "calc(100vw/7)",
-            height: "calc(100vw/7)",
+            width: "calc(98vw/7)",
+            height: "calc(98vw/7)",
             cursor: "pointer",
             position: "relative"
           }}
@@ -187,8 +180,8 @@ const OutlineOptions = props => (
           onClick={props.onOutlineClick}
           key={i}
           style={{
-            width: "calc(100vw/7)",
-            height: "calc(100vw/7)",
+            width: "calc(98vw/7)",
+            height: "calc(98vw/7)",
             cursor: "pointer",
             position: "relative"
           }}
@@ -228,8 +221,8 @@ const FontColor = props => (
           onClick={props.onFontColorClick}
           key={i}
           style={{
-            width: "calc(100vw/7)",
-            height: "calc(100vw/7)",
+            width: "calc(98vw/7)",
+            height: "calc(98vw/7)",
             cursor: "pointer",
             position: "relative"
           }}
