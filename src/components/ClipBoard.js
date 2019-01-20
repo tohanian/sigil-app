@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import * as icons from "../icons/animals";
 import * as keyboardAnimals from "../icons/animals";
 import * as colorz from "../icons/ColorSwatches";
 import * as outlineColors from "../icons/OutlineSwatches";
@@ -338,8 +337,8 @@ const Selectors = props => {
 };
 
 const ClipBoard = props => {
-  const [option, setOption] = useState("sigilOptions");
-  const [name, setName] = useState("Sigil");
+  const [option, setOption] = useState("fontOptions");
+  const [name, setName] = useState("Font");
   const selectorOnClick = selection => () => {
     switch (option) {
       case "sigilOptions":

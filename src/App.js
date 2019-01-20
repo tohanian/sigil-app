@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import css from "./App.css";
+import "./App.css";
 import * as icons from "./icons/animals";
-import canvg from "canvg";
+import "canvg";
 import { svgAsPngUri } from "save-svg-as-png";
-
+import FontInliner from "google-font-inliner";
 // Components
 import ClipBoard from "./components/ClipBoard";
 import ShareIcon from "./components/ShareIcon";
 import ShareMenu from "./components/ShareMenu";
-import CloseShareMenuIcon from "./components/CloseShareMenuIcon";
 
 const LargeImage = props => {
   return Object.keys(icons).map((icon, i) => {
@@ -29,6 +28,7 @@ const LargeImage = props => {
           textColor={props.textColor}
           backgroundColor={props.backgroundColor}
           fillOpacity={props.fillOpacity}
+          fontFamily={props.fontFamily}
         />
       ) : null;
     return iconic;
@@ -100,13 +100,13 @@ class App extends Component {
     };
     this.state = {
       icon: "Bat",
-      text: "YOUR HOUSE SLOGAN HERE",
+      text: "Your HOUSE NAME here",
       shareMenu: false,
       sigilPng: null,
       color: "red",
       fontClassName: null,
       stroke: null,
-      houseText: "YOUR HOUSE NAME HERE",
+      houseText: "Your HOUSE SLOGAN here",
       textColor: null,
       backgroundColor: "white",
       backgroundOpacity: 0,
@@ -171,17 +171,22 @@ class App extends Component {
     this.setState({ text: event.target.value });
   };
 
-  componentDidMount = () => {
-    const svg = document.querySelector("svg");
-    this.setState({ svg: svg });
-  };
-
   onHouseTextChange = event => {
     this.setState({ houseText: event.target.value });
   };
 
   onFontSelect = event => {
-    this.setState({ fontClassName: event.target.className });
+    const fontName = event.target.className.replace(/_/g, " ");
+    const fontInliner = new FontInliner(
+      encodeURIComponent(fontName),
+      this.state.text + this.state.houseText
+    );
+    fontInliner.style().then(style => {
+      this.setState({
+        fontFamily: fontName,
+        fontClassName: style
+      });
+    });
   };
 
   onFontColorClick = event => {
@@ -189,6 +194,7 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state);
     const {
       text,
       icon,
@@ -198,7 +204,8 @@ class App extends Component {
       houseText,
       textColor,
       backgroundColor,
-      backgroundOpacity
+      backgroundOpacity,
+      fontFamily
     } = this.state;
     return (
       <React.Fragment>
@@ -223,6 +230,7 @@ class App extends Component {
             textColor={textColor}
             backgroundColor={backgroundColor}
             backgroundOpacity={backgroundOpacity}
+            fontFamily={fontFamily}
           />
         </div>
         <ClipBoard
@@ -238,7 +246,6 @@ class App extends Component {
           onClick={() => this.setState({ shareMenu: false })}
           isOpen={this.state.shareMenu}
           convertToPng={this.convertToPng}
-          svg={this.state.svg}
           src={this.state.sigilPng}
           quote={this.state.text}
           house={this.state.houseText}
