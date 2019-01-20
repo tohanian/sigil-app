@@ -22,7 +22,7 @@ export const Bat = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -81,7 +81,7 @@ export const Bicep = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -140,7 +140,7 @@ export const Cat = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -199,7 +199,7 @@ export const Chicken = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -258,7 +258,7 @@ export const Cricket = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -315,7 +315,7 @@ export const Eagle = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -374,7 +374,7 @@ export const Elephant = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -433,7 +433,7 @@ export const Hound = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -491,7 +491,7 @@ export const Owl = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -550,7 +550,7 @@ export const Pig = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -607,7 +607,7 @@ export const Scarab = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -666,7 +666,7 @@ export const Shark = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -725,7 +725,7 @@ export const SnakeBite = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -784,7 +784,7 @@ export const Tiger = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -843,7 +843,7 @@ export const Trout = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -901,7 +901,7 @@ export const Turtle = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -958,7 +958,7 @@ export const Spider = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1017,7 +1017,7 @@ export const Venus = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1076,7 +1076,7 @@ export const Hazmat = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1135,7 +1135,7 @@ export const Iceman = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1194,7 +1194,7 @@ export const SmartPhone = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1253,7 +1253,7 @@ export const TrappedGhost = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1312,7 +1312,7 @@ export const Biohazard = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1371,7 +1371,7 @@ export const Sun = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1430,7 +1430,7 @@ export const Sword = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1489,7 +1489,7 @@ export const Shuttle = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1548,7 +1548,7 @@ export const Abstract = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1607,7 +1607,7 @@ export const Dice = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1666,7 +1666,7 @@ export const Fairy = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1725,7 +1725,7 @@ export const Buckles = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1784,7 +1784,7 @@ export const Coat = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1843,7 +1843,7 @@ export const Mask = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1902,7 +1902,7 @@ export const ArchitectMask = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -1961,7 +1961,7 @@ export const PlagueDoctor = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2020,7 +2020,7 @@ export const Turkey = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2079,7 +2079,7 @@ export const Gauntlet = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2138,7 +2138,7 @@ export const DwarfFace = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2197,7 +2197,7 @@ export const Vampire = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2256,7 +2256,7 @@ export const FemaleElf = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2315,7 +2315,7 @@ export const Fangs = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2374,7 +2374,7 @@ export const ShipsWheel = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2433,7 +2433,7 @@ export const Genie = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2492,7 +2492,7 @@ export const Flower = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2550,7 +2550,7 @@ export const Pizza = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
@@ -2609,7 +2609,7 @@ export const FemaleVampire = ({
     />
     <text
       x="50%"
-      y="7%"
+      y="9%"
       fontFamily={fontFamily}
       textAnchor="middle"
       fontSize={
