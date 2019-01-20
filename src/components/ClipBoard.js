@@ -29,7 +29,7 @@ const FontOptions = props => (
           value={font}
           onClick={props.onFontSelect}
           key={i}
-          style={{ padding: 12, cursor: "pointer" }}
+          style={{ padding: 6, cursor: "pointer" }}
         >
           <C
             onClick={props.onFontSelect}
