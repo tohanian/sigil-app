@@ -6,20 +6,17 @@ const ShareIcon = props => {
       <div
         style={{
           position: "absolute",
-          top: "62%",
+          top: "22%",
           left: "90%"
         }}
         onClick={props.onClick}
       >
-        <i className="fa fa-share-square-o fa-2x" aria-hidden="true" />
+        <i className="fa fa-share-square-o fa-1x" aria-hidden="true" />
       </div>
     </div>
   );
 };
 
-const shareIconStyles = {
-  width: "50px",
-  height: "50px"
-};
+const shareIconStyles = {};
 
 export default ShareIcon;

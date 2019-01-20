@@ -196,40 +196,37 @@ class App extends Component {
       backgroundOpacity
     } = this.state;
     return (
-      <React.Fragment>
+      <div className="App" style={{ position: "relative" }}>
         <Header />
+        <ShareIcon onClick={this.convertToPng} />
         <div
-          className="App"
           style={{
-            width: "100%",
-            height: "100%",
-            margin: "0"
+            position: "relative",
+            transform: "translateY(20%)"
           }}
         >
-          <div style={{ marginTop: 20 }}>
-            <LargeImage
-              fontClassName={fontClassName}
-              foregroundColor={color}
-              sloganText={text}
-              icon={icon}
-              stroke={stroke}
-              houseText={houseText}
-              textColor={textColor}
-              backgroundColor={backgroundColor}
-              backgroundOpacity={backgroundOpacity}
-            />
-            <ShareIcon onClick={this.convertToPng} />
-          </div>
-          <ClipBoard
-            onFontSelect={this.onFontSelect}
-            onChange={this.onChange}
-            onClick={this.onClick}
-            onOutlineClick={this.onOutlineClick}
-            onHouseTextChange={this.onHouseTextChange}
-            onFontColorClick={this.onFontColorClick}
-            onBackgroundClick={this.onBackgroundClick}
+          <LargeImage
+            fontClassName={fontClassName}
+            foregroundColor={color}
+            sloganText={text}
+            icon={icon}
+            stroke={stroke}
+            houseText={houseText}
+            textColor={textColor}
+            backgroundColor={backgroundColor}
+            backgroundOpacity={backgroundOpacity}
           />
         </div>
+
+        <ClipBoard
+          onFontSelect={this.onFontSelect}
+          onChange={this.onChange}
+          onClick={this.onClick}
+          onOutlineClick={this.onOutlineClick}
+          onHouseTextChange={this.onHouseTextChange}
+          onFontColorClick={this.onFontColorClick}
+          onBackgroundClick={this.onBackgroundClick}
+        />
         <ShareMenu
           onClick={() => this.setState({ shareMenu: false })}
           isOpen={this.state.shareMenu}
@@ -239,7 +236,7 @@ class App extends Component {
           quote={this.state.text}
           house={this.state.houseText}
         />
-      </React.Fragment>
+      </div>
     );
   }
 }
