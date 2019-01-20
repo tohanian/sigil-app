@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const ShareIcon = props => {
   return (
     <div style={shareIconStyles}>
       <div
         style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: `translate(-50%, -50%)`
+          position: "absolute",
+          top: "-400%",
+          left: "50%",
+          transform: `translate(-50%, 0%)`
         }}
         onClick={props.onClick}
       >
@@ -19,9 +19,9 @@ const ShareIcon = props => {
 };
 
 const shareIconStyles = {
-  width: '50px',
-  height: '50px',
-  position: 'fixed',
+  width: "50px",
+  height: "50px",
+  position: "fixed",
   bottom: 0,
   right: 0
 };

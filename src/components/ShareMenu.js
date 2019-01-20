@@ -64,14 +64,6 @@ const ShareMenu = props => {
   };
 
   const uploadImage = () => {
-    fetch("http://localhost:3000/sigil", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: JSON.stringify(props.svg.outerHTML)
-    });
     const fileBlob = dataUriToBlob(props.src);
     const myFile = blobToFile(fileBlob, "my-image.png");
 

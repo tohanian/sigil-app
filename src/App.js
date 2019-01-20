@@ -221,6 +221,7 @@ class App extends Component {
               backgroundOpacity={backgroundOpacity}
             />
           </div>
+
           <ClipBoard
             onFontSelect={this.onFontSelect}
             onChange={this.onChange}
@@ -230,7 +231,6 @@ class App extends Component {
             onFontColorClick={this.onFontColorClick}
             onBackgroundClick={this.onBackgroundClick}
           />
-          <ShareIcon onClick={this.convertToPng} />
         </div>
         <ShareMenu
           onClick={() => this.setState({ shareMenu: false })}
@@ -241,6 +241,7 @@ class App extends Component {
           quote={this.state.text}
           house={this.state.houseText}
         />
+        <ShareIcon onClick={this.convertToPng} />
       </React.Fragment>
     );
   }
