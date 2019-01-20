@@ -1,12 +1,20 @@
 import * as React from "react";
 import css from "../App.css";
 
+export const Amatic_SC = ({ fontFam = "Amatic_SC" }) => (
+  <div className={fontFam}> Amatic </div>
+);
+
 export const Bungee_Shade = ({ fontFam = "Bungee_Shade" }) => (
   <div className={fontFam}> Bungee </div>
 );
 
 export const Charmonman = ({ fontFam = "Charmonman" }) => (
   <div className={fontFam}> {fontFam} </div>
+);
+
+export const Special_Elite = ({ fontFam = "Special_Elite" }) => (
+  <div className={fontFam}> Elite </div>
 );
 
 export const Gamja_Flower = ({ fontFam = "Gamja_Flower" }) => (
@@ -39,10 +47,6 @@ export const Oswald = ({ fontFam = "Oswald" }) => (
 
 export const Permanent_Marker = ({ fontFam = "Permanent_Marker" }) => (
   <div className={fontFam}> Marker </div>
-);
-
-export const Playfair_Display = ({ fontFam = "Playfair_Display" }) => (
-  <div className={fontFam}> Playfair Display </div>
 );
 
 export const Poppins = ({ fontFam = "Poppins" }) => (

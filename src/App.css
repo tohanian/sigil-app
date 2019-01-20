@@ -52,6 +52,10 @@ input {
     margin: 0 0 10px 0;
 }
 
+.Amatic_SC {
+  font-family: "Amatic SC", cursive;
+}
+
 .Bungee_Shade {
   font-family: "Bungee Shade", cursive;
 }
@@ -95,16 +99,16 @@ input {
   font-family: "Permanent Marker", cursive;
 }
 
-.Playfair_Display {
-  font-family: "Playfair Display", serif;
-}
-
 .Poppins {
   font-family: "Poppins", sans-serif;
 }
 
 .Roboto {
   font-family: "Roboto", sans-serif;
+}
+
+.Special_Elite {
+  font-family: "Special Elite", cursive;
 }
 
 .Unlock {
