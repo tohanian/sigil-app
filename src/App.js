@@ -1,4 +1,4 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import "./App.css";
 import * as icons from "./icons/animals";
 import "canvg";
@@ -30,6 +30,8 @@ const LargeImage = props => {
           backgroundColor={props.backgroundColor}
           fillOpacity={props.fillOpacity}
           fontFamily={props.fontFamily}
+          stopColorOne={props.stopColorOne}
+          stopColorTwo={props.stopColorTwo}
         />
       ) : null;
     return iconic;
@@ -103,7 +105,7 @@ class App extends Component {
       icon: "Bat",
       text: "Your Slogan Here",
       sigilPng: null,
-      color: "red",
+      color: "black",
       fontClassName: null,
       stroke: null,
       houseText: "Your House Here",
@@ -112,7 +114,9 @@ class App extends Component {
       backgroundOpacity: 0,
       svg: null,
       imageUrl: null,
-      shareMenu: false
+      shareMenu: false,
+      stopColorOne: "black",
+      stopColorTwo: "black"
     };
   }
 
@@ -144,10 +148,9 @@ class App extends Component {
   };
 
   onClick = event => {
-    this.setState({
-      [event.currentTarget.attributes[1].value]:
-        event.currentTarget.attributes[0].value
-    });
+    let stopColorOne = event.target.className.baseVal;
+    let stopColorTwo = event.target.id;
+    this.setState({ stopColorOne, stopColorTwo });
   };
 
   onOutlineClick = event => {
@@ -161,9 +164,15 @@ class App extends Component {
     });
   };
 
-
   onChange = event => {
     this.setState({ text: event.target.value });
+  };
+
+  onSigilClick = event => {
+    this.setState({
+      [event.currentTarget.attributes[1].value]:
+        event.currentTarget.attributes[0].value
+    });
   };
 
   onHouseTextChange = event => {
@@ -193,14 +202,8 @@ class App extends Component {
     const svg = document.querySelector("svg");
     svgAsPngUri(svg, {}, function(uri) {
       that.setState({ sigilPng: uri, shareMenu: true });
-    })
+    });
   };
-
-  // convertToPng = () => {
-  //   const that = this;
-  //   const svg = document.querySelector("svg");
-  //   saveSvgAsPng(svg, "sigil.png")
-  // };
 
   render() {
     console.log(this.state);
@@ -215,16 +218,29 @@ class App extends Component {
       backgroundColor,
       backgroundOpacity,
       fontFamily,
-      shareMenu
+      shareMenu,
+      stopColorOne,
+      stopColorTwo
     } = this.state;
     return (
       <React.Fragment>
         <Header>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
             <a style={{ cursor: "pointer" }} href="mailto:sigilsapp@gmail.com">
               Contact Us
             </a>
-            <div style={{marginLeft: 5, marginRight: 5, cursor: "pointer"}} onClick={this.convertToPng}> • Share • </div>
+            <div
+              style={{ marginLeft: 5, marginRight: 5, cursor: "pointer" }}
+              onClick={this.convertToPng}
+            >
+              • Share •
+            </div>
             <a href="https://game-icons.net/about.html#authors"> Credit </a>
           </div>
         </Header>
@@ -240,6 +256,8 @@ class App extends Component {
             backgroundColor={backgroundColor}
             backgroundOpacity={backgroundOpacity}
             fontFamily={fontFamily}
+            stopColorOne={stopColorOne}
+            stopColorTwo={stopColorTwo}
           />
         </div>
         <ClipBoard
@@ -250,15 +268,18 @@ class App extends Component {
           onHouseTextChange={this.onHouseTextChange}
           onFontColorClick={this.onFontColorClick}
           onBackgroundClick={this.onBackgroundClick}
+          onSigilClick={this.onSigilClick}
         />
-        {shareMenu && <ShareMenu
-          onClick={() => this.setState({ shareMenu: false })}
-          isOpen={this.state.shareMenu}
-          convertToPng={this.convertToPng}
-          src={this.state.sigilPng}
-          quote={this.state.text}
-          house={this.state.houseText}
-        />}
+        {shareMenu && (
+          <ShareMenu
+            onClick={() => this.setState({ shareMenu: false })}
+            isOpen={this.state.shareMenu}
+            convertToPng={this.convertToPng}
+            src={this.state.sigilPng}
+            quote={this.state.text}
+            house={this.state.houseText}
+          />
+        )}
       </React.Fragment>
     );
   }

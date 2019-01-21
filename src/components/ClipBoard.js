@@ -3,6 +3,7 @@ import * as keyboardAnimals from "../icons/animals";
 import * as colorz from "../icons/ColorSwatches";
 import * as outlineColors from "../icons/OutlineSwatches";
 import * as fonts from "../icons/fonts";
+import * as gradients from "../icons/gradients";
 import "../App.css";
 
 const OptionSet = props => {
@@ -55,7 +56,7 @@ const SigilOptions = props => (
         <div
           value={icon}
           className="icon"
-          onClick={props.onClick}
+          onClick={props.onSigilClick}
           key={i}
           style={{
             width: "calc(98vw/7)",
@@ -66,7 +67,7 @@ const SigilOptions = props => (
         >
           <div>
             <C
-              onClick={props.onClick}
+              onClick={props.onSigilClick}
               name={icon}
               className="icon"
               key={i}
@@ -114,6 +115,43 @@ const SwatchOptions = props => (
               className="color"
               key={i}
               value={A}
+              index={i}
+              size="25"
+              foregroundColor="black"
+            />
+          </div>
+        </div>
+      );
+    })}
+    {Object.keys(gradients).map((gradient, i) => {
+      const D = gradients[gradient];
+      const E = window.colors[gradient];
+      return (
+        <div
+          value={E}
+          className="color"
+          onClick={props.onClick}
+          key={i}
+          style={{
+            width: "calc(98vw/7)",
+            height: "calc(98vw/7)",
+            cursor: "pointer",
+            position: "relative"
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <D
+              onClick={props.onClick}
+              className="color"
+              key={i}
+              value={E}
               index={i}
               size="25"
               foregroundColor="black"
