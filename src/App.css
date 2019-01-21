@@ -21,11 +21,10 @@ html, body, #root {
   font-family: "Raleway";
   height: 100% !important;
   text-align: center;
-  overflow: hidden;
 }
 
 .App {
-  height: 50%;
+  height: 90%;
 }
 
 .App-header {
@@ -37,6 +36,7 @@ html, body, #root {
   font-family: "Raleway";
   width: 100%;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.28);
+  position: fixed;
 }
 
 input {

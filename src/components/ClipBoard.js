@@ -424,6 +424,7 @@ const cell = {
   alignItems: "center",
   width: "100%",
   height: "30%",
+  position: "fixed",
   bottom: 0,
   boxShadow: "0px 2px 2px 0px rgba(0,0,0,0.28)",
   borderRadius: 4
