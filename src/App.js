@@ -1,8 +1,19 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import "./App.css";
 import * as icons from "./icons/animals";
 import "canvg";
-import { svgAsPngUri } from "save-svg-as-png";
+import { svgAsPngUri, saveSvgAsPng } from "save-svg-as-png";
+import AWS from "aws-sdk";
+import uuidv1 from "uuid";
+import { blobToFile, dataUriToBlob } from "./util/helpers";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  TwitterShareButton,
+  TwitterIcon
+} from "react-share";
 import FontInliner from "google-font-inliner";
 // Components
 import ClipBoard from "./components/ClipBoard";
@@ -38,7 +49,6 @@ const LargeImage = props => {
 const Header = props => {
   return (
     <div className="App-header">
-      {" "}
       <div style={{ fontSize: 30 }}>CREATE YOUR OWN SIGIL</div>
       {props.children}
     </div>
@@ -102,7 +112,6 @@ class App extends Component {
     this.state = {
       icon: "Bat",
       text: "Your Slogan Here",
-      shareMenu: false,
       sigilPng: null,
       color: "red",
       fontClassName: null,
@@ -111,7 +120,8 @@ class App extends Component {
       textColor: null,
       backgroundColor: "white",
       backgroundOpacity: 0,
-      svg: null
+      svg: null,
+      imageUrl: null
     };
   }
 
@@ -160,13 +170,6 @@ class App extends Component {
     });
   };
 
-  convertToPng = () => {
-    const that = this;
-    const svg = document.querySelector("svg");
-    svgAsPngUri(svg, {}, function(uri) {
-      that.setState({ sigilPng: uri, shareMenu: true });
-    });
-  };
 
   onChange = event => {
     this.setState({ text: event.target.value });
@@ -194,6 +197,58 @@ class App extends Component {
     this.setState({ textColor: event.currentTarget.attributes[0].value });
   };
 
+  // convertToPng = () => {
+  //   const that = this;
+  //   const svg = document.querySelector("svg");
+  //   svgAsPngUri(svg, {}, function(uri) {
+  //     that.setState({ sigilPng: uri });
+  //     that.uploadImage(uri)
+  //   })
+  // };
+
+  convertToPng = () => {
+    const that = this;
+    const svg = document.querySelector("svg");
+    saveSvgAsPng(svg, "sigil.png")
+  };
+
+  uploadImage = (uri) => {
+      const awsConfig = {
+        albumBucketName: "sigil-app",
+        bucketRegion: "us-east-1",
+        IdentityPoolId: "us-east-1:0a5fd32c-50ce-479d-b278-a1ded6e5f3df"
+      };
+      const fileBlob = dataUriToBlob(uri)
+      const myFile = blobToFile(fileBlob, "my-image.png");
+
+      AWS.config.update({
+        region: awsConfig.bucketRegion,
+        credentials: new AWS.CognitoIdentityCredentials({
+          IdentityPoolId: awsConfig.IdentityPoolId
+        })
+      });
+
+      const s3 = new AWS.S3({
+        apiVersion: "2006-03-01",
+        params: { Bucket: awsConfig.albumBucketName },
+        correctClockSkew: true
+      });
+      s3.upload(
+        {
+          Key: `${uuidv1()}.png`,
+          Body: myFile,
+          Bucket: awsConfig.albumBucketName,
+          ACL: "public-read-write"
+        },
+        (uploadError, _) => {
+          if (!uploadError) {
+            this.setState({imageUrl: _.Location});
+          } else {
+          }
+        }
+      );
+    };
+
   render() {
     console.log(this.state);
     const {
@@ -211,11 +266,11 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header>
-          <div style={{ whiteSpace: "nowrap" }}>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <ShareIcon onClick={this.convertToPng} />
             <a style={{ cursor: "pointer" }} href="mailto:sigilsapp@gmail.com">
               Contact Us
             </a>
-            <ShareIcon onClick={this.convertToPng} />
           </div>
         </Header>
         <div className="App">
@@ -240,14 +295,6 @@ class App extends Component {
           onHouseTextChange={this.onHouseTextChange}
           onFontColorClick={this.onFontColorClick}
           onBackgroundClick={this.onBackgroundClick}
-        />
-        <ShareMenu
-          onClick={() => this.setState({ shareMenu: false })}
-          isOpen={this.state.shareMenu}
-          convertToPng={this.convertToPng}
-          src={this.state.sigilPng}
-          quote={this.state.text}
-          house={this.state.houseText}
         />
       </React.Fragment>
     );
