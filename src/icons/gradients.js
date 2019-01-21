@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const gradient = ({
+export const mediumPurple_yellow = ({
   stopColorOne = "mediumPurple",
   stopColorTwo = "yellow"
 }) => (
@@ -29,10 +29,7 @@ export const gradient = ({
   </svg>
 );
 
-export const gradientTwo = ({
-  stopColorOne = "red",
-  stopColorTwo = "black"
-}) => (
+export const red_black = ({ stopColorOne = "red", stopColorTwo = "black" }) => (
   <svg
     className={stopColorOne}
     id={stopColorTwo}

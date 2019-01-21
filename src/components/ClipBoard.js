@@ -56,7 +56,7 @@ const SigilOptions = props => (
         <div
           value={icon}
           className="icon"
-          onClick={props.onSigilClick}
+          onClick={props.onClick}
           key={i}
           style={{
             width: "calc(98vw/7)",
@@ -67,7 +67,7 @@ const SigilOptions = props => (
         >
           <div>
             <C
-              onClick={props.onSigilClick}
+              onClick={props.onClick}
               name={icon}
               className="icon"
               key={i}
@@ -86,42 +86,6 @@ const SigilOptions = props => (
 
 const SwatchOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
-    {Object.keys(gradients).map((gradient, i) => {
-      const D = gradients[gradient];
-      const E = window.colors[gradient];
-      return (
-        <div
-          value={E}
-          className="color"
-          onClick={props.onClick}
-          key={i}
-          style={{
-            width: "calc(98vw/7)",
-            height: "calc(98vw/7)",
-            cursor: "pointer",
-            position: "relative"
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)"
-            }}
-          >
-            <D
-              onClick={props.onClick}
-              className="color"
-              key={i}
-              value={E}
-              index={i}
-              size="25"
-            />
-          </div>
-        </div>
-      );
-    })}
     {Object.keys(colorz).map((color, i) => {
       const C = colorz[color];
       const A = window.colors[color];
@@ -164,6 +128,39 @@ const SwatchOptions = props => (
 
 const BackgroundOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
+    {Object.keys(gradients).map((gradient, i) => {
+      const D = gradients[gradient];
+      return (
+        <div
+          className="color"
+          onClick={props.onBackgroundClick}
+          key={i}
+          style={{
+            width: "calc(98vw/7)",
+            height: "calc(98vw/7)",
+            cursor: "pointer",
+            position: "relative"
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <D
+              onClick={props.onBackgroundClick}
+              className="color"
+              key={i}
+              index={i}
+              size="25"
+            />
+          </div>
+        </div>
+      );
+    })}
     {Object.keys(colorz).map((color, i) => {
       const C = colorz[color];
       const A = window.colors[color];

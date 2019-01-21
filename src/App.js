@@ -105,18 +105,18 @@ class App extends Component {
       icon: "Bat",
       text: "Your Slogan Here",
       sigilPng: null,
-      color: "black",
+      color: "red",
       fontClassName: null,
       stroke: null,
       houseText: "Your House Here",
-      textColor: null,
+      textColor: "red",
       backgroundColor: "white",
       backgroundOpacity: 0,
       svg: null,
       imageUrl: null,
       shareMenu: false,
-      stopColorOne: "black",
-      stopColorTwo: "black"
+      stopColorOne: null,
+      stopColorTwo: null
     };
   }
 
@@ -147,20 +147,23 @@ class App extends Component {
     })(document, "script", "facebook-jssdk");
   };
 
-  onClick = event => {
-    let stopColorOne = event.target.className.baseVal;
-    let stopColorTwo = event.target.id;
-    this.setState({ stopColorOne, stopColorTwo });
-  };
+  // onClick = event => {
+  //   let stopColorOne = event.target.className.baseVal;
+  //   let stopColorTwo = event.target.id;
+  //   this.setState({ stopColorOne, stopColorTwo });
+  // };
 
   onOutlineClick = event => {
     this.setState({ stroke: event.currentTarget.attributes[0].value });
   };
 
   onBackgroundClick = event => {
+    let stopColorOne = event.target.className.baseVal;
+    let stopColorTwo = event.target.id;
     this.setState({
-      backgroundColor: event.currentTarget.attributes[0].value,
-      backgroundOpacity: "1"
+      stopColorOne: stopColorOne,
+      stopColorTwo: stopColorTwo,
+      backgroundOpacity: 1
     });
   };
 
@@ -168,7 +171,7 @@ class App extends Component {
     this.setState({ text: event.target.value });
   };
 
-  onSigilClick = event => {
+  onClick = event => {
     this.setState({
       [event.currentTarget.attributes[1].value]:
         event.currentTarget.attributes[0].value
@@ -239,7 +242,9 @@ class App extends Component {
               style={{ marginLeft: 5, marginRight: 5, cursor: "pointer" }}
               onClick={this.convertToPng}
             >
-              • Share •
+              <span style={{ fontWeight: "bold", fontSize: 18 }}>
+                • SHARE •
+              </span>
             </div>
             <a href="https://game-icons.net/about.html#authors"> Credit </a>
           </div>
