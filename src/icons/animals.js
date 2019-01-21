@@ -16,24 +16,10 @@ export const Bat = ({
   stopColorTwo
 }) => (
   <svg width={size} height={size} name="Bat" value="Bat" viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -91,24 +77,10 @@ export const Bicep = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -166,24 +138,10 @@ export const Cat = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -241,24 +199,10 @@ export const Chicken = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -316,24 +260,10 @@ export const Cricket = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -389,24 +319,10 @@ export const Eagle = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -464,24 +380,10 @@ export const Elephant = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -539,24 +441,10 @@ export const Hound = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -613,24 +501,10 @@ export const Owl = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -688,24 +562,10 @@ export const Pig = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -761,24 +621,10 @@ export const Scarab = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -836,24 +682,10 @@ export const Shark = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -911,24 +743,10 @@ export const SnakeBite = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -986,24 +804,10 @@ export const Tiger = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1061,24 +865,10 @@ export const Trout = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1135,24 +925,10 @@ export const Turtle = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1208,24 +984,10 @@ export const Spider = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1283,24 +1045,10 @@ export const Venus = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1358,24 +1106,10 @@ export const Hazmat = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1433,24 +1167,10 @@ export const Iceman = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1508,24 +1228,10 @@ export const SmartPhone = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1583,24 +1289,10 @@ export const TrappedGhost = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1658,24 +1350,10 @@ export const Biohazard = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1733,24 +1411,10 @@ export const Sun = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1808,24 +1472,10 @@ export const Sword = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1883,24 +1533,10 @@ export const Shuttle = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -1958,24 +1594,10 @@ export const Abstract = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2033,24 +1655,10 @@ export const Dice = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2108,24 +1716,10 @@ export const Fairy = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2183,24 +1777,10 @@ export const Buckles = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2258,24 +1838,10 @@ export const Coat = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2333,24 +1899,10 @@ export const Mask = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2408,24 +1960,10 @@ export const ArchitectMask = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2483,24 +2021,10 @@ export const PlagueDoctor = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2558,24 +2082,10 @@ export const Turkey = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2633,24 +2143,10 @@ export const Gauntlet = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2708,24 +2204,10 @@ export const DwarfFace = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2783,24 +2265,10 @@ export const Vampire = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2858,24 +2326,10 @@ export const FemaleElf = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -2933,24 +2387,10 @@ export const Fangs = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -3008,24 +2448,10 @@ export const ShipsWheel = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -3083,24 +2509,10 @@ export const Genie = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -3158,24 +2570,10 @@ export const Flower = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -3232,24 +2630,10 @@ export const Pizza = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text
@@ -3307,24 +2691,10 @@ export const FemaleVampire = ({
   stopColorTwo
 }) => (
   <svg width={size} viewBox="0 0 512 512">
-    <defs>
-      <linearGradient id="gradient-1">
-        <stop
-          offset="0%"
-          stopColor={stopColorOne}
-          stopOpacity={backgroundOpacity}
-        />
-        <stop
-          offset="100%"
-          stopColor={stopColorTwo}
-          stopOpacity={backgroundOpacity}
-        />
-      </linearGradient>
-    </defs>
     <style> {fontClassName} </style>
     <path
       d="M0 0h512v512H0z"
-      fill="url(#gradient-1)"
+      fill={backgroundColor}
       fillOpacity={backgroundOpacity}
     />
     <text

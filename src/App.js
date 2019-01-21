@@ -105,18 +105,18 @@ class App extends Component {
       icon: "Bat",
       text: "Your Slogan Here",
       sigilPng: null,
-      color: "#FFF9C2",
+      color: "black",
       fontClassName: null,
       stroke: null,
       houseText: "Your House Here",
-      textColor: "black",
+      textColor: null,
       backgroundColor: "white",
       backgroundOpacity: 0,
       svg: null,
       imageUrl: null,
       shareMenu: false,
-      stopColorOne: "#a29bfe",
-      stopColorTwo: "#fab1a0"
+      stopColorOne: "black",
+      stopColorTwo: "black"
     };
   }
 
@@ -147,23 +147,14 @@ class App extends Component {
     })(document, "script", "facebook-jssdk");
   };
 
-  // onClick = event => {
-  //   let stopColorOne = event.target.className.baseVal;
-  //   let stopColorTwo = event.target.id;
-  //   this.setState({ stopColorOne, stopColorTwo });
-  // };
-
   onOutlineClick = event => {
     this.setState({ stroke: event.currentTarget.attributes[0].value });
   };
 
   onBackgroundClick = event => {
-    let stopColorOne = event.target.className.baseVal;
-    let stopColorTwo = event.target.id;
     this.setState({
-      stopColorOne: stopColorOne,
-      stopColorTwo: stopColorTwo,
-      backgroundOpacity: 1
+      backgroundColor: event.currentTarget.attributes[0].value,
+      backgroundOpacity: "1"
     });
   };
 

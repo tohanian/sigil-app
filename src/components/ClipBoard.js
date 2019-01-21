@@ -128,39 +128,6 @@ const SwatchOptions = props => (
 
 const BackgroundOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
-    {Object.keys(gradients).map((gradient, i) => {
-      const D = gradients[gradient];
-      return (
-        <div
-          className="color"
-          onClick={props.onBackgroundClick}
-          key={i}
-          style={{
-            width: "calc(98vw/7)",
-            height: "calc(98vw/7)",
-            cursor: "pointer",
-            position: "relative"
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)"
-            }}
-          >
-            <D
-              onClick={props.onBackgroundClick}
-              className="color"
-              key={i}
-              index={i}
-              size="25"
-            />
-          </div>
-        </div>
-      );
-    })}
     {Object.keys(colorz).map((color, i) => {
       const C = colorz[color];
       const A = window.colors[color];
