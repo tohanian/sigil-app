@@ -105,18 +105,18 @@ class App extends Component {
       icon: "Bat",
       text: "Your Slogan Here",
       sigilPng: null,
-      color: "red",
+      color: "#FFF9C2",
       fontClassName: null,
       stroke: null,
       houseText: "Your House Here",
-      textColor: "red",
+      textColor: "black",
       backgroundColor: "white",
       backgroundOpacity: 0,
       svg: null,
       imageUrl: null,
       shareMenu: false,
-      stopColorOne: null,
-      stopColorTwo: null
+      stopColorOne: "#a29bfe",
+      stopColorTwo: "#fab1a0"
     };
   }
 
