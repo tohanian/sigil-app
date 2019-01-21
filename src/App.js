@@ -197,20 +197,20 @@ class App extends Component {
     this.setState({ textColor: event.currentTarget.attributes[0].value });
   };
 
-  // convertToPng = () => {
-  //   const that = this;
-  //   const svg = document.querySelector("svg");
-  //   svgAsPngUri(svg, {}, function(uri) {
-  //     that.setState({ sigilPng: uri });
-  //     that.uploadImage(uri)
-  //   })
-  // };
-
   convertToPng = () => {
     const that = this;
     const svg = document.querySelector("svg");
-    saveSvgAsPng(svg, "sigil.png")
+    svgAsPngUri(svg, {}, function(uri) {
+      that.setState({ sigilPng: uri });
+      that.uploadImage(uri)
+    })
   };
+
+  // convertToPng = () => {
+  //   const that = this;
+  //   const svg = document.querySelector("svg");
+  //   saveSvgAsPng(svg, "sigil.png")
+  // };
 
   uploadImage = (uri) => {
       const awsConfig = {
@@ -242,7 +242,7 @@ class App extends Component {
         },
         (uploadError, _) => {
           if (!uploadError) {
-            this.setState({imageUrl: _.Location});
+            window.open(_.Location)
           } else {
           }
         }
