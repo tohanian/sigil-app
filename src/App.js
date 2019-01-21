@@ -1,24 +1,14 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component} from "react";
 import "./App.css";
 import * as icons from "./icons/animals";
 import "canvg";
 import { svgAsPngUri, saveSvgAsPng } from "save-svg-as-png";
-import AWS from "aws-sdk";
-import uuidv1 from "uuid";
 import { blobToFile, dataUriToBlob } from "./util/helpers";
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
-  TwitterShareButton,
-  TwitterIcon
-} from "react-share";
 import FontInliner from "google-font-inliner";
 // Components
 import ClipBoard from "./components/ClipBoard";
 import ShareIcon from "./components/ShareIcon";
-import ShareMenu from "./components/ShareMenu";
+import ShareMenu from "./components/ShareMenuV2";
 
 const LargeImage = props => {
   return Object.keys(icons).map((icon, i) => {
@@ -121,7 +111,8 @@ class App extends Component {
       backgroundColor: "white",
       backgroundOpacity: 0,
       svg: null,
-      imageUrl: null
+      imageUrl: null,
+      shareMenu: false
     };
   }
 
@@ -201,8 +192,7 @@ class App extends Component {
     const that = this;
     const svg = document.querySelector("svg");
     svgAsPngUri(svg, {}, function(uri) {
-      that.setState({ sigilPng: uri });
-      that.uploadImage(uri)
+      that.setState({ sigilPng: uri, shareMenu: true });
     })
   };
 
@@ -211,43 +201,6 @@ class App extends Component {
   //   const svg = document.querySelector("svg");
   //   saveSvgAsPng(svg, "sigil.png")
   // };
-
-  uploadImage = (uri) => {
-      const awsConfig = {
-        albumBucketName: "sigil-app",
-        bucketRegion: "us-east-1",
-        IdentityPoolId: "us-east-1:0a5fd32c-50ce-479d-b278-a1ded6e5f3df"
-      };
-      const fileBlob = dataUriToBlob(uri)
-      const myFile = blobToFile(fileBlob, "my-image.png");
-
-      AWS.config.update({
-        region: awsConfig.bucketRegion,
-        credentials: new AWS.CognitoIdentityCredentials({
-          IdentityPoolId: awsConfig.IdentityPoolId
-        })
-      });
-
-      const s3 = new AWS.S3({
-        apiVersion: "2006-03-01",
-        params: { Bucket: awsConfig.albumBucketName },
-        correctClockSkew: true
-      });
-      s3.upload(
-        {
-          Key: `${uuidv1()}.png`,
-          Body: myFile,
-          Bucket: awsConfig.albumBucketName,
-          ACL: "public-read-write"
-        },
-        (uploadError, _) => {
-          if (!uploadError) {
-            window.open(_.Location)
-          } else {
-          }
-        }
-      );
-    };
 
   render() {
     console.log(this.state);
@@ -261,16 +214,18 @@ class App extends Component {
       textColor,
       backgroundColor,
       backgroundOpacity,
-      fontFamily
+      fontFamily,
+      shareMenu
     } = this.state;
     return (
       <React.Fragment>
         <Header>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <ShareIcon onClick={this.convertToPng} />
             <a style={{ cursor: "pointer" }} href="mailto:sigilsapp@gmail.com">
               Contact Us
             </a>
+            <div style={{marginLeft: 5, marginRight: 5, cursor: "pointer"}} onClick={this.convertToPng}> • Share • </div>
+            <a href="https://game-icons.net/about.html#authors"> Credit </a>
           </div>
         </Header>
         <div className="App">
@@ -296,6 +251,14 @@ class App extends Component {
           onFontColorClick={this.onFontColorClick}
           onBackgroundClick={this.onBackgroundClick}
         />
+        {shareMenu && <ShareMenu
+          onClick={() => this.setState({ shareMenu: false })}
+          isOpen={this.state.shareMenu}
+          convertToPng={this.convertToPng}
+          src={this.state.sigilPng}
+          quote={this.state.text}
+          house={this.state.houseText}
+        />}
       </React.Fragment>
     );
   }
