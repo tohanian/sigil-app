@@ -1,13 +1,11 @@
 import React from "react";
 
-const ShareIcon = props => {
-  return (
-    <i
-      onClick={props.onClick}
-      className="fa fa-share-square-o fa-1x"
-      aria-hidden="true"
-    />
-  );
-};
+const ShareIcon = props => (
+  <img
+    style={{ marginLeft: 10, bottom: 0 }}
+    onClick={props.onClick}
+    src={require("./share-icon.png")}
+  />
+);
 
 export default ShareIcon;

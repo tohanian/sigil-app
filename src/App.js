@@ -39,7 +39,7 @@ const Header = props => {
   return (
     <div className="App-header">
       {" "}
-      <div style={{ fontSize: 30 }}>SIGILS</div>
+      <div style={{ fontSize: 30 }}>CREATE YOUR OWN SIGIL</div>
       {props.children}
     </div>
   );
@@ -210,9 +210,11 @@ class App extends Component {
     } = this.state;
     return (
       <React.Fragment>
-        <Header onClick={this.convertToPng}>
+        <Header>
           <div style={{ whiteSpace: "nowrap" }}>
-            <a href="mailto:sigilsapp@gmail.com">Contact Us</a>
+            <a style={{ cursor: "pointer" }} href="mailto:sigilsapp@gmail.com">
+              Contact Us
+            </a>
             <ShareIcon onClick={this.convertToPng} />
           </div>
         </Header>

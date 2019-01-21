@@ -1,5 +1,8 @@
 
-
+a {
+  color: black;
+  text-decoration: none;
+}
 input[type='text'],
 input[type='number'],
 textarea {
@@ -35,14 +38,14 @@ html, body, #root {
 }
 
 .App-header {
-  background-color: #0074D9;
+  background-color: #fff9c2;
   padding: 5px;
   min-height: 20vh;
   justify-content: center;
-  color: white;
-  font-family: "Raleway";
+  color: black;
+  font-family: "Mountains of Christmas";
   width: 100%;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.28);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
   position: fixed;
 }
 
