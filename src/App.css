@@ -24,10 +24,14 @@ html, body, #root {
 }
 
 .App {
-  height: 90%;
+  height: 50%;
   width: 100%;
+  top: 20%;
   position: fixed;
-  margin: 0 auto;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .App-header {

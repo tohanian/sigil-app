@@ -38,6 +38,7 @@ const LargeImage = props => {
 const Header = props => {
   return (
     <div className="App-header">
+      {" "}
       <div style={{ fontSize: 30 }}>SIGILS</div>
       {props.children}
     </div>
@@ -209,21 +210,13 @@ class App extends Component {
     } = this.state;
     return (
       <React.Fragment>
-        <Header>
+        <Header onClick={this.convertToPng}>
           <div style={{ whiteSpace: "nowrap" }}>
-            {" "}
-            <a href="mailto:sigilsapp@gmail.com">Contact Us</a>{" "}
+            <a href="mailto:sigilsapp@gmail.com">Contact Us</a>
             <ShareIcon onClick={this.convertToPng} />
           </div>
         </Header>
-        <div
-          style={{
-            justifyContent: "center",
-            display: "flex",
-            alignItems: "center"
-          }}
-          className="App"
-        >
+        <div className="App">
           <LargeImage
             fontClassName={fontClassName}
             foregroundColor={color}
