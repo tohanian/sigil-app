@@ -27,7 +27,7 @@ html, body, #root {
 }
 
 .App {
-  height: 50%;
+  height: 55%;
   width: 100%;
   top: 20%;
   position: fixed;
@@ -81,8 +81,20 @@ input {
   font-family: "Lobster", cursive;
 }
 
+.Sacramento {
+  font-family: "Sacramento", cursive;
+}
+
 .Gamja_Flower {
   font-family: "Gamja Flower", cursive;
+}
+
+.Cabin_Sketch {
+  font-family: "Cabin Sketch", cursive;
+}
+
+.Luckiest_Guy {
+  font-family: "Luckiest Guy", cursive;
 }
 
 .Faster_One {
@@ -91,6 +103,10 @@ input {
 
 .Gloria_Hallelujah {
   font-family: "Gloria Hallelujah", cursive;
+}
+
+.Lobster_Two {
+  font-family: "Lobster Two", cursive;
 }
 
 .Indie_Flower {
@@ -144,6 +160,15 @@ input {
 .Gaegu {
   font-family: "Gaegu", cursive;
 }
+
+.Coiny {
+  font-family: "Coiny", cursive;
+}
+
+.Coiny {
+  font-family: "Righteous", cursive;
+}
+
 
 .Crafty_Girls {
   font-family: "Crafty Girls", cursive;

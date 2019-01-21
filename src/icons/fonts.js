@@ -9,7 +9,19 @@ export const Bungee_Shade = ({ fontFam = "Bungee_Shade" }) => (
   <div className={fontFam}> House Stark Our way is the old way </div>
 );
 
+export const Lobster_Two = ({ fontFam = "Lobster_Two" }) => (
+  <div className={fontFam}> House Stark Our way is the old way </div>
+);
+
 export const Charmonman = ({ fontFam = "Charmonman" }) => (
+  <div className={fontFam}> House Stark Our way is the old way </div>
+);
+
+export const Coiny = ({ fontFam = "Coiny" }) => (
+  <div className={fontFam}> House Stark Our way is the old way </div>
+);
+
+export const Righteous = ({ fontFam = "Righteous" }) => (
   <div className={fontFam}> House Stark Our way is the old way </div>
 );
 
@@ -21,7 +33,19 @@ export const Special_Elite = ({ fontFam = "Special_Elite" }) => (
   <div className={fontFam}> House Stark Our way is the old way </div>
 );
 
+export const Cabin_Sketch = ({ fontFam = "Cabin_Sketch" }) => (
+  <div className={fontFam}> House Stark Our way is the old way </div>
+);
+
+export const Luckiest_Guy = ({ fontFam = "Luckiest_Guy" }) => (
+  <div className={fontFam}> House Stark Our way is the old way </div>
+);
+
 export const Faster_One = ({ fontFam = "Faster_One" }) => (
+  <div className={fontFam}> House Stark Our way is the old way </div>
+);
+
+export const Sacramento = ({ fontFam = "Sacramento" }) => (
   <div className={fontFam}> House Stark Our way is the old way </div>
 );
 
