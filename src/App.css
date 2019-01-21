@@ -25,6 +25,9 @@ html, body, #root {
 
 .App {
   height: 90%;
+  width: 100%;
+  position: fixed;
+  margin: 0 auto;
 }
 
 .App-header {
