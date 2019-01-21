@@ -86,43 +86,6 @@ const SigilOptions = props => (
 
 const SwatchOptions = props => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
-    {Object.keys(colorz).map((color, i) => {
-      const C = colorz[color];
-      const A = window.colors[color];
-      return (
-        <div
-          value={A}
-          className="color"
-          onClick={props.onClick}
-          key={i}
-          style={{
-            width: "calc(98vw/7)",
-            height: "calc(98vw/7)",
-            cursor: "pointer",
-            position: "relative"
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)"
-            }}
-          >
-            <C
-              onClick={props.onClick}
-              className="color"
-              key={i}
-              value={A}
-              index={i}
-              size="25"
-              foregroundColor="black"
-            />
-          </div>
-        </div>
-      );
-    })}
     {Object.keys(gradients).map((gradient, i) => {
       const D = gradients[gradient];
       const E = window.colors[gradient];
@@ -152,6 +115,42 @@ const SwatchOptions = props => (
               className="color"
               key={i}
               value={E}
+              index={i}
+              size="25"
+            />
+          </div>
+        </div>
+      );
+    })}
+    {Object.keys(colorz).map((color, i) => {
+      const C = colorz[color];
+      const A = window.colors[color];
+      return (
+        <div
+          value={A}
+          className="color"
+          onClick={props.onClick}
+          key={i}
+          style={{
+            width: "calc(98vw/7)",
+            height: "calc(98vw/7)",
+            cursor: "pointer",
+            position: "relative"
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <C
+              onClick={props.onClick}
+              className="color"
+              key={i}
+              value={A}
               index={i}
               size="25"
               foregroundColor="black"
