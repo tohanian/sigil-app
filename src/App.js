@@ -188,14 +188,6 @@ class App extends Component {
     this.setState({ textColor: event.currentTarget.attributes[0].value });
   };
 
-  convertToPng = () => {
-    const that = this;
-    const svg = document.querySelector('svg');
-    svgAsPngUri(svg, {}, function(uri) {
-      that.setState({ sigilPng: uri, shareMenu: true });
-    });
-  };
-
   render() {
     const {
       text,
@@ -266,7 +258,6 @@ class App extends Component {
           <ShareMenu
             onClick={() => this.setState({ shareMenu: false })}
             isOpen={this.state.shareMenu}
-            convertToPng={this.convertToPng}
             src={this.state.sigilPng}
             quote={this.state.text}
             house={this.state.houseText}
