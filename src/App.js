@@ -122,6 +122,16 @@ class App extends Component {
 
   componentDidMount() {
     this.loadFacebookApi();
+
+    const fontInliner = new FontInliner(
+      encodeURIComponent('Mountains of Christmas')
+    );
+    fontInliner.style().then(style => {
+      this.setState({
+        fontFamily: 'Mountains of Christmas',
+        fontClassName: style
+      });
+    });
   }
 
   loadFacebookApi = () => {

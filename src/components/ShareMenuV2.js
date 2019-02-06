@@ -62,23 +62,6 @@ const ShareMenu = props => {
     uploadImage();
   };
 
-  // convertToPng = () => {
-  //   const that = this;
-  //   const svg = document.querySelector('svg');
-  //   console.log(svg);
-  //   svgAsPngUri(svg, {}, function(uri) {
-  //     that.setState({ sigilPng: uri }, () => {
-  //       svgAsPngUri(svg, {}, function(uri) {
-  //         console.log('this', this);
-  //         console.log('that', that);
-  //         console.log('that too', thatToo);
-  //         console.log('the 2nd goods', uri);
-  //         thatToo.setState({ sigilPng: uri, shareMenu: true });
-  //       });
-  //     });
-  //   });
-  // };
-
   const uploadImage = () => {
     const svg = document.querySelector('svg');
     svgAsPngUri(svg, {}, function(uri) {
@@ -141,28 +124,35 @@ const ShareMenu = props => {
   const menuItems = () => (
     <React.Fragment>
       <div style={styles.shareMenu}>
-        <div
+        <a
+          href={imageUrl}
+          download="sigil.png"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
-            display: 'flex',
-            justifyContent: 'center',
-            height: '32px'
+            height: '32px',
+            width: '32px'
           }}
         >
-          <a
-            href={imageUrl}
-            download="sigil.png"
-            target="_blank"
-            rel="noopener noreferrer"
+          <div
             style={{
-              height: '32px',
-              width: '32px',
-              color: 'rgb(146, 146, 146)'
+              display: 'flex',
+              justifyContent: 'center',
+              height: '32px'
             }}
           >
-            <i className="fa fa-cloud-download fa-2x" aria-hidden="true" />
-          </a>
-          <div style={{ marginTop: '7px', width: '180px' }}>Download Sigil</div>
-        </div>
+            <a
+              style={{
+                color: 'rgb(146, 146, 146)'
+              }}
+            >
+              <i className="fa fa-cloud-download fa-2x" aria-hidden="true" />
+            </a>
+            <div style={{ marginTop: '7px', width: '180px' }}>
+              Download Sigil
+            </div>
+          </div>
+        </a>
       </div>
       <TwitterShareButton
         title={`${props.house}: ${props.quote}`}
