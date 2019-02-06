@@ -188,6 +188,14 @@ class App extends Component {
     this.setState({ textColor: event.currentTarget.attributes[0].value });
   };
 
+  convertToPng = () => {
+    const that = this;
+    const svg = document.querySelector('svg');
+    svgAsPngUri(svg, {}, function(uri) {
+      that.setState({ sigilPng: uri, shareMenu: true });
+    });
+  };
+
   render() {
     const {
       text,
